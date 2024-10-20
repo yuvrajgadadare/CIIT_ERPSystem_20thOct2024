@@ -1,0 +1,890 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- ################# Header Starts Here#######################--->
+<style>
+    .slider {
+        padding-top: 0px;
+        height: 500px;
+    }
+</style>
+<!-- ################# Slider Starts Here#######################--->
+<div class="slider">
+    <!-- Set up your HTML -->
+    <div class="owl-carousel">
+        <div class="slider-img">
+            <div class="item">
+                @* <div class="slider-img"><img src="~/assets/images/slider/slider-1.jpg" alt=""></div> *@
+
+                <div id="SimpleCarouselExample" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="~/assets/images/slider/slider-1.jpg" class="d-block w-100" alt="..." style="height:500px">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/assets/images/istockphoto-1.jpg" class="d-block w-100" style="height:500px" alt="..." />
+
+                        </div>
+                        <div class="carousel-item">
+
+                            <img src="~/assets/images/istockphoto-2.jpg" class="d-block w-100" alt="..." style="height:500px" />
+                        </div>
+                        <div class="carousel-item">
+
+                            <img src="~/assets/images/istockphoto-3.jpg" class="d-block w-100" alt="..." style="height:500px" />
+                        </div>
+                        <div class="carousel-item">
+
+                            <img src="~/assets/images/istockphoto-4.jpg" class="d-block w-100" alt="..." style="height:500px" />
+                        </div>
+                    </div>
+                    @* <a class="carousel-control-prev" href="#SimpleCarouselExample" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#SimpleCarouselExample" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                    </a> *@
+                </div>
+
+
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+                            <div class="slider-captions">
+                                <h1 class="slider-title">Limitless learning guarantee</h1>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- ################# Key Features Starts Here#######################--->
+<div class="key-features">
+    <div class="container">
+        <div class="row key-row no-margin">
+            <div class="box c1">
+                @* <i class="fas fa-project-diagram"></i> *@
+                <h4>Job <br />Guaranteed<br /> Training</h4>
+            </div>
+            <div class="box c2">
+                @* <i class="fas fa-space-shuttle"></i> *@
+                <h4>Training <br /> on Live <br /> Project</h4>
+            </div>
+            <div class="box c1">
+                @* <i class="fas fa-globe-americas"></i> *@
+                <h4>
+                    14+ Years
+                    <br />
+                    Experienced   <br />Trainers
+                </h4>
+            </div>
+            <div class="box c2">
+                @* <i class="fas fa-feather-alt"></i> *@
+                <h4>
+                    18000+<br />
+                    Successful <br />Placements
+                </h4>
+            </div>
+            <div class="box c1">
+                @* <i class="fab fa-app-store-ios"></i> *@
+                <h4>
+                    20000+<br />
+
+                    Students<br />  Trained
+                </h4>
+            </div>
+        </div>
+
+    </div><br />
+</div>
+
+<!-- ################# popular Cources Starts Here#######################--->
+
+<div class="popular-cources">
+    <div class="container">
+        <div class="session-title row">
+            <h2 style="color:#e74c3c">Our Job Guarnteed Training Programs</h2>
+        </div>
+        <div class="row courc-ro">
+            <div class="col-md-3">
+                <div class="courc-card">
+                    <a href="/Dot-Net-Training-With-Live-Project" style="text-decoration:none">
+                        <img src="~/assets/technologies/dotnet.png" style="height:200px;" alt="">
+                        <div class="cource-det">
+                            <h6>.Net Full Stack Development</h6>
+                            @* <ul>
+                            <li><i class="fas fa-graduation-cap">Training on Live Project</i> <span></span></li>
+                            <li><i class="far fa-calendar-plus"></i> 14+ Years Experience Trainers</li>
+                            </ul> *@
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <a href="/Java-Training-With-Live-Project" style="text-decoration:none">
+
+                    <div class="courc-card">
+                        <img src="~/assets/technologies/java.png" style="height:200px;" alt="">
+                        <div class="cource-det">
+                            <h6>Java Full Stack Development</h6>
+                            @* <ul>
+                            <li><i class="fas fa-graduation-cap">Training on Live Project</i> <span></span></li>
+                            <li><i class="far fa-calendar-plus"></i>14+ Years Experience Trainers</li>
+                            </ul> *@
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="/Python-Training-With-Live-Project" style="text-decoration:none">
+
+                    <div class="courc-card">
+                        <img src="~/assets/technologies/python.png" style="height:200px;" alt="">
+                        <div class="cource-det">
+                            <h6>Python Full Stack</h6>
+                            @*  <ul>
+                            <li><i class="fas fa-graduation-cap">Senior Trainer</i> <span></span></li>
+                            <li><i class="far fa-calendar-plus"></i>14+ Years Experience Trainers</li>
+                            </ul> *@
+                        </div>
+                    </div>
+                </a>
+            </div>
+            @*   <div class="col-md-3">
+            <div class="courc-card">
+            <img src="~/assets/technologies/MEAN.png" style="height:200px;" alt="">
+            <div class="cource-det">
+            <h6>MEAN Stack Development</h6>
+            <ul>
+            <li><i class="fas fa-graduation-cap">Senior Trainer</i> <span></span></li>
+            <li><i class="far fa-calendar-plus"></i> 14+ Years Experience</li>
+            </ul>
+            </div>
+            </div>
+            </div> *@
+
+            <div class="col-md-3">
+                <a href="/MERN-Stack-Training-With-Live-Project" style="text-decoration:none">
+
+                    <div class="courc-card">
+                        <img src="~/assets/technologies/MERN.png" style="height:200px;" alt="">
+                        <div class="cource-det">
+                            <h6>MERN Stack Development</h6>
+                            @*  <ul>
+                            <li><i class="fas fa-graduation-cap">Senior Trainer</i> <span></span></li>
+                            <li><i class="far fa-calendar-plus"></i>14+ Years Experience Trainers</li>
+                            </ul> *@
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="/DevOps-Training-With-Live-Project" style="text-decoration:none">
+
+                    <div class="courc-card">
+                        <img src="~/assets/technologies/devops.png" style="height:200px;" alt="">
+                        <div class="cource-det">
+                            <h6>DevOps</h6>
+                            @* <ul>
+                            <li><i class="fas fa-graduation-cap">Senior Trainer</i> <span></span></li>
+                            <li><i class="far fa-calendar-plus"></i>14+ Years Experience Trainers</li>
+                            </ul> *@
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="/Software-Testing-Training-With-Live-Project" style="text-decoration:none">
+
+                    <div class="courc-card">
+                        <img src="~/assets/technologies/Testing.png" style="height:200px;" alt="">
+                        <div class="cource-det">
+                            <h6>Software Testing</h6>
+                            @*  <ul>
+                            <li><i class="fas fa-graduation-cap">Senior Trainer</i> <span></span></li>
+                            <li><i class="far fa-calendar-plus"></i>14+ Years Experience Trainers</li>
+                            </ul> *@
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="/Data-Science-Training-With-Live-Project" style="text-decoration:none">
+
+                    <div class="courc-card">
+                        <img src="~/assets/technologies/DataScience.png" style="height:200px;" alt="">
+                        <div class="cource-det">
+                            <h6>Data Science</h6>
+                            @*  <ul>
+                            <li><i class="fas fa-graduation-cap">Onl</i> <span></span></li>
+                            <li><i class="far fa-calendar-plus"></i>7+ Years Experience Trainers</li>
+                            </ul> *@
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="/Data-Analyst-Training-With-Live-Project" style="text-decoration:none">
+
+                    <div class="courc-card">
+                        <img src="~/assets/technologies/Analyst.png" style="height:200px;" alt="">
+                        <div class="cource-det">
+                            <h6>Data Analyst</h6>
+                            @* <ul>
+                            <li><i class="fas fa-graduation-cap">Training With Real Time Project  </i> <span></span></li>
+                            <li><i class="far fa-calendar-plus"></i>7+ Years Experience Trainers</li>
+                            </ul> *@
+                        </div>
+                    </div>
+                </a>
+                <hr />
+            </div>
+            <div class="col-md-12">
+                <a href="latest-training-with-live-project" class="btn btn-primary form-control" style="background-color: #0d6efd">View All</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popular-cources" style="margin-top:0px;padding:0px;">
+    <div class="container">
+        <div class="session-title row">
+            <h2 style="color:#e74c3c">Our Top Placements</h2>
+        </div>
+        <div class="row courc-ro">
+            <div class="col-md-3">
+                <div class="courc-card">
+                    @* <img src="~/assets/images/cources/cource-1.jpg" alt=""> *@
+                    <img src="~/assets/PlacementPhotos/snehal Shivthare.png" style="height:200px;" />
+                    <div class="cource-det">
+                        <h6>Snehal Shivtare </h6>
+                        <ul>
+                            <li><i class="fas fa-graduation-cap">.Net Full Stack Developer</i></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="courc-card">
+                    @* <img src="~/assets/images/cources/cource-1.jpg" alt=""> *@
+                    <img src="~/assets/PlacementPhotos/Vaibhav Mulik.jpg" style="height:200px;" />
+                    <div class="cource-det">
+                        <h6>Vaibhav Mulik </h6>
+                        <ul>
+                            <li><i class="fas fa-graduation-cap">.Net Full Stack Developer</i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="courc-card">
+                    @* <img src="~/assets/images/cources/cource-1.jpg" alt=""> *@
+                    <img src="~/assets/PlacementPhotos/swapnita.jpeg" style="height:200px;" />
+                    <div class="cource-det">
+                        <h6>Swapnita </h6>
+                        <ul>
+                            <li><i class="fas fa-graduation-cap">.Net Full Stack Developer</i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="courc-card">
+                    @* <img src="~/assets/images/cources/cource-1.jpg" alt=""> *@
+                    <img src="~/assets/PlacementPhotos/neha patel.jpeg" style="height:200px;" />
+                    <div class="cource-det">
+                        <h6>Neha Patel </h6>
+                        <ul>
+                            <li><i class="fas fa-graduation-cap">Java Full Stack Developer</i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="courc-card">
+                    @* <img src="~/assets/images/cources/cource-1.jpg" alt=""> *@
+                    <img src="~/assets/PlacementPhotos/Mayur Mahadik.jpg" style="height:200px;" />
+                    <div class="cource-det">
+                        <h6>Mayur Mahadik</h6>
+                        <ul>
+                            <li><i class="fas fa-graduation-cap">.Net Full Stack Developer</i></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="courc-card">
+                    @* <img src="~/assets/images/cources/cource-1.jpg" alt=""> *@
+                    <img src="~/assets/PlacementPhotos/Sanjay Sharma.jpg" style="height:200px;" />
+                    <div class="cource-det">
+                        <h6>Sanjay Sharma</h6>
+                        <ul>
+                            <li><i class="fas fa-graduation-cap">Java Full Stack Developer</i></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="courc-card">
+                    @* <img src="~/assets/images/cources/cource-1.jpg" alt=""> *@
+                    <img src="~/assets/PlacementPhotos/Umair Ahmed.jpg" style="height:200px;" />
+                    <div class="cource-det">
+                        <h6>Umair Ahmed </h6>
+                        <ul>
+                            <li><i class="fas fa-graduation-cap">Python Full Stack Developer</i></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="courc-card">
+                    @* <img src="~/assets/images/cources/cource-1.jpg" alt=""> *@
+                    <img src="~/assets/PlacementPhotos/Piyush Dwivedi.jpg" style="height:200px;" />
+                    <div class="cource-det">
+                        <h6>Piyush Dwivedi </h6>
+                        <ul>
+                            <li><i class="fas fa-graduation-cap">.Net Full Stack Developer</i></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="courc-card">
+                    @* <img src="~/assets/images/cources/cource-1.jpg" alt=""> *@
+                    <img src="~/assets/PlacementPhotos/Avantika Malleshe.jpg" style="height:200px;" />
+                    <div class="cource-det">
+                        <h6>Avantika Malleshe </h6>
+                        <ul>
+                            <li><i class="fas fa-graduation-cap">.Net Full Stack Developer</i></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="courc-card">
+                    @* <img src="~/assets/images/cources/cource-1.jpg" alt=""> *@
+                    <img src="~/assets/PlacementPhotos/Dnyneshwar Patil.jpg" style="height:200px;" />
+                    <div class="cource-det">
+                        <h6>Dnyneshwar Patil </h6>
+                        <ul>
+                            <li><i class="fas fa-graduation-cap">Java Full Stack Developer</i></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="courc-card">
+                    @* <img src="~/assets/images/cources/cource-1.jpg" alt=""> *@
+                    <img src="~/assets/PlacementPhotos/Abhishek Badakwan.jpg" style="height:200px;" />
+                    <div class="cource-det">
+                        <h6>Abhishek Badakwan</h6>
+                        <ul>
+                            <li><i class="fas fa-graduation-cap">.Net Full Stack Developer</i></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="courc-card">
+                    @* <img src="~/assets/images/cources/cource-1.jpg" alt=""> *@
+                    <img src="~/assets/PlacementPhotos/Ajey Ransinge1.jpg" style="height:200px;" />
+                    <div class="cource-det">
+                        <h6>Amey Ransinge </h6>
+                        <ul>
+                            <li><i class="fas fa-graduation-cap">.Net Full Stack Developer</i></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <hr />
+            </div>
+
+            <div class="col-md-12">
+                <a href="/out-students-placed-in-top-companies" class="btn btn-primary form-control" style="background-color: #0d6efd">View All</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="popular-cources" style="margin-top:0px;padding:0px;">
+    <div class="container">
+        <div class="session-title row">
+            <h2 style="color:#e74c3c">Student Reviews</h2>
+        </div>
+        <div class="row courc-ro">
+            <div class="col-md-4">
+                <div class="courc-card">
+                    <div style="text-align:center">
+                        <img src="~/assets/PlacementPhotos/male.png" style="height:120px;width:120px;" />
+                    </div>
+                    <p style="padding:7px;text-align:justify">
+                        Specially Thanks to Yuvraj Sir and Leena Ma'am . My experience at CIIT Training Institute has been outstanding. The institute's commitment to excellence, coupled with the dedication of its instructors and staff, sets it apart.
+                        <a href="https://g.co/kgs/hKktkt" target="_blank">Read Complete Feedback</a>
+                    </p>
+                    <div class="cource-det">
+                        <h6>Akash Barage </h6>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="courc-card">
+                    <div style="text-align:center">
+                        <img src="~/assets/PlacementPhotos/male.png" style="height:120px;width:120px;" />
+                    </div>
+                    <p style="padding:7px;text-align:justify">
+                        recently completed the .NET Certification Course at  CIIT training institute and I can't speak highly enough about the experience! The course content was well-structured and covered everything from the fundamentals of .NET to advanced
+                        <a href="https://g.co/kgs/jmC75m" target="_blank">Read Complete Feedback</a>
+
+
+                    </p>
+                    <div class="cource-det">
+                        <h6>Pratik Dahiwade </h6>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="courc-card">
+                    <div style="text-align:center">
+                        <img src="~/assets/PlacementPhotos/male.png" style="height:120px;width:120px;" />
+                    </div>
+                    <p style="padding:7px;text-align:justify">
+                        CIIT is one of the best institute for IT training. Staff is very supportive. Trainers are very good and experienced. They provided fully practical knowledge. My over all experience is very good. Thanks to CIIT team. Special thanks to yuvraj sir.
+                        <a href="https://g.co/kgs/SWa9Gs" target="_blank">Read Complete Feedback</a>
+                    </p>
+                    <div class="cource-det">
+                        <h6>Sujitkumar Kharade </h6>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="courc-card">
+                    <div style="text-align:center">
+                        <img src="~/assets/PlacementPhotos/male.png" style="height:120px;width:120px;" />
+                    </div>
+                    <p style="padding:7px;text-align:justify">
+                        It has been a nice learning experience with the institute.
+                        Teachers are really good and are ready to help whenever needed. I would recommend CIIT institute for students who want learn programming languages.
+                        <a href="https://g.co/kgs/c4mdWe" target="_blank">Read Complete Feedback</a>
+                    </p>
+                    <div class="cource-det">
+                        <h6>Deep Dodia</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="courc-card">
+                    <div style="text-align:center">
+                        <img src="~/assets/PlacementPhotos/male.png" style="height:120px;width:120px;" />
+                    </div>
+                    <p style="padding:7px;text-align:justify">
+                        CIIT is a great place to learn coding in JavaScript, REACT, HTML, CSS, Bootstrap, SQL etc. the lot. The staff are very nice and flexible, the atmosphere is great for study and practice. They have a separate practice room/lab where you can work on your code and projects.
+                    </p>
+                    <div class="cource-det">
+                        <h6>Shweta Patel </h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="courc-card">
+                    <div style="text-align:center">
+                        <img src="~/assets/PlacementPhotos/male.png" style="height:120px;width:120px;" />
+                    </div>
+                    <p style="padding:7px;text-align:justify">
+                        Specially Thanks to Yuvraj Sir and Leena Ma'am . My experience at CIIT Training Institute has been outstanding. The institute's commitment to excellence, coupled with the dedication of its instructors and staff, sets it apart.
+                        <a href="https://g.co/kgs/hKktkt" target="_blank">Read Complete Feedback</a>
+                    </p>
+                    <div class="cource-det">
+                        <h6>Akash Barage</h6>
+
+                    </div>
+                </div>
+                <hr />
+            </div>
+
+            <div class="col-md-12">
+                <a href="#" class="btn btn-primary form-control" style="background-color: #0d6efd">View All</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- ################# University Number Starts Here#######################--->
+
+
+<div class="doctor-message">
+    <div class="inner-lay">
+        <div class="container">
+            <div class="row session-title">
+                <h1>CIIT Training Institute Pvt Ltd</h1>
+                <p>
+                    <h5>Where Learning Knows No Limits.</h5>
+
+                    <h6>
+                        Join the league of achievers we offer at CIIT Training Institute.
+                        where dreams find direction.
+                    </h6>
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 numb">
+                    <h3><span id="experienceCounter">0</span>+</h3>
+                    <span>YEARS OF EXPERIENCE</span>
+                </div>
+                <div class="col-sm-3 numb">
+                    <h3><span id="coursesCounter">0</span>+</h3>
+                    <span>COURSES</span>
+                </div>
+                <div class="col-sm-3 numb">
+                    <h3><span id="staffCounter">0</span>+</h3>
+                    <span>QUALIFIED STAFF</span>
+                </div>
+                <div class="col-sm-3 numb">
+                    <h3><span id="certificationsCounter">0</span>+</h3>
+                    <span>MASTER CERTIFICATIONS</span>
+                </div>
+            </div>
+
+            @* <div class="row">
+            <div class="col-sm-3 numb">
+            <h3>14+</h3>
+            <span>YEARS OF EXPEREANCE</span>
+            </div>
+            <div class="col-sm-3 numb">
+            <h3>100+</h3>
+            <span>COURSES</span>
+            </div>
+            <div class="col-sm-3 numb">
+            <h3>52+</h3>
+            <span>QUALIFIED STAFF</span>
+            </div>
+            <div class="col-sm-3 numb">
+            <h3>18+</h3>
+            <span>MASTER CERTIFICATIONS</span>
+            </div>
+            </div> *@
+        </div>
+    </div>
+</div>
+<!-- ################# Our Instructors Starts Here#######################--->
+<div class="our-instructor">
+    <div class="container">
+        <div class="session-title row">
+            <h2>Our Instructors</h2>
+        </div>
+        <div class="instruct-row row">
+            <div class="col-md-3">
+                <div class="instruct-card">
+                    <img src="~/assets/Staff/Yuvraj.jpeg" alt="" style="height:200px;min-width:160px">
+                    <h6>Yuvraj Gadadare</h6>
+                    <p>Director, Mentor for .Net, Java, Python, DevOps, Technical Expert</p>
+                    <ul>
+                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href=""><i class="fab fa-pinterest-p"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+       @*      <div class="col-md-3">
+                <div class="instruct-card">
+                    <img src="~/assets/Staff/Suraj.jpeg" alt="" style="height:200px;min-width:160px">
+                    <h6>Suraj Dudhawade</h6>
+                    <p>Mentor for .Net, Java, Python, Senior Java Developer</p>
+                    <ul>
+                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href=""><i class="fab fa-pinterest-p"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="instruct-card">
+                    <img src="~/assets/Staff/Rupesh.jpeg" alt="" style="height:200px;min-width:160px">
+                    <h6>Rupesh Dabhade</h6>
+                    <p>Mentor for .Net, Java, Python, Senior .Net Developer</p>
+                    <ul>
+                        <li><a href=""><i class="fab fa-facebook-f"></i><a></a></li>
+                        <li><a href="https://x.com/DhabadeRupesh?t=lKkgVGPRXYXNs4CjVmyZ8g&s=09"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/rupesh-dhabade-22319a126?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href=""><i class="fab fa-pinterest-p"></i></a></li>
+                    </ul>
+                </div>
+            </div> *@
+            <div class="col-md-3">
+                <div class="instruct-card">
+                    <img src="~/assets/Staff/swapnil.jpg" alt="" style="height:200px;min-width:160px">
+                    <h6>Swapnil Dhaygude</h6>
+                    <p>Mentor for .Net, Html, CSS, JS, Front End Developer</p>
+                    <ul>
+                        <li><a href=""><i class="fab fa-facebook-f"></i><a></a></li>
+                        <li><a href="https://x.com/spdhaigude?t=lVzDSOAvmSNXig0AaN35Pg&s=08"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fab fa-linkedin-in"></i></li>
+                        <li><a href=""><i class="fab fa-pinterest-p"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="instruct-card">
+                    <img src="~/assets/Staff/Tejas.jpeg" alt="" style="height:200px;min-width:160px">
+                    <h6>Tejas gadadare</h6>
+                    <p> Mentor for .Net, Html, CSS, JS, Front End Developer</p>
+                    <ul>
+                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://x.com/Tejasgadadare?t=b2354pBnU0xRaCAh35kP9Q&s=08"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href=""><i class="fab fa-pinterest-p"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="instruct-card">
+                    <img src="~/assets/Staff/Rohit.jpeg" alt="" style="height:200px;min-width:160px">
+                    <h6>Rohit Lonkar</h6>
+                    <p>Mentor for Java, Html, CSS, JS, Front End Developer</p>
+                    <ul>
+                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://x.com/rohitlonkar3114?t=yOa-gI4E5lCbV95LZn1c9w&s=08"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/rohit-lonkar-7426782b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href=""><i class="fab fa-pinterest-p"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="instruct-card">
+                    <img src="~/assets/Staff/Geeta.jpg" alt="" style="height:200px;min-width:160px">
+                    <h6>Geeta Gadadare</h6>
+                    <p>Mentor, HR, Senior Counselor</p>
+                    <ul>
+                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://x.com/LGadadare1008?t=TGLTSeNQaIW_uaDKg2gjLQ&s=09"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/leena-gadadare-9780b9231?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href=""><i class="fab fa-pinterest-p"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="instruct-card">
+                    <img src="~/assets/Staff/Pooja Miglani.jpg" alt="" style="height:200px;min-width:160px">
+                    <h6>Pooja Mighlani</h6>
+                    <p>Mentor for Soft Skills, HR</p>
+                    <ul>
+                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://x.com/PoojaMigz27?t=pi7GwxPWIwqMgGvcec1MHQ&s=08"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/pooja-migz-aa9699b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href=""><i class="fab fa-pinterest-p"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="instruct-card">
+                    <img src="~/assets/Staff/Pushpa.jpeg" alt="" style="height:200px;min-width:160px">
+                    <h6>Pushpa Lakade</h6>
+                    <p>HR,Counselor</p>
+                    <ul>
+                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href=""><i class="fab fa-pinterest-p"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="instruct-card">
+                    <img src="~/assets/Staff/Chetan1.JPEG" alt="" style="height:200px;min-width:160px">
+                    <h6>Chetan Sonwalkar</h6>
+                    <p>Software Engineer</p>
+                    <ul>
+                        <li><a href="https://www.facebook.com/chetansonwalkar4145?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://twitter.com/SonwalkarChetan"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.linkedin.com/public-profile/settings"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="https://pin.it/1Omul89zN"><i class="fab fa-pinterest-p"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ################# Our Blog Starts Here#######################--->
+<div class="our-blog">
+    <div class="container">
+        <div class="session-title row">
+            <h2>Our Blogs</h2>
+        </div>
+
+        <div class="row-blog row" style="font-size:14px">
+            <div class="col-md-12 vbf mx-auto">
+                <div class="blog-card row">
+                    <div class="col-4">
+                        <iframe style="height:200px;width:100%" src="https://www.youtube.com/embed/XMtMNBneaM4?si=3DUTXNNgGLWsclCm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                    </div>
+                    <div class="col-8">
+
+                        <div class="date-box" style="height:200px;text-align:justify">
+                            <h5 style="text-align:center">Blog To Think before join any training institute </h5>
+                            <div>Many time candidate think to join training institute for Professional IT courses.His/Her main motive is to get better training and get first break in IT industry.We have added video blog to guide candidate to select best training institute</div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="blog-card row">
+                    <div class="col-4">
+                        <iframe style="height:200px;width:100%" src="https://www.youtube.com/embed/CYA8v6ccLEk?si=SrNYUz9mKJMTLUkg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                    </div>
+                    <div class="col-8">
+
+                        <div class="date-box" style="height:200px;text-align:justify">
+                            <h5 style="text-align:center">Blog To Importance of Practical knowledge </h5>
+                            <div>Practical–Learning means knowledge gained by implementing theory in real-life activities.Practical-Learning assists students in identifying their real interests and choose a career accordingly.</div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="blog-card row">
+                    <div class="col-4">
+                        <iframe style="height:200px;width:100%" src="https://www.youtube.com/embed/PIV6X2t6mWM?si=CLA8aPO5brxZGK1n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                    </div>
+                    <div class="col-8">
+
+                        <div class="date-box" style="height:200px;text-align:justify">
+                            <h5 style="text-align:center">Blog To Difference Between Java and Dot Net </h5>
+                            <div>Though both Java and . Net offer various advantages to building complex business apps the major difference between them is- that Java is compatible to work on any operating system whereas . Net is mainly focused on working on the different versions of Windows</div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="blog-card row">
+                    <div class="col-4">
+                        <iframe style="height:200px;width:100%" src="https://www.youtube.com/embed/idyr_GZXUb4?si=eptkDIS_931k6Kik" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                    </div>
+                    <div class="col-8">
+
+                        <div class="date-box" style="height:200px;text-align:justify">
+                            <h5 style="text-align:center">Blog To What is Full Stack Development </h5>
+                            <div>Full-stack developers are experts in both the frontend and backend; so, the full-stack of technology that makes up a website. They are proficient in both frontend and backend languages and frameworks, as well as in server, network and hosting environments.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-card row">
+                    <div class="col-4">
+                        <iframe style="height:200px;width:100%" src="https://www.youtube.com/embed/7xg4Njedl6g?si=Vc5ipeyXnW6L0SFf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                    </div>
+                    <div class="col-8">
+
+                        <div class="date-box" style="height:200px;text-align:justify">
+                            <h5 style="text-align:center">Blog To Store Employee Details. </h5>
+                            <div>Explore the art of preserving invaluable employee information, complete with profile portraits, professional designations, and a glimpse into their passions.We have added video blog for guidance of candidate.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+
+        $("#SimpleCarouselExample").carousel({
+
+            wrap: true,
+            ride: 'carousel'
+        });
+
+
+        $("#SimpleCarouselExample").hover(function () {
+            $(this).carousel('pause');
+        }, function () {
+            $(this).carousel('cycle');
+        });
+    });
+</script>
+<script>
+    window.onload = function () {
+        animateValue("experienceCounter", 0, 14, 2000);
+        animateValue("coursesCounter", 0, 100, 2000);
+        animateValue("staffCounter", 0, 52, 2000);
+        animateValue("certificationsCounter", 0, 18, 2000);
+    };
+
+    function animateValue(id, start, end, duration) {
+        if (start === end) return;
+        var range = end - start;
+        var current = start;
+        var increment = end > start ? 1 : -1;
+        var stepTime = Math.abs(Math.floor(duration / range));
+        var obj = document.getElementById(id);
+        var timer = setInterval(function () {
+            current += increment;
+            obj.innerHTML = current;
+            if (current === end) {
+                clearInterval(timer);
+            }
+        }, stepTime);
+    }
+
+</script>
+@*
+<script>
+    $(document).ready(function () {
+        // Enable carousel functionality
+        $("#SimpleCarouselExample").carousel();
+
+        // Pause carousel on hover
+        $("#SimpleCarouselExample").hover(function () {
+            $(this).carousel('pause');
+        }, function () {
+            $(this).carousel('cycle');
+            interval: 2000;
+        });
+    });
+
+
+</script>  *@
+
+<script>
+
+    // $(document).ready(function () {
+    //     $('#SimpleCarouselExample').carousel({
+    //         interval: 2000, // Set the interval between slides (milliseconds)
+    //         wrap: true // Enable continuous scrolling
+    //     });
+    // });
+    //                     </script>

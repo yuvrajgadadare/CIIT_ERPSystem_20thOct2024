@@ -1,0 +1,89 @@
+﻿@* @model CIIT_NEW_WithCore.Models.RegistrationModel
+@{
+    ViewData["Title"] = "Registration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container" style="padding-top:80px;text-align:justify; font-size:16px; font-family:'Bookman Old Style'">
+
+    <div class="row">
+<div class="container" >
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+
+            <form method="post" enctype="multipart/form-data">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 style="text-align:center" class="card-title">Student Registration Form</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="form-group">
+                                <label>Student Name</label>
+                                @Html.TextBoxFor(e => e.StudentName, new { @class = "form-control" })
+                            </div>
+                           <div class="row">
+                               <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Gender</label><br />
+                                                @Html.RadioButtonFor(e => e.Gender, "Male") <span>Male</span>
+                                                @Html.RadioButtonFor(e => e.Gender, "Female") <span>Female</span>
+                                            </div>
+
+                               </div>
+                               <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Mobile Number</label>
+                                                @Html.TextBoxFor(e => e.MobileNumber, new { @class = "form-control" })
+                                            </div>
+                               </div>
+                               </div>
+                            <div class="form-group" >
+                                <label>Birth Date</label>
+                                @Html.TextBoxFor(e => e.BirthDate, new { @type = "date", @class = "form-control" })
+                            </div>
+                            <div class="form-group" ">
+                                <label>Qualification</label>
+                                @Html.TextBoxFor(e => e.Qualification, new { @class = "form-control" })
+                            </div>
+                            <div class="mb-3">
+                                <label>Email Address</label>
+                                @Html.TextBoxFor(e => e.EmailAddress, new { @class = "form-control" })
+                            </div>
+                           
+                            <div class="form-group">
+                                <label>Profile Photo</label>
+                                <input type="file" name="photo" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Registration Date</label>
+                                <input type="date" id="registrationdate" name="registrationdate" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Course</label>
+                                @Html.DropDownListFor(e => e.FeeId, ViewBag.courses as List<SelectListItem>, "Select Course", new { @class = "form-control" })
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-lg btn-success1 btn-block" type="submit">Submit</button>
+                                <span style="color:green;">@ViewBag.msg</span>
+
+                                <div class="registration">
+                                    Already Registered.
+                                    <a style="font-size:14px;" href="/Account/Login">
+                                        Login
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </form>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+
+
+ *@

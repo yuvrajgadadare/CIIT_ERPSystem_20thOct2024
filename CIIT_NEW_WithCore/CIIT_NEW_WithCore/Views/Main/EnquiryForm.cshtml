@@ -1,0 +1,172 @@
+﻿@* @model CIIT_NEW_WithCore.Models.EnquiryModel
+@{
+    ViewData["Title"] = "Enquiry Form";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .form-control{
+        font-size: 14px;
+    }
+</style>
+<div class="container col-md-6" style="padding-top:140px;text-align:justify;font-size:14px;font-family:'Bookman Old Style';background-color:white;">
+    @using(Html.BeginForm())
+    {
+        <div style="padding-left:2%;padding-right:2%;font-size:14px;">
+    <div class="row">
+        <div class="col-md-12" style="text-align:center">
+                    <h5 style="color:green">@ViewBag.msg</h5>
+
+                    <h4>Enquiry Form</h4>
+
+            </div>
+                <br />
+                <br />
+</div>
+            <div class="row">
+                <label for="inputEmail" class="col-sm-3">
+                    Branch Name
+                </label>
+                <div class="col-sm-9">
+                    @Html.DropDownListFor(e => e.BranchId, ViewBag.branches as List<SelectListItem>, "Select Branch", new { @class = "form-control" })
+
+                </div>
+            </div>
+    <div class="row">
+        <label for="inputEmail" class="col-sm-3">Candidate Name</label>
+        <div class="col-sm-9">
+            @Html.TextBoxFor(e=>e.CandidateName,new{@class="form-control"})
+
+        </div>
+    </div>
+    <div class="row">
+        <label for="inputPassword" class="col-sm-3 col-form-label">Gender</label>
+        <div class="col-sm-9">
+            @Html.RadioButtonFor(e => e.Gender, "Male")<span> Male</span>
+            @Html.RadioButtonFor(e => e.Gender, "Female")<span> Female</span>
+
+        </div>
+    </div>
+    <div class="row">
+        <label for="inputPassword" class="col-sm-3 col-form-label">Email Address</label>
+        <div class="col-sm-9">
+            @Html.TextBoxFor(e=>e.EmailAddress,new{@class="form-control"})
+
+        </div>
+    </div>
+
+    <div class="row">
+        <label for="inputPassword" class="col-sm-3 col-form-label">Mobile Number</label>
+        <div class="col-sm-9">
+            @Html.TextBoxFor(e => e.MobileNumber, new { @class = "form-control" })
+
+        </div>
+    </div>
+            <div class="row">
+                <label for="inputPassword" class="col-sm-3 col-form-label">Local Address</label>
+                <div class="col-sm-9">
+                    @Html.TextBoxFor(e => e.LocalAddress, new { @class = "form-control" })
+
+                </div>
+            </div>
+
+
+    <div class="row">
+        <label for="inputPassword" class="col-sm-3 col-form-label">Qualification</label>
+        <div class="col-sm-9">
+                    @Html.DropDownListFor(e => e.Qualification, ViewBag.qualifications as List<SelectListItem>, "Select Qualification", new { @class = "form-control" })
+
+        </div>
+    </div>
+    <div class="row">
+        <label for="inputPassword" class="col-sm-3 col-form-label">Birth Date</label>
+        <div class="col-sm-9">
+            @Html.TextBoxFor(e => e.BirthDate,new{@type="date", @class = "form-control" })
+
+        </div>
+    </div>
+    <div class="row">
+                <label for="inputPassword" class="col-sm-3 col-form-label">Enquiry For</label>
+    </div>
+    <div class="row">
+
+                <div class="col-sm-12 col-form-label">
+            <div class="row">
+                    <div style="height:100px;margin-left:2%; overflow:scroll" class="form-control">
+                            <div class="row">
+
+            @for(int i=0;i<Model.enquiryfors.Count();i++)
+                {
+
+                                <div class="col-md-6">
+                                    @Html.CheckBoxFor(e => Model.enquiryfors[i].IsSelected) <span>@Model.enquiryfors[i].EnquiryFor</span>
+                                    @Html.HiddenFor(e => Model.enquiryfors[i].EnquiryForId)
+                                    @Html.HiddenFor(e => Model.enquiryfors[i].EnquiryFor)
+
+                                </div>
+
+                }
+                            </div>
+                        </div>
+
+          </div>
+        </div>
+    </div>
+
+            <div class="row">
+                <label for="inputPassword" class="col-sm-12 col-form-label">How did you come to know about us?</label>
+            </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                        <div style="height:120px;margin-left:2%; overflow:scroll" class="form-control">
+                            <div class="row">
+
+                    @for (int i = 0; i < Model.leadsources.Count(); i++)
+                    {
+                        <div class="col-md-6">
+                            @Html.CheckBoxFor(e => Model.leadsources[i].IsSelected) <span>@Model.leadsources[i].SourceName</span>
+                            @Html.HiddenFor(e => Model.leadsources[i].SourceId)
+                            @Html.HiddenFor(e => Model.leadsources[i].SourceName)
+                        </div>
+                    }
+                            </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <div class="row">
+                <label for="inputPassword" class="col-sm-12 col-form-label">Tick your Interesting Training</label>
+            </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                        <div style="height:150px;margin-left:2%;width:100%;overflow:scroll" class="form-control">
+                        <div class="row">
+                    @for (int i = 0; i < Model.topics.Count(); i++)
+                    {
+                        <div class="col-md-6">
+                            @Html.CheckBoxFor(e => Model.topics[i].IsSelected) <span>@Model.topics[i].TopicName</span>
+                            @Html.HiddenFor(e => Model.topics[i].TopicId)
+                            @Html.HiddenFor(e => Model.topics[i].TopicName)
+                        </div>
+                    }
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+
+    <div class="row">
+        <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+            </div>
+        </div>
+    }
+</div>
+ *@

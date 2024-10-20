@@ -1,0 +1,322 @@
+﻿@model IEnumerable< ERPSystem_Models.EnquiryModel>
+@{
+    ViewData["Title"] = "Enquiry";
+    Layout = "~/Areas/Counsellor/Views/_CounsellorLayout.cshtml";
+}
+
+<link href="~/assets/vendor/simple-datatables/style.css" rel="stylesheet">
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<style>
+    table{
+        font-size:12px;
+    }
+
+ 
+    .form-control {
+        font-size: 12px
+    }
+
+    label {
+        font-size: 12px
+    }
+
+    span {
+        font-size: 12px
+    }
+
+    input[type=text] {
+        font-size: 12px
+    }
+ 
+</style>
+<script>
+    var enquiry_id = 0;
+    var message_id = 0;
+    var enquiryids = "";
+    function SelectAll() {
+        chk = document.getElementById("chkall");
+        enquiryids = "";
+        checkboxes = document.getElementsByName('chk');
+        for (var i = 0, n = checkboxes.length; i < n; i++) {
+            if (chk.checked) {
+                checkboxes[i].checked = true;
+                enquiryids += "," + checkboxes[i].value;
+            }
+            else
+            checkboxes[i].checked = false;
+          
+               
+            }
+        alert(enquiryids);
+        }
+ 
+
+    function ViewEnquiry(eid){
+        enquiry_id = eid;
+        $("#enquirymodal").modal("show");
+        $.ajax({
+            url: '/Counsellor/Enquiry/GetEnquiry/'+eid,
+            method:'get',
+            success: function (resp) {
+              //  console.log(resp);
+                var data = "<tr><td>Date:</td><td>" + resp.enquiry_date + "</td></tr>";
+                data += "<tr><td>Name:</td><td>" + resp.candidate_name + "</td></tr>"
+                data += "<tr><td>Gender:</td><td>" + resp.enquiry_date + "</td></tr>"
+                data += "<tr><td>Birth Date:</td><td>" + resp.birth_date + "</td></tr>"
+                data += "<tr><td>Qualification:</td><td>" + resp.qualification + "</td></tr>"
+                data += "<tr><td>Email:</td><td>" + resp.email_address + "</td></tr>"
+                data += "<tr><td>Mobile:</td><td>" + resp.mobile_number + "</td></tr>"
+                data += "<tr><td>Address:</td><td>" + resp.enquiry_date + "</td></tr>"
+                data += "<tr><td>Enquiry For:</td><td>" + resp.local_address + "</td></tr>"
+                data += "<tr><td>Sources:</td><td>" + resp.lead_sources + "</td></tr>"
+                data += "<tr><td>Trainings:</td><td>" + resp.interested_topics + "</td></tr>"
+                
+                $("#tbldata").html(data)
+             
+            }
+        })
+        FetchFollowUps(eid);
+    }
+
+    function FetchFollowUps(enquiry_id) {
+     
+        $.ajax({
+            url: '/Counsellor/Enquiry/GetEnquiryWiseFollowUps/' + enquiry_id,
+            method: 'get',
+            success: function (resp) {
+                console.log(resp);
+                console.log(enquiry_id);
+                $("#tblfollowupdata").empty();
+                $.each(resp, function (i, d) {
+                    $("#tblfollowupdata").append("<tr><td>" + (i + 1) + "</td><td>" + d.follow_up_date + "</td><td>" + d.follow_up_by + "</td><td>" + d.description + "</td></tr>")
+
+                })
+            }
+        });
+    }
+
+    function SubmitFollowup() {
+        var date = $("#txtfollowup_date").val();
+        var followupby = $("#txtfollowup_by").val();
+        var description = $("#txtdescription").val();
+        var st = { "enquiry_id": enquiry_id, "follow_up_date": date, "follow_up_by":followupby,"description":description}
+        $.ajax({
+            url: '/Counsellor/Enquiry/AddFolloup',
+            method:'post',
+            data:st,
+            success: function (resp) {
+                alert(resp);
+                ClearData();
+                FetchFollowUps(enquiry_id);
+            }
+        })
+    }
+
+    function SendEmail() {
+        
+        checkboxes = document.getElementsByName('chk');
+        
+        for (var i = 0, n = checkboxes.length; i < n; i++) {
+            if (checkboxes[i].checked) {
+                console.log(checkboxes[i].value);
+                enquiryids += "," + checkboxes[i].value;
+            }
+        }
+        $.ajax({
+            url: '/Counsellor/Enquiry/GetPromotionalMessages',
+            method:'get',
+            success: function (resp) {
+                $("#tblmsgdata").empty();
+                $.each(resp, function (i, d) {
+                    $("#tblmsgdata").append("<tr><td><input type='radio' name='rd' value='"+d.message_id+"' onchange='SelectMessage("+d.message_id+")' /></td><td>"+d.message+"</td></tr>");
+                })
+            }
+        })
+        $("#smsmodal").modal("show");
+    }
+
+    function SelectMessage(mid){
+        message_id = mid;
+    }
+
+    function SendMessage() {
+
+        var st = { "enquiry_ids": enquiryids, "message_id": message_id };
+        $.ajax({
+            url: '/Counsellor/Enquiry/AddPromotionalMessage',
+            method: 'post',
+            data:st,
+            success: function (resp) {
+                alert(resp);
+                $("#smsmodal").modal("hide");
+
+            }
+        })
+
+    }
+    function ClearData() {
+        $("#txtfollowup_date").val("");
+       $("#txtfollowup_by").val("");
+       $("#txtdescription").val("");
+    }
+    </script>
+<div class="row">
+    <div class="col-md-10">
+        <input type="checkbox" id="chkall" onchange="SelectAll()" />
+        <input type="button" value="Send Email" onclick="SendEmail()" class="btn btn-sm btn-primary" />
+
+    </div>
+    <div class="col-md-2">
+        <a href="/Counsellor/Enquiry/NewEnquiry">New Enquiry</a>
+
+
+    </div>
+</div>
+<div class="modal fade" id="smsmodal" tabindex="-1" data-bs-backdrop="false">
+    <div class="modal-dialog  modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Select Message Template</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table">
+                            <tbody id="tblmsgdata"></tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+
+               
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" onclick="SendMessage()" class="btn btn-primary">Send Message</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="enquirymodal" tabindex="-1" data-bs-backdrop="false">
+    <div class="modal-dialog  modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Enquiry Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                  <div class="col-md-6">
+                        <table class="table">
+                            <tbody id="tbldata"></tbody>
+                        </table>
+                  </div>
+                    <div class="col-md-6">
+                        <div class="card" style="font-size:12px;">
+                            <div class="card-header">
+                                <h4>Folloup</h4>
+                            </div>
+                            <div class="card-body" style="padding-top:1%">
+                                <div class="mb-3">
+                                    <label>Follow Up Date</label>
+                                    <input type="date" class="form-control" id="txtfollowup_date"/>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Follow Up By</label>
+                                    <input type="text" class="form-control" id="txtfollowup_by" />
+                                </div>
+                                <div class="mb-3">
+                                    <label>Description</label>
+                                    <textarea class="form-control" id="txtdescription" >
+
+                                    </textarea>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <input type="button" value="Submit" id="btnsubmit" onclick="SubmitFollowup()" class="btn btn-sm btn-primary" />
+                            </div>
+                        </div>
+                    </div>
+              </div>
+               
+              <div class="row">
+                  <div class="card">
+                      <div class="card-header">
+                            <h4>Follow Ups</h4>
+                      </div>
+                      <div class="card-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Date</th>
+                                        <th>Follow Up By</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tblfollowupdata"></tbody>
+                            </table>
+                      </div>
+                  </div>
+                
+              </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div><!-- End Disabled Backdrop Modal-->
+        <table class="table datatable">
+            <thead>
+             <tr>
+            <th>Action</th>
+            <th></th>
+            <th>#</th>
+            <th>Candidate Name</th>
+            <th data-type="date" data-format="DD-MM-YYYY">Date</th>
+                    <th>Gender</th>
+                    <th>Email </th>
+                    <th>Mobile</th>
+                <th data-type="date" data-format="DD-MM-YYYY">Birth Date</th>
+                    <th>Qualification</th>
+                    <th>Status</th>
+                    <th>Branch</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    int i = 1;
+                }
+                @foreach(var item in Model)
+                {
+                   <tr>
+                <td><input type="button" value="View" class="btn btn-sm btn-info" onclick="ViewEnquiry(@item.enquiry_id)" /></td>
+                <td><input type="checkbox" name="chk" value="@item.enquiry_id" /></td>
+                <td>@i</td>
+                <td>@item.candidate_name</td>
+                       <td>@item.enquiry_date.ToShortDateString()</td>
+                       <td>@item.gender</td>
+                      <td>@item.email_address</td>
+                    <td>@item.mobile_number</td>
+                        <td>@item.birth_date.ToShortDateString()</td>
+                    <td>@item.qualification</td>
+                    <td>@item.status</td>
+                    <td>@item.branch_name</td>
+            </tr>
+                    i++;
+                }
+            </tbody>
+</table>
+   
+
+ 
+<script src="~/assets/vendor/simple-datatables/simple-datatables.js"></script>
+<script src="~/assets/vendor/tinymce/tinymce.min.js"></script>

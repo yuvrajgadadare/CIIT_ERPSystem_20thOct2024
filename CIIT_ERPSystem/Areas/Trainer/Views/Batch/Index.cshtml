@@ -1,0 +1,58 @@
+﻿@model IEnumerable< ERPSystem_Models.BatchModel>
+@{
+    ViewData["Title"] = "Batches";
+    Layout = "~/Areas/Trainer/Views/Shared/TrainerLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="card">
+
+<table class="table datatable">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Batch Name</th>
+            <th>Topic Name</th>
+            <th>Trainer Name</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Batch Time</th>
+            <th>#Students</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int i = 1;
+        }
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@i</td>
+                <td>@item.batch_name</td>
+                <td>@item.topic_name</td>
+                <td>@item.trainer_name</td>
+                <td>@item.start_date.ToShortDateString()</td>
+                <td>@item.end_date.ToShortDateString()</td>
+                <td>@item.batch_time</td>
+                <td>@item.student_count</td>
+                <td>
+                    @if (!item.is_schedule_generated)
+                    {
+                        <input style="font-size:12px;" type="button" value="Generate Schedule" onclick="GenerateSchedule(@item.batch_id)" class="btn btn-sm btn-primary" />
+                    }
+                    else
+                    {
+                                <a style="font-size:12px;" href="/Trainer/Batch/Details/@item.batch_id" class="btn btn-sm btn-primary">Batch Details</a>
+                    }
+                    <input type="button" id="btnaddstudents" value="Add Students" onclick="ViewStudents(@item.batch_id)" style="font-size:12px;" />
+                </td>
+            </tr>
+            i++;
+        }
+    </tbody>
+</table>
+
+                    </div>
+                    </div>
+                

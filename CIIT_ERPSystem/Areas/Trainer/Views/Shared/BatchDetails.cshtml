@@ -1,0 +1,22 @@
+﻿<div class="col-md-12">
+    <div class="table-responsive">
+
+    <table class="table table-bordered">
+        <tr>
+            <td>Batch Name: <b>@ViewBag.batch.batch_name</b></td>
+         
+            <td>Topic: <b>@ViewBag.batch.topic_name</b></td>
+            </tr>
+            <tr>
+            <td>Trainer: <b>@ViewBag.batch.trainer_name</b></td>
+           
+            <td>Start Date: <b>@ViewBag.batch.start_date.ToShortDateString()</b></td>
+            </tr>
+            <tr>
+                <td>Timing: <b>@ViewBag.batch.batch_time</b></td>
+           
+                <td>#Students: <b>@ViewBag.batch.student_count</b></td>
+        </tr>
+    </table>
+    </div>
+</div>

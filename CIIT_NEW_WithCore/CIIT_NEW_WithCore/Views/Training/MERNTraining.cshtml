@@ -1,0 +1,435 @@
+﻿@{
+    ViewData["Title"] = " MERN Full Stack Development";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+
+    nav > .nav.nav-tabs {
+        border: none;
+        color: #fff;
+        background: #272e38;
+        border-radius: 0;
+    }
+
+    nav > div a.nav-item.nav-link,
+    nav > div a.nav-item.nav-link.active {
+        border: none;
+        padding: 18px 25px;
+        color: #fff;
+        background: #272e38;
+        border-radius: 0;
+    }
+
+        nav > div a.nav-item.nav-link.active:after {
+            content: "";
+            position: relative;
+            bottom: -60px;
+            left: -50%;
+            border: 15px solid transparent;
+            border-top-color: #e74c3c;
+        }
+
+    .tab-content {
+        background: #fdfdfd;
+        line-height: 25px;
+        border: 1px solid #ddd;
+        border-top: 5px solid #e74c3c;
+        border-bottom: 5px solid #e74c3c;
+        padding: 30px 25px;
+    }
+
+    nav > div a.nav-item.nav-link:hover,
+    nav > div a.nav-item.nav-link:focus {
+        border: none;
+        background: #e74c3c;
+        color: #fff;
+        border-radius: 0;
+        transition: background 0.20s linear;
+    }
+</style>
+ 
+<div class="container" style="padding-top:80px;text-align:justify;font-size:14px;font-family:'Bookman Old Style'">
+    <img src="~/assets/images/Mern.png" style="height:300px;width:100%" />
+
+    <h4 style="margin-top:2%;text-align:left">
+        Each year over 800 students secure positions as MERN Full Stack Developers in the IT industry.
+    </h4>
+    <div>
+        <p>
+            The MERN stack is a collection of technologies that comprise a full-stack capable of building applications with JavaScript.Because JavaScript is a front-end programming language, developers need additional tools in order to ensure functionality on the back end. MongoDB, Express, React, and Node
+        </p>
+        <p>
+            There are four components of the MERN stack are following .
+            The first component is MongoDB, which is a NoSQL database management system.
+            The second MERN stack component is ExpressJS. It is a backend web application framework for NodeJS.
+            The third component is ReactJS, a JavaScript library for developing UIs based on UI components.
+            The final component of the MERN stack is NodeJS. It is a JS runtime environment, i.e., it enables running JavaScript code outside the browser.
+        </p>
+        <p>
+            There are many good reasons to use the MERN Stack. For example, it allows the creation of a 3-tier architecture that includes frontend, backend, and database using JavaScript and JSON.
+        </p>
+        <p>
+            MongoDB, which is the base of the MERN stack, is designed to store JSON data natively. Everything in it, including CLI and query language, is built using JSON and JS. The NoSQL database management system works well with NodeJS and thus, allows manipulating, representing, and storing JSON data at every tier of the application.
+            It comes in a variant called MongoDB Atlas that further eases database management by offering an auto-scaling MongoDB cluster on any cloud provider and with just a few clicks.
+            Express is a server-side framework that wraps HTTP requests and responses and makes mapping URLs to server-side functions easy. This perfectly complements the ReactJS framework, a front-end JS framework for developing interactive UIs in HTML while communicating with the server.
+             As the two technologies work with JSON, data flows seamlessly, making it possible to develop fast and debug easily. To make sense of the entire system, you need to understand only one language, i.e., JavaScript and the JSON document structure.
+        </p>
+    </div>
+    <div>
+        <p>CIIT Training Institute offers comprehensive MERN stack training for both Freshers and working professionals. With a track record of training over 10,000 students in MERN stack technology, many have gone on to land coveted positions as MERN stack Developers in their dream companies.</p>
+        <p>At CIIT Training Institute, our MERN stack training is meticulously crafted with an updated syllabus and hands-on experience on live projects. We ensure that upon completion of the training, students possess the skills to independently develop projects with confidence. Our guarantee extends to empowering every trainee to confidently present themselves for lucrative opportunities in the industry.</p>
+    </div>
+    <div>
+        <div style="height:30px;width:100%;background-color:#007bff;color:white;text-align:center">
+            <h4>Why CIIT?</h4>
+        </div>
+        <ul style="font-size:14px;list-style:none;margin-top:2%">
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Latest Curriculum</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Highly Experienced Trainers</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Chance to work with our development team</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Practically Work on Projects & Case Studies</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Real time project Training</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> 100% Job assurance</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Weekly Mock & HR Interviews </h6></li>
+            @* <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> 100% Job assurance</h6></li> *@
+        </ul>
+    </div>
+    <div>
+        <div style="height:30px;width:100%;background-color:#007bff;color:white;text-align:center">
+            <h4>Course Curriculum</h4>
+        </div>
+
+        <p style="margin-top:2%">
+            This comprehensive MERN stack Full Stack Development course is perfect for individuals keen on building projects from the ground up. CIIT stands out as the premier platform for aspiring professionals aiming to carve out an expansive career as a MERN stack Developer in the dynamic IT industry. With CIIT, your journey to becoming a proficient developer knows no bounds.
+        </p>
+    </div>
+    <div>
+
+
+
+        <div class="" style="text-align:justify;font-family:'Bookman Old Style'">
+            <h4 style="margin-top:2%">Various MERN stack Courses offered by CIIT Training Institute</h4>
+
+
+            <div class="row">
+                <div class="col-md-9">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 ">
+                        <nav>
+                            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">MERN Stack Development<br /> With Stipend</a>
+<<<<<<< HEAD
+                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Full Stack<br /> Development</a>
+=======
+                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Full Stack Development</a>
+>>>>>>> 31540cd491063ddadd76556de9cc75ac2c42f7d6
+                                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">MERN Stack for Working <br />Professionals</a>
+                            </div>
+                        </nav>
+                        <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" style="padding:2%">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card border-primary shadow-sm  mb-4">
+                                            <div class="card-body">
+                                                <h4 style="color:#e74c3c">CIIT Gaurantee for Quality Training and Live Project with 100% Job Placement</h4>
+                                                <br />
+                                                <h5 class="card-title"><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Who can do this course</h5>
+                                                <p class="card-text" style="padding-left:10%"> Any Graduate ,Non IT / IT professionals</p>
+                                                <h5 class="card-title"><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Total Duration</h5>
+                                                <p class="card-text" style="padding-left:10%"> 4 Months Training and gauranteed job from 5th month</p>
+                                                <h5><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Key Points for Freshers</h5>
+                                                <ul style="padding-left:10%">
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  100% Real time Project Training</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Training will be provided by Industry experts</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Mock Interviews will be conducted 2 days a week</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Best Platform for freshers to get their dream job in IT Industry</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Weekly Assessment</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Unlimited Job Calls </li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  10+ Mini Projects and 2 Real Time Industry Projects</li>
+                                                </ul>
+                                                <h5><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Course Contents</h5>
+                                                <ul style="padding-left:10%">
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> Front End</h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Html,Html5</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> CSS,CSS3</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Bootstrap 5</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JavaScript</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JQuery</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> TypeScript</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Mastering front-end tools</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>AngularJS</li>
+                                                        </ul>
+                                                        <hr />
+                                                    </li>
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> RDBMS</h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> MongoDB</li>
+                                                        </ul>
+                                                        <hr />
+
+                                                    </li>
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> MERN stack </h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JavaScript Object model</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> RESTFUL API's</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> MongoDB</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> TypeScript</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>ExpressJS</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>ReactJS </li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Visual Studio VS code</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>  Web API's</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> NodeJS</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>NoSQL databases </li>
+                                                                                                      
+                                                        </ul>
+                                                        <hr />
+
+                                                    </li>
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> More Important Topics </h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> AWS Services</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Agile Development Methodologies</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> GraphQL</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> GitHub</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Troubleshooting And Debugging</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>  Developing And Maintaining Web Applications</li>
+                                                        </ul>
+                                                        <hr />
+
+                                                    </li>
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> Project </h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> 2 Real Time Projects</li>
+
+
+                                                        </ul>
+                                                        <hr />
+
+                                                    </li>
+
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" style="padding:2%">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card border-primary shadow-sm  mb-4">
+                                            <div class="card-body">
+                                                <h4 style="color:#e74c3c">CIIT Gaurantee for 100% Job Assistance on industry oriented Dot Net Training with live project with </h4>
+                                                <br />
+
+                                                <h5 class="card-title"><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Who can do this course</h5>
+                                                <p class="card-text" style="padding-left:10%"> Any Graduate ,Non IT / IT professionals</p>
+                                                <h5 class="card-title"><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Total Duration</h5>
+                                                <p class="card-text" style="padding-left:10%"> 6 Months Training With Real time project from Industry Experts</p>
+                                                <h5><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Key Points for Freshers</h5>
+                                                <ul style="padding-left:10%">
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  100% Real time Project Training</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Training will be provided by Industry experts</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Mock Interviews will be conducted 2 days a week</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Best Platform for freshers to get their dream job in IT Industry</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Weekly Assessment</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Unlimited Job Calls </li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  10+ Mini Projects and 2 Real Time Industry Projects</li>
+                                                </ul>
+                                                <h5><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Course Contents</h5>
+                                                <ul style="padding-left:10%">
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> Front End</h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Html,Html5</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> CSS,CSS3</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Bootstrap 5</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JavaScript</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JQuery</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> TypeScript</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Mastering front-end tools</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>AngularJS</li>
+                                                        </ul>
+                                                        <hr />
+                                                    </li>
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> RDBMS</h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> MongoDB</li>
+                                                        </ul>
+                                                        <hr />
+
+                                                    </li>
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> MERN stack </h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JavaScript Object model</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> RESTFUL API's</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> MongoDB</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> TypeScript</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>ExpressJS</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>ReactJS</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Visual Studio VS code</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>  Web API's</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> NodeJS</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>NoSQL databases </li>
+
+                                                        </ul>
+                                                        <hr />
+
+                                                    </li>
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> More Important Topics </h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> AWS Services</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Agile Development Methodologies</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> GraphQL</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> GitHub</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Troubleshooting And Debugging</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>  Developing And Maintaining Web Applications</li>
+                                                        </ul>
+                                                        <hr />
+
+                                                    </li>
+
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> Project </h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> 2 Real Time Projects</li>
+
+
+                                                        </ul>
+                                                        <hr />
+
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" style="padding:2%">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card border-primary shadow-sm  mb-4">
+                                            <div class="card-body">
+                                                <h4 style="color:#e74c3c">CIIT Gaurantee for real time industry  training with live project</h4>
+                                                <br />
+                                                <h5 class="card-title"><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Who can do this course</h5>
+                                                <p class="card-text" style="padding-left:10%">  IT professionals</p>
+                                                <h5 class="card-title"><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Total Duration</h5>
+                                                <p class="card-text" style="padding-left:10%"> 2-3 Months</p>
+                                                <h5><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Key Points for Working Professionals</h5>
+                                                @* <ul style="padding-left:10%">
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  100% Real time Project Training</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Training will be provided by Industry experts</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Mock Interviews </li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  We love to help working professionals in their current project</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Weekly Assessment</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Unlimited Job Calls for switch from current job </li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  10+ Mini Projects and 2 Real Time Industry Project</li>
+                                                </ul> *@
+                                                <ul style="padding-left:10%">
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  100% Job Gurantee</li>
+                                                </ul>
+                                                <h5><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Course Contents</h5>
+                                                <ul style="padding-left:10%">
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> Front End</h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Html,Html5</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> CSS,CSS3</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Bootstrap 5</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JavaScript</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JQuery</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> TypeScript</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Mastering front-end tools</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>AngularJS</li>
+                                                        </ul>
+                                                        <hr />
+                                                    </li>
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> RDBMS</h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> MongoDB</li>
+                                                        </ul>
+                                                        <hr />
+
+                                                    </li>
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> MERNT Stack </h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JavaScript Object model</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> RESTFUL API's</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> MongoDB</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> TypeScript</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>ExpressJS </li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>ReactJS </li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Visual Studio VS code</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>  Web API's</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> NodeJS</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>NoSQL databases </li>
+
+                                                        </ul>
+                                                        <hr />
+
+                                                    </li>
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> More Important Topics </h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> AWS Services</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Agile Development Methodologies</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> GraphQL</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> GitHub</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Troubleshooting And Debugging</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>  Developing And Maintaining Web Applications</li>
+                                                        </ul>
+                                                        <hr />
+
+                                                    </li>
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> Project </h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> 1 Real Time Project</li>
+
+
+                                                        </ul>
+                                                        <hr />
+
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
+
+
+                <div class="col-md-3">
+                    @Html.Partial("PartialView")
+
+                </div>
+        </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,88 @@
+﻿@model ERPSystem_Models.StudentPaymentModel
+@{
+    ViewData["Title"] = "Pay Fees";
+    Layout = "~/Areas/Accountant/Views/Shared/AccountantLayout.cshtml";
+}
+<script>
+    $(document).ready(function () {
+        $("#registration_id").change(function () {
+            GetRegistrationDettails();
+        })
+    })
+
+    function GetRegistrationDettails() {
+        var reg_id = $("#registration_id").val();
+        $.ajax({
+            url: '/Accountant/Student/GetRegistrationDetails/'+reg_id,
+            method:'get',
+            success: function (resp) {
+                var d = resp;
+                console.log(d);
+                var data = "";
+                data += "<tr><td style='text-align:right'>Course Name:</td><td>" + d.course_name + "</td></tr>";
+                data += "<tr><td style='text-align:right'>Course Fees:</td><td>" + d.fees_amount + "</td></tr>";
+                data += "<tr><td style='text-align:right'>GST:</td><td>" + d.gst + "</td></tr>";
+                data += "<tr><td style='text-align:right'>Discount:</td><td>" + d.discount + "</td></tr>";
+                data += "<tr><td style='text-align:right'>Total Fees:</td><td>" + d.final_fees_amount + "</td></tr>";
+                data += "<tr><td style='text-align:right'>Paid Amount:</td><td>" + d.paid_amount + "</td></tr>";
+                data += "<tr><td style='text-align:right'>Remaining Amount:</td><td>" + d.remaining_amount + "</td></tr>";
+                $("#tbldata").html(data);
+            }
+        })
+    }
+
+</script>
+<h5>Pay Fees</h5>
+<div class="conrainer">
+    <div class="row">
+       <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    @using(Html.BeginForm())
+                    {
+                        
+                   
+                    <div class="mb-3">
+                        <label>Select Student</label>
+                        @Html.DropDownListFor(e=>e.registration_id, ViewBag.registrations as SelectList, "Select Student", new { @class = "form-control" })
+                  </div>
+                  <div class="mb-3">
+                      <label>Payment Date:</label>
+                      @Html.TextBoxFor(e=>e.payment_date,new{@class="form-control",@type="date"})
+                  </div>
+                        <div class="mb-3">
+                            <label>Payment Amount:</label>
+                            @Html.TextBoxFor(e => e.payment_amount, new { @class = "form-control"})
+                        </div>
+                        <div class="mb-3">
+                            <label>Payment Mode:</label>
+                            @Html.TextBoxFor(e => e.payment_mode, new { @class = "form-control" })
+                        </div>
+                        <div class="mb-3">
+                            <label>Payment Description:</label>
+                            @Html.TextAreaFor(e => e.payment_description, new { @class = "form-control" })
+                        </div>
+                        <div class="mb-3">
+                           <input type="submit" value="Submit" class="btn btn-primary" />
+                            <h4>@ViewBag.msg</h4>
+                        </div>
+
+
+                    }
+                </div>
+            </div>
+       </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <table class="table">
+                        <tbody id="tbldata">
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

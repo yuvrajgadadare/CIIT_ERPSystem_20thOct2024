@@ -1,0 +1,555 @@
+﻿
+@{
+    ViewData["Title"] = "Dot Net Full Stack Development";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+ <style>
+
+    nav > .nav.nav-tabs {
+        border: none;
+        color: #fff;
+        background: #272e38;
+        border-radius: 0;
+    }
+
+    nav > div a.nav-item.nav-link,
+    nav > div a.nav-item.nav-link.active {
+        border: none;
+        padding: 15px 24px;
+        color: #fff;
+        background: #272e38;
+        border-radius: 0;
+       
+    }
+
+        nav > div a.nav-item.nav-link.active:after {
+            content: "";
+            position: relative;
+            bottom: -60px;
+            left: -50%;
+            border: 15px solid transparent;
+            border-top-color: #e74c3c;
+        }
+
+    .tab-content {
+        background: #fdfdfd;
+        line-height: 25px;
+        border: 1px solid #ddd;
+        border-top: 5px solid #e74c3c;
+        border-bottom: 5px solid #e74c3c;
+        padding: 30px 25px;
+    }
+ 
+     nav > div a.nav-item.nav-link:hover,
+    nav > div a.nav-item.nav-link:focus {
+        border: none;
+        background: #e74c3c;
+        color: #fff;
+        border-radius: 0;
+        transition: background 0.20s linear;
+    }
+</style> 
+<div class="container" id="netFullStack" style="padding-top:140px;text-align:justify;font-size:14px;font-family:'Bookman Old Style'">
+    <img src="~/assets/courses/Dot Net.jpg" style="height:200px;width:100%" />
+
+    <h4 style="margin-top:2%">
+        Every year 600+ Students get placed as a .Net Full Stack Developer in IT industry
+    </h4>
+    <div>
+        <p>
+            Dot Net is one of the most popular and widely used frameworks for developing web and mobile applications that help businesses achieve new heights smoothly. The demand for dot net development companies is overgrowing, and every industrial sector is inclined towards using it. Microsoft developed the .Net Framework, and it is an ideal platform for all technology companies. Dot Net development also helps in MVC structure and web API.
+        </p>
+        <p>
+            Furthermore, dot net development also helps transform the overall business setup and develop API for application development. Dot net development companies are multiplying as per the market demands, and because of their advancement, it’s pretty popular.
+            Also, it is popular among the leading industries due to its open-source approach and stronghold on the community. There are many similar frameworks available in the market, but the question is, why should you go with the .net framework, and what makes the platform different from others? Just have a look below as we have explained this in detail.
+            
+
+        </p>
+        <p>
+            The demand for .NET will continue to increase as long as new and better technologies are developed. For example, C# has been around for over a decade, but it’s still one of the most popular programming languages on the market today. Its popularity can be attributed to its ease of use and ability to work with other languages such as Java and JavaScript.
+            Another important factor contributing to the demand for .NET is its ability to run on multiple platforms. This makes it ideal for mobile and web applications, which are becoming increasingly popular daily as people discover new technology methods.
+           
+        </p>
+        <p>
+            .Net is a programming language for developing applications compatible with Windows, Mac OS, and Linux. It is a platform-independent programming language that provides an object-oriented programming environment and cross-platform support.
+            The demand for .Net developers is rising because it has been proven to be a robust platform for developing apps and websites. The need to hire a .NET developer is growing at an alarming rate for many reasons.
+
+        </p>
+    </div>
+    <div>
+        <p>At CIIT Training Institute, we offer comprehensive .NET training programs tailored for both freshers and working professionals. To date, we've successfully trained over 10,000 students in .NET technology, with the majority securing positions as .NET Developers in their desired companies.</p>
+        <p>Our .NET training program features an updated syllabus and hands-on experience with live projects. We guarantee that upon completion of the training, students will possess the skills to independently develop projects with confidence. They'll be fully equipped to present themselves effectively in the professional arena.</p>
+    </div>
+    <div>
+        <div style="height:30px;width:100%;background-color:#007bff;color:white;text-align:center">
+            <h4>Why CIIT?</h4>
+        </div>
+        <ul style="font-size:14px;list-style:none;margin-top:2%" >
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Latest Curriculum</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Highly Experienced Trainers</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Chance to work with our development team</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Practically Work on Projects & Case Studies</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Real time project Training</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> 100% Job assurance</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Weekly Mock & HR Interviews </h6></li>
+           @*  <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> 100% Job assurance</h6></li> *@
+        </ul>
+    </div>
+    <div>
+        <div style="height:30px;width:100%;background-color:#007bff;color:white;text-align:center">
+            <h4 >Course Curriculum</h4>
+        </div>
+        
+        <p style="margin-top:2%">This .NET Full Stack Development course offers an ideal opportunity for individuals passionate about building projects from the ground up. CIIT serves as an excellent platform for those aspiring for boundless opportunities in the IT industry as Dot Net Developers. </p>
+    </div>
+  <div>
+         
+        <div class="" style="text-align:justify;font-family:'Bookman Old Style'">
+            <h4 style="margin-top:2%;text-align:left">Various Dot Net Courses offered by CIIT Training Institute</h4>
+            <!-- Form for Download Syllabus-->
+ 
+            <button type="button" style="margin:10px 0px" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#popupModal">
+               Download Syllabus
+            </button>
+
+            <!-- Popup Modal-->
+            <div class="modal fade" id="popupModal" tabindex="-1" aria-labelledby="popupModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title"style="text-align:left"id="popupModalLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="contact_form" name="contact_form" method="post">
+                                <div class="mb-5">
+                                    <label for="email_addr">Email address</label>
+                                    <input type="email" required maxlength="50" class="form-control" id="email_addr" name="email"
+                                           placeholder="name@example.com">
+                                </div>
+                                <div class="mb-5">
+                                    <label for="name_input">Name</label>
+                                    <input type="text" required maxlength="50" class="form-control" id="name_input" name="name"
+                                           placeholder="Name">
+                                </div>
+                                <div class="mb-5">
+                                    <label for="phone_input">Phone</label>
+                                    <input type="tel" required maxlength="50" class="form-control" id="phone_input" name="Phone"
+                                           placeholder="Phone">
+                                </div>
+                                <div class="mb-5">
+                                    <label for="message">Message</label>
+                                    <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @*             ----------------------------------------------------------------------- *@
+ 
+ <div class="row">
+  <div class="col-md-9">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-xs-12" >
+                        <nav>
+                            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Dot Net Development<br /> With Stipend</a>
+ 
+                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Full Stack<br /> Development</a>
+ 
+                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Full Stack Development</a>
+ 
+                                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Dot Net For Working <br />Professionals</a>
+                                <!-- New Nav Item -->
+                                @* <a class="nav-item nav-link" id="nav-new-tab" data-toggle="tab" href="#nav-new" role="tab" aria-controls="nav-new" aria-selected="false">Quotation</a> *@
+                            </div>
+                        </nav>
+                  
+              
+             
+
+                <!-- Content for each tab -->
+                <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" style="padding:2%">
+
+                        <div class="row">
+                            <div class="col-12">
+
+                                <div class="card border-primary shadow-sm  mb-4">
+                                    <div class="card-body">
+                                        <h4 style="color:#e74c3c">CIIT Gaurantee for Quality Training and Live Project with 100% Job Placement</h4>
+                                        <br />
+                                                <h5 class="card-title"><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Who can do this course</h5>
+                                        <p class="card-text" style="padding-left:10%"> Any Graduate ,Non IT / IT professionals</p>
+                                                <h5 class="card-title"><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Total Duration</h5>
+                                        <p class="card-text" style="padding-left:10%"> 4 Months Training and gauranteed job from 5th month</p>
+                                                <h5><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Key Points for Freshers</h5>
+                                        <ul style="padding-left:10%">
+                                            <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  100% Real time Project Training</li>
+                                            <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Training will be provided by Industry experts</li>
+                                            <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Mock Interviews will be conducted 2 days a week</li>
+                                            <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Best Platform for freshers to get their dream job in IT Industry</li>
+                                            <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Weekly Assessment</li>
+                                            <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Unlimited Job Calls </li>
+                                            <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  10+ Mini Projects and 2 Real Time Industry Projects</li>
+                                        </ul>
+                                                <h5><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Course Contents</h5>
+                                        <ul style="padding-left:10%">
+                                            <li>
+                                                <h6><i class="fas fa-book" style="color:#e74c3c"></i> Front End</h6>
+                                                <ul style="padding-left:10%">
+                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Html,Html5</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> CSS,CSS3</li>
+                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Bootstrap 5</li>
+                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JavaScript</li>
+                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JQuery</li>
+                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> TypeScript</li>
+                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Angular Latest/ReactJs Latest</li>
+
+                                                </ul>
+                                                <hr />
+                                            </li>
+                                            <li>
+                                                <h6><i class="fas fa-book" style="color:#e74c3c"></i> RDBMS</h6>
+                                                <ul style="padding-left:10%">
+                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Microsoft Sql Server 2022</li>
+                                                </ul>
+                                                <hr />
+
+                                            </li>
+                                            <li>
+                                                <h6><i class="fas fa-book" style="color:#e74c3c"></i> Dot Net </h6>
+                                                <ul style="padding-left:10%">
+                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> C-Sharp</li>
+                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Ado.Net</li>
+                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> LINQ</li>
+                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Entity Framework</li>
+                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Asp.Net MVC .Net Framework</li>
+                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Asp.Net MVC Core</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Asp.Net MVC Web API's</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Asp.Net Core Web API's</li>
+                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Razor Pages</li>
+                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Blazor</li>
+
+                                                </ul>
+                                                <hr />
+
+                                            </li>
+                                            <li>
+                                                <h6><i class="fas fa-book" style="color:#e74c3c"></i> More Important Topics </h6>
+                                                <ul style="padding-left:10%">
+                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Unit Testing</li>
+                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Azure Cloud</li>
+                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> POSTMAN</li>
+                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> GitHub</li>
+                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Jenkins</li>
+                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Project Depolyment on Azure</li>
+                                                </ul>
+                                                <hr />
+
+                                            </li>
+                                            <li>
+                                                <h6><i class="fas fa-book" style="color:#e74c3c"></i> Project </h6>
+                                                <ul style="padding-left:10%">
+                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> 2 Real Time Projects</li>
+
+
+                                                </ul>
+                                                <hr />
+
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            @* <div class="col-md-3">
+                                <div class="container">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <a href="#">Java</a>
+                                        </li>
+                                         <li class="list-group-item">
+                                            <a href="#">Java</a>
+                                        </li>
+                                         <li class="list-group-item">
+                                            <a href="#">Java</a>
+                                        </li>
+                                         <li class="list-group-item">
+                                            <a href="#">Java</a>
+                                        </li>
+                                        
+                                        <li class="list-group-item">
+                                            <a href="#">Java</a>
+                                        </li> 
+                                        <li class="list-group-item">
+                                            <a href="#">Java</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="#">Java</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="#">Java</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="#">Java</a>
+                                        </li> 
+                                        <li class="list-group-item">
+                                            <a href="#">Java</a>
+                                        </li> 
+                                        <li class="list-group-item">
+                                            <a href="#">Java</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="#">Java</a>
+                                        </li> 
+                                        <li class="list-group-item">
+                                            <a href="#">Java</a>
+                                        </li> 
+                                        <li class="list-group-item">
+                                            <a href="#">Java</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="#">Java</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div> *@
+
+
+
+
+
+                                    
+
+
+                        </div>
+                    </div>
+                    @* <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <!-- Your content for Dot Net Development With Stipend -->
+                    </div> *@
+                    <!-- Content for Full Stack Development -->
+                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" style="padding:2%">
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="card border-primary shadow-sm  mb-4">
+                                        <div class="card-body">
+                                            <h4 style="color:#e74c3c">CIIT Gaurantee for Quality Training and Live Project with 100% Job Placement</h4>
+                                            <br />
+                                                    <h5 class="card-title"><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Who can do this course</h5>
+                                            <p class="card-text" style="padding-left:10%"> Any Graduate ,Non IT / IT professionals</p>
+                                                    <h5 class="card-title"><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Total Duration</h5>
+                                            <p class="card-text" style="padding-left:10%"> 4 Months Training and gauranteed job from 5th month</p>
+                                                    <h5><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Key Points for Freshers</h5>
+                                            <ul style="padding-left:10%">
+                                                <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  100% Real time Project Training</li>
+                                                <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Training will be provided by Industry experts</li>
+                                                <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Mock Interviews will be conducted 2 days a week</li>
+                                                <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Best Platform for freshers to get their dream job in IT Industry</li>
+                                                <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Weekly Assessment</li>
+                                                <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Unlimited Job Calls </li>
+                                                <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  10+ Mini Projects and 2 Real Time Industry Projects</li>
+                                            </ul>
+                                                    <h5><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Course Contents</h5>
+                                            <ul style="padding-left:10%">
+                                                <li>
+                                                    <h6><i class="fas fa-book" style="color:#e74c3c"></i> Front End</h6>
+                                                    <ul style="padding-left:10%">
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Html,Html5</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> CSS,CSS3</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Bootstrap 5</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JavaScript</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JQuery</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> TypeScript</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Angular Latest/ReactJs Latest</li>
+
+                                                    </ul>
+                                                    <hr />
+                                                </li>
+                                                <li>
+                                                    <h6><i class="fas fa-book" style="color:#e74c3c"></i> RDBMS</h6>
+                                                    <ul style="padding-left:10%">
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Microsoft Sql Server 2022</li>
+                                                    </ul>
+                                                    <hr />
+
+                                                </li>
+                                                <li>
+                                                    <h6><i class="fas fa-book" style="color:#e74c3c"></i> Dot Net </h6>
+                                                    <ul style="padding-left:10%">
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> C-Sharp</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Ado.Net</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> LINQ</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Entity Framework</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Asp.Net MVC .Net Framework</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Asp.Net MVC Core</li>
+                                                                <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Asp.Net MVC Web API's</li>
+                                                                <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Asp.Net Core Web API's</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Razor Pages</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Blazor</li>
+
+                                                    </ul>
+                                                    <hr />
+
+                                                </li>
+                                                <li>
+                                                    <h6><i class="fas fa-book" style="color:#e74c3c"></i> More Important Topics </h6>
+                                                    <ul style="padding-left:10%">
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Unit Testing</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Azure Cloud</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> POSTMAN</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> GitHub</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Jenkins</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Project Depolyment on Azure</li>
+                                                    </ul>
+                                                    <hr />
+
+                                                </li>
+                                                <li>
+                                                    <h6><i class="fas fa-book" style="color:#e74c3c"></i> Project </h6>
+                                                    <ul style="padding-left:10%">
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> 2 Real Time Projects</li>
+
+
+                                                    </ul>
+                                                    <hr />
+
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Content for Dot Net Core for Working Professionals -->
+                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" style="padding:2%">
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="card border-primary shadow-sm  mb-4">
+                                        <div class="card-body">
+                                            <h4 style="color:#e74c3c">CIIT Gaurantee for Quality Training and Live Project with 100% Job Placement</h4>
+                                            <br />
+                                                    <h5 class="card-title"><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Who can do this course</h5>
+                                            <p class="card-text" style="padding-left:10%"> Any Graduate ,Non IT / IT professionals</p>
+                                                    <h5 class="card-title"><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Total Duration</h5>
+                                            <p class="card-text" style="padding-left:10%"> 4 Months Training and gauranteed job from 5th month</p>
+                                                    <h5><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Key Points for Freshers</h5>
+                                            <ul style="padding-left:10%">
+                                                <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  100% Real time Project Training</li>
+                                                <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Training will be provided by Industry experts</li>
+                                                <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Mock Interviews will be conducted 2 days a week</li>
+                                                <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Best Platform for freshers to get their dream job in IT Industry</li>
+                                                <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Weekly Assessment</li>
+                                                <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Unlimited Job Calls </li>
+                                                @* <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  10+ Mini Projects and 2 Real Time Industry Project</li> *@
+                                            </ul>
+                                                    <h5><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Course Contents</h5>
+                                            <ul style="padding-left:10%">
+                                                <li>
+                                                    <h6><i class="fas fa-book" style="color:#e74c3c"></i> Front End</h6>
+                                                    <ul style="padding-left:10%">
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Html,Html5</li>
+                                                                <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> CSS,CSS3</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Bootstrap 5</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JavaScript</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JQuery</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> TypeScript</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Angular Latest/ReactJs Latest</li>
+
+                                                    </ul>
+                                                    <hr />
+                                                </li>
+                                                <li>
+                                                    <h6><i class="fas fa-book" style="color:#e74c3c"></i> RDBMS</h6>
+                                                    <ul style="padding-left:10%">
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Microsoft Sql Server 2022</li>
+                                                    </ul>
+                                                    <hr />
+
+                                                </li>
+                                                <li>
+                                                    <h6><i class="fas fa-book" style="color:#e74c3c"></i> Dot Net </h6>
+                                                    <ul style="padding-left:10%">
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> C-Sharp</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Ado.Net</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> LINQ</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Entity Framework</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Asp.Net MVC .Net Framework</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Asp.Net MVC Core</li>
+                                                                <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Asp.Net MVC Web API's</li>
+                                                                <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Asp.Net Core Web API's</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Razor Pages</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Blazor</li>
+
+                                                    </ul>
+                                                    <hr />
+
+                                                </li>
+                                                <li>
+                                                    <h6><i class="fas fa-book" style="color:#e74c3c"></i> More Important Topics </h6>
+                                                    <ul style="padding-left:10%">
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Unit Testing</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Azure Cloud</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> POSTMAN</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> GitHub</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Jenkins</li>
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Project Depolyment on Azure</li>
+                                                    </ul>
+                                                    <hr />
+
+                                                </li>
+                                                <li>
+                                                    <h6><i class="fas fa-book" style="color:#e74c3c"></i> Project </h6>
+                                                    <ul style="padding-left:10%">
+                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> 1 Real Time Project</li>
+
+
+                                                    </ul>
+                                                    <hr />
+
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+         
+                </div>
+            </div>
+    
+  
+</div>
+</div>
+
+</div>
+
+
+<div class="col-md-3">
+    @Html.Partial("PartialView")
+                    
+</div>
+
+
+</div>
+
+ </div>
+   </div>
+</div>

@@ -1,0 +1,444 @@
+﻿@{
+    ViewData["Title"] = "Data Analyst";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+
+    nav > .nav.nav-tabs {
+        border: none;
+        color: #fff;
+        background: #272e38;
+        border-radius: 0;
+    }
+
+    nav > div a.nav-item.nav-link,
+    nav > div a.nav-item.nav-link.active {
+        border: none;
+        padding: 18px 25px;
+        color: #fff;
+        background: #272e38;
+        border-radius: 0;
+    }
+
+        nav > div a.nav-item.nav-link.active:after {
+            content: "";
+            position: relative;
+            bottom: -60px;
+            left: -50%;
+            border: 15px solid transparent;
+            border-top-color: #e74c3c;
+        }
+
+    .tab-content {
+        background: #fdfdfd;
+        line-height: 25px;
+        border: 1px solid #ddd;
+        border-top: 5px solid #e74c3c;
+        border-bottom: 5px solid #e74c3c;
+        padding: 30px 25px;
+    }
+
+    nav > div a.nav-item.nav-link:hover,
+    nav > div a.nav-item.nav-link:focus {
+        border: none;
+        background: #e74c3c;
+        color: #fff;
+        border-radius: 0;
+        transition: background 0.20s linear;
+    }
+</style>
+
+<div class="container" style="padding-top: 80px; text-align: justify; font-size: 14px; font-family: 'Bookman Old Style'">
+    <img src="~/assets/courses/Data Analyst.jpg" style="height:300px;width:100%" />
+
+    <h4 style="margin-top:2%">
+        Every year over 700 talented individuals secure promising positions as Data Analytics professionals in the dynamic landscape of the IT industry.
+    </h4>
+    <div>
+        <p>
+            Data analysis is the process of examining, filtering, adapting, and modeling data to help solve problems. Data analysis helps determine what is and isn't working, so you can make the changes needed to achieve your business goals.
+        </p>
+        <p>
+
+            Data Analytics relied on manual data recording and collation as technological progress was slow. Before we had flashy hard drives and cloud storage, data was stored on physical hardware and could only be handled by a specialized machine. Businesses rarely stored non-essential data, let alone analyze it! However, when IBM invented the hard disk in 1956 (which held a measly 5MB of data), Data Analytics became more feasible for enterprises. Yet, Data Analytics as a business function took off only in the 1970s, when Mr. Edgar F. Codd invented relational databases for computers to store data in Sequel (SQL), which could be retrieved and analyzed swiftly.
+
+        </p>
+        <p>
+            In simpler words, Data Analytics is the science of making sense of raw datasets to identify trends and common patterns to come to a business decision or prove a hypothesis. For businesses, Data analysis is all about using data to build logical reasoning to make informed business decisions.
+        </p>
+        <p>
+            While businesses have been analyzing data since forever, the emergence of the field of Data Analytics can be dated back to the 1880s. Here's how the field has evolved since.
+        </p>
+    </div>
+    <div>
+        <p>
+            CIIT Training Institute offers comprehensive Data Analytics training tailored for both freshers and seasoned professionals. With a track record of empowering over 10,000 students, many have realized their aspirations by landing coveted positions in leading companies as proficient Data Analysts
+        </p>
+        <p>We offer Data Analytics training with a cutting-edge curriculum, focusing on hands-on experience with live projects. Our guarantee is that upon completion of the course, students will master project development independently. Equipped with this expertise, they can confidently showcase their skills in the professional arena.</p>
+    </div>
+    <div>
+        <div style="height:30px;width:100%;background-color:#007bff;color:white;text-align:center">
+            <h4>Why CIIT?</h4>
+        </div>
+        <ul style="font-size:14px;list-style:none;margin-top:2%">
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Latest Curriculum</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Highly Experienced Trainers</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Chance to work with our development team</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Practically Work on Projects & Case Studies</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Real time project Training</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> 100% Job assurance</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Weekly Mock & HR Interviews </h6></li>
+            @* <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> 100% Job assurance</h6></li> *@
+        </ul>
+    </div>
+    <div>
+        <div style="height:30px;width:100%;background-color:#007bff;color:white;text-align:center">
+            <h4>Course Curriculum</h4>
+        </div>
+
+        <p style="margin-top:2%">This Data Analytics course is ideal for anyone with an interest in creating their own projects from scratch,CIIT is a good platform for those people who want to do limitless career as a Data Analytics in IT Industry. </p>
+    </div>
+    <div>
+
+
+
+        <div class="" style="text-align:justify;font-family:'Bookman Old Style'">
+            <h4 style="margin-top:2%"> Data Analytics Course offered by CIIT Training Institute</h4>
+
+
+            <div class="row">
+                <div class="col-md-9">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 ">
+                        <nav>
+                            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"> Data Analytics for Working Professionals</a>
+                                @* <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Data Analytics</a> *@
+                                @* <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Data Analytics for Working Professionals</a> *@
+                            </div>
+                        </nav>
+                        <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" style="padding:2%">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card border-primary shadow-sm  mb-4">
+                                            <div class="card-body">
+                                                <h4 style="color:#e74c3c">CIIT Gaurantee for Quality Training and Live Project with 100% Job Placement</h4>
+                                                <br />
+                                                <h5 class="card-title"><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Who can do this course</h5>
+                                                <p class="card-text" style="padding-left:10%"> Any Graduate ,Non IT / IT professionals</p>
+                                                <h5 class="card-title"><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Total Duration</h5>
+                                                <p class="card-text" style="padding-left:10%"> 4 Months Training and gauranteed job from 5th month</p>
+                                                <h5><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Key Points for Freshers</h5>
+                                                <ul style="padding-left:10%">
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  100% Real time Project Training</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Training will be provided by Industry experts</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Mock Interviews will be conducted 2 days a week</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Best Platform for freshers to get their dream job in IT Industry</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Weekly Assessment</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Unlimited Job Calls </li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  10+ Mini Projects and 1 Real Time Industry Project</li>
+                                                </ul>
+                                                <h5><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Course Contents</h5>
+                                                <ul style="padding-left:10%">
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> Front End</h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Html,Html5</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> CSS,CSS3</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Bootstrap 5</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JavaScript</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JQuery</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> TypeScript</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Angular Latest/ReactJs Latest</li>
+
+                                                        </ul>
+                                                        <hr />
+                                                    </li>
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> RDBMS</h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Oracle</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> MS SQL Server</li>
+                                                        </ul>
+                                                        <hr />
+
+                                                    </li>
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> Data Analyst </h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>Data Collection and Preprocessing</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Exploratory Data Analysis (EDA)</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Statistical Analysis</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Machine Learning Basics</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Data Mining Techniques</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Big Data Analytics</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Data Visualization and Communication</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Ethical and Legal Issues in Data Analysis</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Practical Applications and Case Studies</li>
+
+
+                                                        </ul>
+                                                        <hr />
+
+                                                    </li>
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> More Important Topics </h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Data Collection</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Data Cleaning</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Data Exploration</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Data Preprocessing</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Statistical Analysis</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Machine Learning</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>Data Visualization Validation and Iteration</li>
+                                                        </ul>
+                                                        <hr />
+
+                                                    </li>
+
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> Project </h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> 1 Real Time Project</li>
+
+
+                                                        </ul>
+                                                        <hr />
+
+                                                    </li>
+
+                                                   @*  <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i>  Data Analytics </h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>Power BI</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> UsePowerBIMobileApps</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Textfunctions</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> UsePowerBI Desktop</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Tableau</li> *@
+                                                           @*  <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Excel</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Excel Basic – Advanced Excel</li> *@
+                                                            
+                                                            @* 
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Data Mining Techniques:</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Big Data Analytics:</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Data Visualization and Communication:</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Ethical and Legal Issues in Data Analysis:</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Practical Applications and Case Studies:</li>
+ *@
+@* 
+                                                        </ul>
+                                                        <hr />
+
+                                                    </li> *@
+                                                    @* <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> More Important Topics </h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> CorePython</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Advance Python</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Numpy</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Pandas</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Matplotlib</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Machine Learning</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>Data Visualization Validation and Iteration</li>
+                                                        </ul>
+                                                        <hr />
+
+                                                    </li> *@
+
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @* <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" style="padding:2%">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card border-primary shadow-sm  mb-4">
+                                            <div class="card-body">
+                                                <h4 style="color:#e74c3c">CIIT Gaurantee for 100% Job Assistance on industry oriented Data Analyst Training with live project with </h4>
+                                                <br />
+
+                                                <h5 class="card-title"><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Who can do this course</h5>
+                                                <p class="card-text" style="padding-left:10%"> Any Graduate ,Non IT / IT professionals</p>
+                                                <h5 class="card-title"><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Total Duration</h5>
+                                                <p class="card-text" style="padding-left:10%"> 6 Months Training With Real time project from Industry Experts</p>
+                                                <h5><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Key Points for Freshers</h5>
+                                                <ul style="padding-left:10%">
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  100% Real time Project Training</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Training will be provided by Industry experts</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Mock Interviews will be conducted 2 days a week</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Best Platform for freshers to get their dream job in IT Industry</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Weekly Assessment</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Unlimited Job Calls </li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  10+ Mini Projects and 2 Real Time Industry Project</li>
+                                                </ul>
+                                                <h5><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Course Contents</h5>
+                                                <ul style="padding-left:10%">
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> Front End</h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Html,Html5</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> CSS,CSS3</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Bootstrap 5</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JavaScript</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JQuery</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Angular Latest/ReactJs Latest</li>
+
+                                                        </ul>
+                                                        <hr />
+                                                    </li>
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> RDBMS</h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Microsoft Sql Server 2022</li>
+                                                        </ul>
+                                                        <hr />
+
+                                                    </li>
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i>  Data Analytics</h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>Data Collection and Preprocessing</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Exploratory Data Analysis (EDA)</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Statistical Analysis:</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Machine Learning Basics:</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Data Mining Techniques:</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Big Data Analytics:</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Data Visualization and Communication:</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Ethical and Legal Issues in Data Analysis:</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Practical Applications and Case Studies:</li>
+
+
+                                                        </ul>
+                                                        <hr />
+
+                                                    </li>
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> More Important Topics </h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Data Collection</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Data Cleaning</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Data Exploration</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Data Preprocessing</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Statistical Analysis</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Machine Learning</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>Data Visualization Validation and Iteration</li>
+                                                        </ul>
+                                                        <hr />
+
+                                                    </li>
+
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div> *@
+
+                            @* <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" style="padding:2%">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card border-primary shadow-sm  mb-4">
+                                            <div class="card-body">
+                                                <h4 style="color:#e74c3c">CIIT Gaurantee for real time industry  training with live project</h4>
+                                                <br />
+                                                <h5 class="card-title"><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Who can do this course</h5>
+                                                <p class="card-text" style="padding-left:10%">  IT professionals</p>
+                                                <h5 class="card-title"><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Total Duration</h5>
+                                                <p class="card-text" style="padding-left:10%"> 2-3 Months</p>
+                                                <h5><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Key Points for Working Professionals</h5>
+                                                <ul style="padding-left:10%">
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  100% Real time Project Training</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Training will be provided by Industry experts</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Mock Interviews </li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  We love to help working professionals in their current project</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Weekly Assessment</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Unlimited Job Calls for switch from current job </li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  10+ Mini Projects and 2 Real Time Industry Project</li>
+                                                </ul>
+                                                <h5><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Course Contents</h5>
+                                                <ul style="padding-left:10%">
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> Front End</h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Html,Html5</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> CSS,CSS3</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Bootstrap 5</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JavaScript</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JQuery</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Python</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> R language</li>
+
+                                                        </ul>
+                                                        <hr />
+                                                    </li>
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> RDBMS</h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Microsoft Sql Server 2022</li>
+                                                        </ul>
+                                                        <hr />
+
+                                                    </li>
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> Data Analyst </h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>Data Collection and Preprocessing</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Exploratory Data Analysis (EDA)</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Statistical Analysis:</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Machine Learning Basics:</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Data Mining Techniques:</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Big Data Analytics:</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Data Visualization and Communication:</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Ethical and Legal Issues in Data Analysis:</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Practical Applications and Case Studies:</li>
+                                                            
+
+                                                        </ul>
+                                                        <hr />
+
+                                                    </li>
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> More Important Topics </h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Data Collection</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Data Cleaning</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Data Exploration</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Data Preprocessing</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Statistical Analysis</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Machine Learning</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>Data Visualization Validation and Iteration</li>
+                                                        </ul>
+                                                        <hr />
+
+                                                    </li>
+
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> *@
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                <div class="col-md-3">
+                    @Html.Partial("PartialView")
+
+                </div>
+        </<div></div>
+    </div>
+</div>
+
+</div></div>

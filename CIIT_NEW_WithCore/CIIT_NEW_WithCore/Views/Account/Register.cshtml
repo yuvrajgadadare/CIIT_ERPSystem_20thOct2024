@@ -1,0 +1,100 @@
+﻿@* @model CIIT_NEW_WithCore.Models.RegistrationModel
+@{
+    ViewData["Title"] = "Registration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container" style="padding-top:80px;font-size:14px;font-family:'Bookman Old Style'">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-6">
+                <form method="post" enctype="multipart/form-data">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 style="text-align:center" class="card-title">Student Registration Form</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div>
+                                    <h4 style="color:darkblue;">@ViewBag.msg</h4>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Student Name</label>
+                                    @Html.TextBoxFor(e => e.StudentName, new { @class = "form-control" })
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label>Gender</label><br />
+                                            @Html.RadioButtonFor(e => e.Gender, "Male") <span>Male</span>
+                                            @Html.RadioButtonFor(e => e.Gender, "Female") <span>Female</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3 ">
+                                            <label>Birth Date</label>
+                                            @Html.TextBoxFor(e => e.BirthDate, new { @type = "date", @class = "form-control" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Email Address</label>
+                                    @Html.TextBoxFor(e => e.EmailAddress, new { @class = "form-control" })
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label>Mobile Number</label>
+                                            @Html.TextBoxFor(e => e.MobileNumber, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label>Qualification</label>
+                                            @Html.TextBoxFor(e => e.Qualification, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label>Parent Name</label>
+                                            @Html.TextBoxFor(e => e.ParentName, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label>Parent Number</label>
+                                            @Html.TextBoxFor(e => e.ParentNumber, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Profile Photo</label>
+                                    <input type="file" name="photo" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label>Registration Date</label>
+                                    <input type="date" id="registrationdate" name="registrationdate" class="form-control" />
+                                </div>
+                                <div class="mb-3">
+                                    <label>Course</label>
+                                    @Html.DropDownListFor(e => e.FeeId, ViewBag.courses as List<SelectListItem>, "Select Course", new { @class = "form-control" })
+                                </div>
+                                <div class="mb-3">
+                                    <button class="btn btn-primary" type="submit">Submit</button>
+
+                                    Already Registered.
+                                    <a style="font-size:14px;" href="/Account/Login">
+                                        Login
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+ *@

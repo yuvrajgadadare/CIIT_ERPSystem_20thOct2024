@@ -1,0 +1,279 @@
+﻿@using Microsoft.AspNetCore.Http
+@using Newtonsoft.Json
+@inject IHttpContextAccessor Accessor
+@using ERPSystem_Models;
+@{
+    ViewData["Title"] = "Student";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    string e = Accessor.HttpContext.Session.GetString("student");
+    StudentModel emp = (StudentModel)JsonConvert.DeserializeObject<StudentModel>(e);
+}
+<script src="https://unpkg.com/gijgo@1.9.14/js/gijgo.min.js" type="text/javascript"></script>
+<link href="https://unpkg.com/gijgo@1.9.14/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+<style>
+    .form-control {
+        padding: 4px;
+        font-size: small;
+    }
+
+    body {
+        font-size: small;
+    }
+
+</style>
+<script>
+    function ChangeProfilePhoto(sid){
+        $("#profilephotomodal").modal("show");  
+    }
+    function ChangeAadharPhoto(sid) {
+        $("#aadharphotomodal").modal("show");
+    }
+    function OpenModalToChangePassword(sid) {
+        $("#changepasswordmodal").modal("show");
+    }
+    function UploadPhoto() {
+        var file = $('#imgphoto')[0].files[0];
+        var form = new FormData();
+        form.append("file", file);
+        $.ajax({
+            url: '/Student/ChangeProfilePhoto',
+            method:'post',
+            data:form,
+            processData: false,
+            contentType: false,
+            success: function (resp) {
+                alert(resp);
+                $("#profilephotomodal").modal("hide");
+                window.location.href = window.location.href;
+
+            }
+        })
+            console.log(file);
+    }
+
+    function UploadAadharPhoto() {
+        var file = $('#aadharphoto')[0].files[0];
+        var form = new FormData();
+        form.append("file", file);
+        $.ajax({
+            url: '/Student/ChangeAadharPhoto',
+            method: 'post',
+            data: form,
+            processData: false,
+            contentType: false,
+            success: function (resp) {
+                alert(resp);
+                $("#aadharphotomodal").modal("hide");
+                window.location.href = window.location.href;
+
+            }
+        })
+        console.log(file);
+    }
+    function ChangePassword() {
+        var current_password = $('#txtcurrent_password').val();
+        var new_password = $('#txtnew_password').val();
+        var re_password = $('#txtconfirm_new_password').val();
+        var st = {"current_password":current_password,"new_password":new_password,"re_password":re_password};
+        $.ajax({
+            url: '/Student/ChangePassword',
+            method: 'post',
+            data: st,
+            success: function (resp) {
+                $("#passmsg").html(resp);
+              //  $("#changepasswordmodal").modal("hide");
+               // window.location.href = window.location.href;
+
+            }
+        })
+         
+    }
+    
+</script>
+<div>
+    <div class="modal fade" id="profilephotomodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                   <div class="mb-3">
+                        <h4>Upload Photo</h4>
+                        <input type="file" id="imgphoto" class="form-control" />
+                   </div>
+                    <div class="mb-3">
+                        <input type="button" value="Submit" id="btnsubmit" class="btn btn-primary" onclick="UploadPhoto()" />
+                        <input type="button" value="Cancel" class="btn btn-danger" data-bs-dismiss="modal" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="aadharphotomodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body" style="text-align:center">
+                    <div class="mb-3" >
+                        <img src="~/Students/AadharCards/@emp.aadhar_card_photo" alt="avatar"
+                             class="img-thumbnail" style="width: 150px;height:150px">
+                    </div>
+                    <div class="mb-3">
+                        <h4>Upload Aadhar Photo</h4>
+                        <input type="file" id="aadharphoto" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <input type="button" value="Submit" id="btnsubmit" class="btn btn-primary" onclick="UploadAadharPhoto()" />
+                        <input type="button" value="Cancel" class="btn btn-danger" data-bs-dismiss="modal" />
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="changepasswordmodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label>Current Password</label>
+                        <input type="password" id="txtcurrent_password" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <label>New Password</label>
+                        <input type="password" id="txtnew_password" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <label>Confirm New Password</label>
+                        <input type="password" id="txtconfirm_new_password" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <input type="button" value="Change Password" id="btnchangepassword" class="btn btn-primary" onclick="ChangePassword()" />
+                        <input type="button" value="Cancel" class="btn btn-danger" data-bs-dismiss="modal" />
+                        <p id="passmsg"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <div class="card mb-4">
+                <div class="card-body text-center">
+                    <img src="~/Students/Profiles/@emp.profile_photo" alt="avatar"
+                         class="rounded-circle img-fluid" style="width: 150px;height:150px">
+                    <h5 class="my-3">@emp.student_name @emp.last_name</h5>
+                    <p class="text-muted mb-1">@emp.registrations[0].course_name</p>
+                    <p class="text-muted mb-2">PIN : @emp.permanent_identification_number</p>
+                    <p class="text-muted mb-2">Aadhar : @emp.aadhar_card_number</p>
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-link" style="text-decoration:none;font-size:small" onclick="ChangeProfilePhoto(@emp.student_id)">Change Photo</button>
+                        <button type="button" class="btn btn-link" style="text-decoration:none;font-size:small" onclick="ChangeAadharPhoto(@emp.student_id)">Aadhar Photo</button>
+                    </div>
+                    <button type="button" class="btn btn-link" style="text-decoration:none;font-size:small" onclick="OpenModalToChangePassword(@emp.student_id)">Change Password</button>
+                </div>
+            </div>
+            <div class="card mb-4 mb-lg-0">
+                 <div class="card-body p-0">
+                    <ul class="list-group list-group-flush rounded-3">
+                        <li class="list-group-item d-flex justify-content-between">
+                            <i class="fas fa-globe fa-lg text-warning"></i>
+                            <p class="mb-0"><a href="/Student/Profile" class="btn btn-link" style="text-decoration:none;font-size:small">Profile</a></p>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <i class="fab fa-github fa-lg text-body"></i>
+                            <p class="mb-0"><a href="/Qualification/Index" class="btn btn-link" style="text-decoration:none;font-size:small">Qualification</a></p>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <i class="fab fa-twitter fa-lg" style="color: #55acee;"></i>
+                            <p class="mb-0"><a href="/Batch/Index" class="btn btn-link" style="text-decoration:none;font-size:small">Batches</a></p>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <i class="fab fa-instagram fa-lg" style="color: #ac2bac;"></i>
+                            <p class="mb-0"><a href="/Payment/Index" class="btn btn-link" style="text-decoration:none;font-size:small">Payments</a></p>
+                        </li>
+                       @*  <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                            <i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i>
+                            <p class="mb-0"><a href="/Student/Profile" class="btn btn-link" style="text-decoration:none">Profile</a></p>
+                        </li> *@
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-9">
+            @RenderBody()
+        @*     <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4 mb-md-0">
+                        <div class="card-body">
+                            <p class="mb-4">
+                                <span class="text-primary font-italic me-1">assigment</span> Project Status
+                            </p>
+                            <p class="mb-1" style="font-size: .77rem;">Web Design</p>
+                            <div class="progress rounded" style="height: 5px;">
+                                <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
+                                     aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="mt-4 mb-1" style="font-size: .77rem;">Website Markup</p>
+                            <div class="progress rounded" style="height: 5px;">
+                                <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72"
+                                     aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="mt-4 mb-1" style="font-size: .77rem;">One Page</p>
+                            <div class="progress rounded" style="height: 5px;">
+                                <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89"
+                                     aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="mt-4 mb-1" style="font-size: .77rem;">Mobile Template</p>
+                            <div class="progress rounded" style="height: 5px;">
+                                <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55"
+                                     aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="mt-4 mb-1" style="font-size: .77rem;">Backend API</p>
+                            <div class="progress rounded mb-2" style="height: 5px;">
+                                <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66"
+                                     aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4 mb-md-0">
+                        <div class="card-body">
+                            <p class="mb-4">
+                                <span class="text-primary font-italic me-1">assigment</span> Project Status
+                            </p>
+                            <p class="mb-1" style="font-size: .77rem;">Web Design</p>
+                            <div class="progress rounded" style="height: 5px;">
+                                <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
+                                     aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="mt-4 mb-1" style="font-size: .77rem;">Website Markup</p>
+                            <div class="progress rounded" style="height: 5px;">
+                                <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72"
+                                     aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="mt-4 mb-1" style="font-size: .77rem;">One Page</p>
+                            <div class="progress rounded" style="height: 5px;">
+                                <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89"
+                                     aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="mt-4 mb-1" style="font-size: .77rem;">Mobile Template</p>
+                            <div class="progress rounded" style="height: 5px;">
+                                <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55"
+                                     aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="mt-4 mb-1" style="font-size: .77rem;">Backend API</p>
+                            <div class="progress rounded mb-2" style="height: 5px;">
+                                <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66"
+                                     aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> *@
+        </div>
+    </div>
+</div>
+

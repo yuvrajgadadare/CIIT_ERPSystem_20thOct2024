@@ -1,0 +1,82 @@
+﻿@* @model  CIIT_NEW_WithCore.Models.StudentMockModel *@
+   
+@{
+ViewBag.Title = "Mock Interview Result";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Mock Interview Result</h2>
+    @{
+// MVC_StudentLMSPortal.Models.tblstudent_details sd = ViewBag.student;
+     }
+<div class="container" style="padding-top:80px; text-align:justify;font-size:14px;font-family:'Bookman Old Style';background-color:white;">
+    <div class="mb-3">
+        <div class="col-md-12" style="text-align:center">
+            
+            <h4>Mock Interview Details</h4>
+
+
+        </div>
+        @*<div class="col-md-12">
+            <h5>@ViewBag.count</h5>
+        </div>*@
+    </div>
+    <div class="row" style="height:700px;">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <img src="~/Profiles/Students/@Model.profile_photo" style="height:200px;width:200px" />
+          @*   <table class="table table-borderless">
+                <tr>
+                    <td>Student Name : <b>@Model.student_name</b></td>
+                 
+                    <td>Email Address : <b>@Model.email_address</b></td>
+                </tr>
+                <tr>
+                    <td>Mobile Number : <b>@Model.mobile_number</b></td>
+                
+                    <td>Course Name :  <b>@Model.course_name</b></td>
+                </tr>
+            </table> *@
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Sr No</th>
+                        <th>Interview Date</th>
+                        <th>Topics</th>
+                        <th>Attendance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  @*   @{
+                        int i = 1;
+                    }
+                    @foreach (var item in Model.mocks)
+                    {
+                        string is_present_status = "";
+                        if (item.is_present == 0)
+                        {
+                            is_present_status = "Not Yet Conducted";
+                        }
+                        else if (item.is_present == 1)
+                        {
+
+                            is_present_status = "Present";
+                        }
+                        else if (item.is_present == 2)
+                        {
+
+
+                            is_present_status = "Absent";
+                        }
+                        <tr>
+                            <td>@i</td>
+                            <td>@item.mock_interview_date</td>
+                            <td>@item.interview_topics</td>
+                            <td>@is_present_status</td>
+                        </tr>
+                        i++;
+                    } *@
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

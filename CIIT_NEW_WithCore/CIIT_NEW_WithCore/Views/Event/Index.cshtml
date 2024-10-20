@@ -1,0 +1,1312 @@
+﻿@{
+    ViewData["Title"] = "Gallery";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<link href="~/css/ImageSheet.css" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+<style>
+    .border {
+        width: 100%;
+        height: 100%;
+        float: left;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        cursor: default;
+    }
+
+        .border .overlay {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            background-color: rgba(0,0,0,0.5);
+            -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out
+        }
+
+        .border img {
+            display: block;
+            position: relative;
+            -webkit-transition: all .4s linear;
+            transition: all .4s linear;
+        }
+
+        .border h2 {
+            text-transform: uppercase;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            font-size: 17px;
+            background: rgba(0,0,0,0.6);
+            -webkit-transform: translatey(-100px);
+            -ms-transform: translatey(-100px);
+            transform: translatey(-100px);
+            -webkit-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+            padding: 10px;
+        }
+
+        .border a.info {
+            text-decoration: none;
+            display: inline-block;
+            text-transform: uppercase;
+            color: #fff;
+            border: 1px solid #fff;
+            background-color: transparent;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            -webkit-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+            margin: 50px 0 0;
+            padding: 7px 14px;
+        }
+
+            .border a.info:hover {
+                box-shadow: 0 0 5px #fff;
+            }
+
+        .border:hover img {
+            -ms-transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+
+        .border:hover .overlay {
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
+
+        .border:hover h2, .hovereffect:hover a.info {
+            opacity: 1;
+            filter: alpha(opacity=100);
+            -ms-transform: translatey(0);
+            -webkit-transform: translatey(0);
+            transform: translatey(0);
+        }
+
+        .border:hover a.info {
+            -webkit-transition-delay: .2s;
+            transition-delay: .2s;
+        }
+</style>
+
+
+
+<script>
+    $(document).ready(function () {
+        // Initialize Magnific Popup
+        $('.gallery-item').magnificPopup({
+            type: 'image',
+            gallery: {
+                enabled: true
+            },
+            callbacks: {
+                open: function () {
+                    // Append previous and next buttons
+                    this.contentContainer.append('<div class="mfp-prev"></div><div class="mfp-next"></div>');
+                },
+                change: function () {
+                    // Update previous and next buttons on change
+                    var prevBtn = this.contentContainer.find('.mfp-prev');
+                    var nextBtn = this.contentContainer.find('.mfp-next');
+                    prevBtn.on('click', function () {
+                        $.magnificPopup.proto.prev.call(this);
+                    });
+                    nextBtn.on('click', function () {
+                        $.magnificPopup.proto.next.call(this);
+                    });
+                }
+            }
+        });
+
+        // Initialize MixItUp
+        $('#container').mixItUp();
+    });
+</script>
+
+
+<div class="container" style="padding-top:80px;text-align:justify; font-size:16px; font-family:'Bookman Old Style'">
+
+    <h4 style="margin-top:2%;color:#007bff;text-align:center">
+        Our Gallery
+
+    </h4>
+
+
+
+
+    <div class="container-fluid">
+        <div class="row" style="margin-bottom:20px;margin-top:20px;">
+
+
+
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/Staff.png">
+                        <img class="img-fluid" src="~/assets/slides/Staff.png" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>Branch Opening Celebration</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border  border-primary">
+                    <a class="gallery-item" href="~/assets/slides/2.jpg">
+                        <img class="img-fluid" src="~/assets/slides/2.jpg" alt="One" style="width: 100%; height: 200px;" />
+                        <div class="img-overlay">
+                            <h7>Gift from Students</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border border-primary">
+
+                    <a class="gallery-item" href="~/assets/slides/kesari.jpg">
+                        <img class="img-fluid" src="~/assets/slides/kesari.jpg" alt="One" style="width: 100%; height: 200px;" />
+                        <div class="img-overlay">
+                            <h7>Maharashtra Kesari ACP Sir Visit</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom:20px">
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/7.jpg">
+                        <img class="img-fluid" src="~/assets/slides/7.jpg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>MCA College  Seminar</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+
+
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/ProjectRepresentation.jpeg">
+                        <img class="img-fluid" src="~/assets/slides/ProjectRepresentation.jpeg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>Project Representation</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="col-md-4">
+                <div class="border  border-primary">
+                    <a class="gallery-item" href="~/assets/slides/CIITStaff (11).jpeg">
+                        <img class="img-fluid" src="~/assets/slides/CIITStaff (11).jpeg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>Someshwar Clg visit</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        @* mazyaimages *@
+
+        <div class="row" style="margin-bottom:20px">
+            <div class="col-md-4">
+                <div class="border  border-primary">
+                    <a class="gallery-item" href="~/assets/slides/ACPVisit.jpg">
+                        <img class="img-fluid" src="~/assets/slides/ACPVisit.jpg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>ACP sir Visit</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/9.jpg">
+                        <img class="img-fluid" src="~/assets/slides/9.jpg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>MCA College  Seminar</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-4">
+                <div class="border  border-primary">
+                    <a class="gallery-item" href="~/assets/slides/Rohitsir.jpg">
+                        <img class="img-fluid" src="~/assets/slides/Rohitsir.jpg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>Diwali Gift</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row" style="margin-bottom:20px">
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/nilesh.jpg">
+                        <img class="img-fluid" src="~/assets/slides/nilesh.jpg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>Student Placement Celebration</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/bhushan.jpg">
+                        <img class="img-fluid" src="~/assets/slides/bhushan.jpg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>Student Placement Celebration</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/images/sagarplacement.jpg">
+                        <img class="img-fluid" src="~/assets/images/sagarplacement.jpg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>Student Placement Celebration</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="row" style="margin-bottom:20px">
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/Pushpamaamdiwali.jpg">
+                        <img class="img-fluid" src="~/assets/slides/Pushpamaamdiwali.jpg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>Diwali Gift</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border  border-primary">
+                    <a class="gallery-item" href="~/assets/slides/Someshawarclg.jpeg">
+                        <img class="img-fluid" src="~/assets/slides/Someshawarclg.jpeg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>Someshwar Clg Visit </h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/CIITStaff (5).jpg">
+                        <img class="img-fluid" src="~/assets/slides/CIITStaff (5).jpg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>Diwali Gift</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom:20px">
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/72.jpeg">
+                        <img class="img-fluid" src="~/assets/slides/72.jpeg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>Engg College Workshop</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border  border-primary">
+
+                    <a class="gallery-item" href="~/assets/slides/someshawarclg6.jpeg">
+                        <img class="img-fluid" src="~/assets/slides/someshawarclg6.jpeg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>Someshwar Clg visit</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/32.jpeg">
+                        <img class="img-fluid" src="~/assets/slides/32.jpeg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>Engg College Workshop</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom:20px">
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/31.png">
+                        <img class="img-fluid" src="~/assets/slides/31.png" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>Engg College Workshop</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/12.jpg">
+                        <img class="img-fluid" src="~/assets/slides/12.jpg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>Engg College Workshop</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/19.jpeg">
+                        <img class="img-fluid" src="~/assets/slides/19.jpeg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>Engg College Workshop</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom:20px">
+            <div class="col-md-4">
+                <div class="border border-primary">
+
+
+                    <a class="gallery-item" href="~/assets/slides/acpsirstudentvisit.jpg">
+                        <img class="img-fluid" src="~/assets/slides/acpsirstudentvisit.jpg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7> Students visit</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/31.png">
+                        <img class="img-fluid" src="~/assets/slides/31.png" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>Engg College Workshop</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/6.jpg">
+                        <img class="img-fluid" src="~/assets/slides/6.jpg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>MCA College  Seminar</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="row" style="margin-bottom:20px">
+            <div class="col-md-4">
+                <div class="border  border-primary">
+                    <a class="gallery-item" href="~/assets/slides/69.jpeg">
+                        <img class="img-fluid" src="~/assets/slides/69.jpeg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>Engg College Workshop</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border  border-primary">
+                    <a class="gallery-item" href="~/assets/slides/70.jpeg">
+                        <img class="img-fluid" src="~/assets/slides/70.jpeg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>Engg College Workshop</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border  border-primary">
+                    <a class="gallery-item" href="~/assets/slides/71.jpeg">
+                        <img class="img-fluid" src="~/assets/slides/71.jpeg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>Engg College Workshop</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom:20px">
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/Pupeshsirdiwali.jpg">
+                        <img class="img-fluid" src="~/assets/slides/Pupeshsirdiwali.jpg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>Diwali Gift</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/Someshawarclg2.jpeg">
+                        <img class="img-fluid" src="~/assets/slides/Someshawarclg2.jpeg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>Someshwar Clg visit</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/8.jpg">
+                        <img class="img-fluid" src="~/assets/slides/8.jpg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>MCA College  Seminar</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+        <div class="row" style="margin-bottom:20px">
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/images/shubhangiplacement.jpg">
+                        <img class="img-fluid" src="~/assets/images/shubhangiplacement.jpg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>Student Placement Celebration</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border border-primary">
+
+                    <a class="gallery-item" href="~/assets/slides/diwali.jpg">
+                        <img class="img-fluid" src="~/assets/slides/diwali.jpg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>Diwali Celebration</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/priya.jpg">
+                        <img class="img-fluid" src="~/assets/slides/priya.jpg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>Student Placement Celebration</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row" style="margin-bottom:20px">
+            <div class="col-md-4">
+                <div class="border  border-primary">
+                    <a class="gallery-item" href="~/assets/slides/64.jpeg">
+                        <img class="img-fluid" src="~/assets/slides/64.jpeg" alt="One" style="width: 100%; height: 200px;" />
+                        <div class="img-overlay">
+                            <h7>Engg College Workshop</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/11.jpg">
+                        <img class="img-fluid" src="~/assets/slides/11.jpg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>Ganpati Festival</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/55.jpeg">
+                        <img class="img-fluid" src="~/assets/slides/55.jpeg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>Student Placement Celebration</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom:20px">
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/50.jpeg">
+                        <img class="img-fluid" src="~/assets/slides/50.jpeg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>Student Placement Celebration</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/70.jpeg">
+                        <img class="img-fluid" src="~/assets/slides/70.jpeg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>Student Placement Celebration</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/25.jpg">
+                        <img class="img-fluid" src="~/assets/slides/25.jpg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>CIIT's Anniversary Celebration</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom:20px">
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/20.jpg">
+                        <img class="img-fluid" src="~/assets/slides/20.jpg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>CIIT's Anniversary Celebration</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/21.jpg">
+                        <img class="img-fluid" src="~/assets/slides/21.jpg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7> Guidance from Industry Experts</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/39.jpg">
+                        <img class="img-fluid" src="~/assets/slides/39.jpg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7> Guidance from Industry Experts</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom:20px">
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/23.jpg">
+                        <img class="img-fluid" src="~/assets/slides/23.jpg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7> Guidance from Industry Experts</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/40.jpg">
+                        <img class="img-fluid" src="~/assets/slides/40.jpg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7> Guidance from Industry Experts</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/24.jpg">
+                        <img class="img-fluid" src="~/assets/slides/24.jpg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>College Student Visit</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom:20px">
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/41.jpg">
+                        <img class="img-fluid" src="~/assets/slides/41.jpg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7> Mentors Visit</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/42.jpg">
+                        <img class="img-fluid" src="~/assets/slides/42.jpg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7> Mentors Visit</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/43.jpg">
+                        <img class="img-fluid" src="~/assets/slides/43.jpg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7> Mentors Visit</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom:20px">
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/44.jpg">
+                        <img class="img-fluid" src="~/assets/slides/44.jpg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7> Mentors Visit</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/26.jpg">
+                        <img class="img-fluid" src="~/assets/slides/26.jpg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7> Corporate Training(Diabos)</h7>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border border-primary">
+                    <a class="gallery-item" href="~/assets/slides/61.jpg">
+                        <img class="img-fluid" src="~/assets/slides/61.jpg" alt="One" style="width: 100%; height: 200px;" />
+
+                        <div class="img-overlay">
+                            <h7>  Development Team</h7>
+
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        @* <div class="col-md-4">
+                <div class="border border-primary">
+                <a class="gallery-item" href="~/assets/slides/2.jpg"><img class="img-fluid" src="~/assets/slides/2.jpg" alt="One" style="width: 100%; height: 200px;" /></a>
+                </div>
+            </div> *@
+
+    </div>
+</div>
+
+</div>
+
+
+<!-- Previous and Next buttons -->
+<div class="mfp-prev"></div>
+<div class="mfp-next"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@* @{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    img {
+        height: 200px;
+        width: 100%;
+    }
+
+    a > div > h5 {
+        text-decoration: none;
+    }
+</style> 
+
+<div class="container" style="padding-top:140px;text-align:justify;font-family:'Bookman Old Style'">
+
+
+    <h4 style="margin-top:2%;color:#007bff;text-align:center">
+        Our Gallery
+
+    </h4>
+    
+
+
+
+    
+
+             <div class="row">
+
+       
+
+       <div class="col-md-4  gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/64.jpeg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/64.jpeg" id="img-responsive" alt="Engg College Workshop">
+                <div class="form-group">
+                    <span style=“ padding: 5px; text-align: center;”>Engg College Seminar</span>
+
+                </div>
+            </a>
+        </div>
+
+
+
+        
+        <div class="col-md-4   gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/63.jpeg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/63.jpeg" class="img-responsive" alt="Engg College Workshop">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>Engg College Seminar</span>
+
+                </div>
+            </a>
+        </div>
+
+         <div class="col-md-4   gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/69.jpeg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/69.jpeg" class="img-responsive" alt="Engg College Workshop">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>Engg College Seminar</span>
+
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-4   gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/70.jpeg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/70.jpeg" class="img-responsive" alt="Engg College Workshop">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>Engg College Seminar</span>
+
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4   gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/71.jpeg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/71.jpeg" class="img-responsive" alt="Engg College Workshop">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>Engg College Seminar</span>
+
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4   gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/72.jpeg" class="swipebox" style="text-decoration: none; border: 1px solid white; ">
+                <img src="~/assets/slides/72.jpeg" class="img-responsive" alt="Engg College Workshop">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>Engg College Seminar</span>
+
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-4   gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/35.jpeg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/35.jpeg" class="img-responsive" alt="Engg College Workshop">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>Engg College Workshop</span>
+
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-4    gallery-grid gallery1"  style="border:groove">
+            <a href="~/assets/slides/32.jpeg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/32.jpeg" class="img-responsive" alt="Engg College Workshop">
+                <div class="form-group">
+
+                    <span style=“padding:5px;text-align:center”>Engg College Workshop</span>
+
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4   gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/31.png" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/31.png" class="img-responsive" alt="Engg College Workshop">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>Engg College Workshop</span>
+
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4   gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/12.jpg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/12.jpg" class="img-responsive" alt="Engg College Workshop">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>Engg College Workshop</span>
+
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4   gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/19.jpeg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/19.jpeg" class="img-responsive" alt="Engg College Workshop">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>Engg College Workshop</span>
+
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-4   gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/30.png" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/30.png" class="img-responsive" alt="Engg College Workshop">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>Engg College Workshop</span>
+
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4    gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/31.png" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/31.png" class="img-responsive" alt="Engg College Workshop">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>Engg College Workshop</span>
+
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4   gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/6.jpg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/6.jpg" class="img-responsive" alt="MCA College  Seminar">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>MCA College  Seminar</span>
+
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-4   gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/7.jpg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/7.jpg" class="img-responsive" alt="MCA College  Seminar">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>MCA College  Seminar</span>
+
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4   gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/8.jpg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/8.jpg" class="img-responsive" alt="MCA College  Seminar">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>MCA College  Seminar</span>
+
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4   gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/9.jpg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/9.jpg" class="img-responsive" alt="MCA College  Seminar">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>
+                        MCA College  Seminar
+                    </span>
+
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-4   gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/nilesh.jpg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/nilesh.jpg" class="img-responsive" alt="Engg College Workshop">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>Student Placement Celebration</span>
+
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4   gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/bhushan.jpg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/bhushan.jpg" class="img-responsive" alt="Engg College Workshop">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>Student Placement Celebration</span>
+
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4   gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/priya.jpg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/priya.jpg" class="img-responsive" alt="Engg College Workshop">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>Student Placement Celebration</span>
+
+                </div>
+            </a>
+        </div>
+
+
+        <div class="col-md-4   gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/10.jpg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/10.jpg" class="img-responsive" alt="Ganpati Festival">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>
+                        Ganpati Festival
+                    </span>
+
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4    gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/11.jpg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/11.jpg" class="img-responsive" alt="Ganpati Festival">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>
+                        Ganpati Festival
+                    </span>
+
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-4    gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/55.jpeg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/55.jpeg" class="img-responsive" alt="Student Placement Celebration">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>
+                        Student Placement Celebration
+                    </span>
+
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4    gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/50.jpeg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/50.jpeg" class="img-responsive" alt="Student Placement Celebration">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>
+                        Student Placement Celebration
+                    </span>
+
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4   gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/57.jpeg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/57.jpeg" class="img-responsive" alt="Student Placement Celebration">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>
+                        Student Placement Celebration
+                    </span>
+
+                </div>
+            </a>
+        </div>
+
+
+
+
+        <div class="col-md-4   gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/25.jpg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/25.jpg" class="img-responsive" alt="Anniversary Celebration">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>
+                        CIIT's Anniversary Celebration
+                    </span>
+
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4   gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/20.jpg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/20.jpg" class="img-responsive" alt="Anniversary Celebration">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>CIIT's Anniversary Celebration</span>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="col-md-4   gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/21.jpg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/21.jpg" class="img-responsive" alt="/">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>
+                        Guidance from Industry Experts
+                    </span>
+
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4   gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/39.jpg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/39.jpg" class="img-responsive" alt="/">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>
+                        Guidance from Industry Experts
+                    </span>
+
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4   gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/23.jpg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/23.jpg" class="img-responsive" alt="/">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>
+                        Guidance from Industry Experts
+                    </span>
+
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4   gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/40.jpg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/40.jpg" class="img-responsive" alt="/">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>
+                        Guidance from Industry Experts
+                    </span>
+
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-4   gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/24.jpg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/24.jpg" class="img-responsive" alt="/">
+                <div class="form-group">
+                    <span style="padding:5px">
+                        College Student Visit
+                    </span>
+
+                </div>
+            </a>
+        </div>
+
+
+
+        <div class="col-md-4   gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/41.jpg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/41.jpg" class="img-responsive" alt="/">
+                <div class="form-group">
+                    <span style="padding:5px">
+                        Mentors Visit
+                    </span>
+
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4    gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/42.jpg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/42.jpg" class="img-responsive" alt="/">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>
+                        Mentors Visit
+                    </span>
+
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4    gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/43.jpg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/43.jpg" class="img-responsive" alt="/">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>
+                        Mentors Visit
+                    </span>
+
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4    gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/44.jpg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/44.jpg" class="img-responsive" alt="/">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>
+                        Mentors Visit
+                    </span>
+
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4    gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/26.jpg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/26.jpg" class="img-responsive" alt="/">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>
+                        Corporate Training(Diabos)
+                    </span>
+
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-4   gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/61.jpg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/61.jpg" class="img-responsive" alt="/">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>
+                         Corporate Training(Diabos)
+                        Development Team
+                    </span>
+
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4   gallery-grid gallery1" style="border:groove">
+            <a href="~/assets/slides/2.jpg" class="swipebox" style="text-decoration: none; border: 1px solid white;">
+                <img src="~/assets/slides/2.jpg" class="img-responsive" alt="/">
+                <div class="form-group">
+                    <span style=“padding:5px;text-align:center”>
+                        Gift from Students
+                    </span>
+
+                </div>
+            </a>
+        </div>
+ 
+      <section>
+        <div class="clearfix"> </div>
+        </section>
+    </div> 
+    
+
+</div>
+
+
+
+
+
+
+ *@

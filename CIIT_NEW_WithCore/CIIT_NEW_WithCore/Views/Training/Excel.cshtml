@@ -1,0 +1,291 @@
+﻿
+@{
+    ViewData["Title"] = "Excel";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@* <h2 style="padding-top:500px">hi</h2> *@
+
+<style>
+
+    nav > .nav.nav-tabs {
+        border: none;
+        color: #fff;
+        background: #272e38;
+        border-radius: 0;
+    }
+
+    nav > div a.nav-item.nav-link,
+    nav > div a.nav-item.nav-link.active {
+        border: none;
+        padding: 18px 25px;
+        color: #fff;
+        background: #272e38;
+        border-radius: 0;
+    }
+
+        nav > div a.nav-item.nav-link.active:after {
+            content: "";
+            position: relative;
+            bottom: -60px;
+            left: -50%;
+            border: 15px solid transparent;
+            border-top-color: #e74c3c;
+        }
+
+    .tab-content {
+        background: #fdfdfd;
+        line-height: 25px;
+        border: 1px solid #ddd;
+        border-top: 5px solid #e74c3c;
+        border-bottom: 5px solid #e74c3c;
+        padding: 30px 25px;
+    }
+
+    nav > div a.nav-item.nav-link:hover,
+    nav > div a.nav-item.nav-link:focus {
+        border: none;
+        background: #e74c3c;
+        color: #fff;
+        border-radius: 0;
+        transition: background 0.20s linear;
+    }
+</style>
+
+<div class="container" style="padding-top:80px;text-align:justify;font-size:14px;font-family:'Bookman Old Style'">
+    <img src="~/assets/images/excelsheet.JPG" style="height:100%;width:100%" />
+
+
+    <h4 style="margin-top:2%">
+        Annually over 500 students excel as Excel Course Developers, securing prominent positions in the IT industry.
+    </h4>
+    <div>
+        <p>
+            Among all the computer programs Excel has become one of the most important computer software. It has become an integral part of organizations across the world. Because of its importance employees are required to learn it to enter or to stay in an organization. Most of the companies mentioned in their job description that they want employees who possess knowledge of Excel.
+        </p>
+        <p>
+            Microsoft Excel is a powerful data organising platform made to minimise the clutter and maximise the value of data. The platform contains spreadsheets which combine rows and columns for the organisation, calculation, and manipulation of data. As the growth of globalisation and e-commerce is generating huge volumes of data than ever before, companies aim to hire individuals skilled in advanced Excel. Enrolling in an online Advanced Excel training not only opens multiple doors of lucrative jobs but also allows the students of various fields to affordably learn new skills from experts.
+        </p>
+        <p>
+            Microsoft Excel is a spreadsheet application distributed by Microsoft and the basis of all data entry jobs. It allows the customer to have the ability to use simple spreadsheet capacities like practical tools, equations, diagrams and other critical tools. Every one of us knows all the essential options of Microsoft Excel, but there are many advanced excel functions which very few know. It is one of the major benefits of getting advanced excel training. Advanced Excel today is the need of great importance and taking in the skills of advanced excel can lead you to stand out among a big crowd of people.
+        </p>
+        <p>
+            Most of the companies require that just being skilled in Excel isn’t sufficient. Applicants need to have an industry standard certification to prove their claim and facilitate the recruitment process. The Advanced Excel Certification is acknowledged globally and benefits the applicant with a superior recognition and competitive edge over non-certified professionals.
+        </p>
+        <p>
+            <h6> <b>Benefits of getting advanced excel training:</b></h6>
+        <p><b>1).You will have more value to employers</b></p>
+        <p>What does it mean is that when you choose for the Advanced Excel Training, you will get comfortable with the skills that not many people understand. So you stand better among other individuals with comparable capabilities just like you. Therefore, advanced excel skills will bring excellent job opportunities for you and you will be an outstanding candidate for your employers. Business organizations are looking for employees who are willing to study and have extensive analyzing skills. A proficient of Microsoft Excel means that you have awesome analyzing skills and you will be a strength of the company. Hence, you will get grand pay scales and good job opportunities.</p>
+        </p>
+        <p><b>2).Protects a significant amount of Time</b></p>
+        <p>
+            If you are a small business person or a freelance worker, the advanced excel can assist you in saving a significant amount of time. Managing and analyzing data on the right path with essential Excel skills needs a decent measure of time. However, if you intend of all the complicated functions and practice of Microsoft Excel, then you can do the similar job in the least possible time. Here, advanced excel training is thought to be quite useful for your business and your career as time is significant in the business world.
+        </p>
+        <p><b>3).Increase your Knowledge and Management Skills</b></p>
+        <p>
+            Advanced Excel training does not just mean that a person becomes an expert in excel. But in the meantime, it also increases your knowledge and administration skills. During the training period, you will get comfortable with the complicated functions which include cells formatting, macro, making use of the graphical representations in spreadsheets, financial complex formulas, etc. A skilled professional in advanced excel is high-quality at arranging and analyzing data and thus in his advanced excel training
+        </p>
+    </div>
+    <div>
+        <p>Join our Excel Course at CIIT Training Institute and unlock endless career opportunities.</p>
+        <p>
+            At CIIT Training Institute, we offer comprehensive Excel Course training tailored for both freshers and working professionals. With a track record of successfully training over 10,000 students in Excel technology, many have realized their career aspirations by securing coveted positions as Excel Course Developers in their dream companies.
+        </p>
+    </div>
+    <div>
+        <div style="height:30px;width:100%;background-color:#007bff;color:white;text-align:center">
+            <h4>Why CIIT?</h4>
+        </div>
+        <ul style="font-size:14px;list-style:none;margin-top:2%">
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Latest Curriculum</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Highly Experienced Trainers</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Chance to work with our development team</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Practically Work on Projects & Case Studies</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Real time project Training</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> 100% Job assurance</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Weekly Mock & HR Interviews </h6></li>
+            @* <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> 100% Job assurance</h6></li> *@
+        </ul>
+    </div>
+    <div>
+        <div style="height:30px;width:100%;background-color:#007bff;color:white;text-align:center">
+            <h4>Course Curriculum</h4>
+        </div>
+
+        <p style="margin-top:2%">The Excel Course is perfect for individuals eager to craft their own projects from the ground up. CIIT serves as an excellent platform for those aspiring to pursue a limitless career as an Excel professional in the IT industry. </p>
+    </div>
+    <div>
+
+
+
+        <div class="" style="text-align:justify;font-family:'Bookman Old Style'">
+            <h4 style="margin-top:2%">Advanced  Excel Course offered by CIIT Training Institute</h4>
+
+            <div class="row">
+                <div class="col-md-9">
+
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 ">
+                                <nav>
+                                    <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Advanced Excel Course </a>
+                                    </div>
+                                </nav>
+                                <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" style="padding:2%">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="card border-primary shadow-sm  mb-4">
+                                                    <div class="card-body">
+                                                        <h4 style="color:#e74c3c">CIIT Gaurantee for Quality Training and Live Project with 100% Job Placement</h4>
+                                                        <br />
+                                                        <h5 class="card-title"><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Who can do this course</h5>
+                                                        <p class="card-text" style="padding-left:10%"> Any Graduate ,Non IT / IT professionals</p>
+                                                        <h5 class="card-title"><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Total Duration</h5>
+                                                        <p class="card-text" style="padding-left:10%"> 4 Months Training and 2 Months Live Project</p>
+                                                        <h5><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Key Points for Freshers</h5>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  100% Real time Project Training</li>
+                                                            <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Training will be provided by Industry Experts</li>
+                                                            <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Weekly Assessment</li>
+                                                            <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Mock Interviews will be conducted 2 days a week</li>
+                                                            @*     <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Mock Interviews will be conducted 2 days a week</li>
+                                                                <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Best Platform for freshers to get their dream job in IT Industry</li>
+                                                                <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Weekly Assessment</li> *@
+                                                            @* <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Unlimited Job Calls </li> *@
+                                                            @* <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  10+ Mini Projects and 2 Real Time Industry Project</li> *@
+                                                        </ul>
+                                                        <h5><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Course Contents</h5>
+                                                        <ul style="padding-left:10%">
+
+
+                                                            <li>
+                                                                <ul>
+                                                                    <li>
+                                                                        <i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>
+                                                                        Introduction
+                                                                    </li>
+                                                                    <li>
+                                                                        <i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>
+                                                                        Text to Columns
+                                                                    </li>
+                                                                    <li>
+                                                                        <i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>
+                                                                        Concatenate
+                                                                    </li>
+                                                                    <li>
+                                                                        <i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>
+                                                                        The Concatenate Function
+                                                                    </li>
+                                                                    <li>
+                                                                        <i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>
+                                                                        The Right Function with Concatenation
+                                                                    </li>
+                                                                    <li>
+                                                                        <i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>
+
+                                                                        Absolute Cell References
+                                                                    </li>
+                                                                    <li>
+                                                                        <i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>
+
+                                                                        Data Validation
+                                                                    </li>
+                                                                    <li>
+                                                                        <i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>
+
+                                                                        Time and Date Calculations
+                                                                    </li>
+                                                                    <li>
+                                                                        <i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>
+                                                                        Conditional Formatting
+                                                                    </li>
+                                                                    <li>
+                                                                        <i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>
+                                                                        Exploring Styles and Clearing Formatting
+                                                                    </li>
+                                                                    <li>
+                                                                        <i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>
+                                                                        Using Conditional Formatting to Hide Cells
+                                                                    </li>
+                                                                    <li>
+                                                                        <i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>
+                                                                        Using the IF Function
+                                                                    </li>
+                                                                    <li>
+                                                                        <i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>
+
+                                                                        Changing the “Value if false” Condition to Text
+                                                                    </li>
+                                                                    <li>
+                                                                        <i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>
+                                                                        Pivot Tables
+                                                                    </li>
+                                                                    @* <li>
+                                                                        <i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>
+                                                                        Azure With Devops
+                                                                        </li>
+                                                                        <li>
+                                                                        <i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>
+                                                                        Terraform Modules & Workspaces
+                                                                        </li>
+                                                                        <li>
+                                                                        <i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>
+                                                                        Azure Devops And Azure Repos
+                                                                        </li>
+                                                                        <li>
+                                                                        <i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>
+                                                                        Azure Artifacts And Azure Test Plans
+                                                                        </li>
+                                                                        <li>
+                                                                        <i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>
+                                                                        Azure Artifacts And Azure Test Plans
+                                                                        </li>
+                                                                        <li>
+                                                                        <i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>
+                                                                        Azure Boards
+                                                                        </li>
+                                                                        <li>
+                                                                        <i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>
+                                                                        Terraform With Azure
+                                                                        </li> *@
+                                                                </ul>
+                                                                <hr />
+
+                                                            </li>
+                                                            <li>
+                                                                <h6><i class="fas fa-book" style="color:#e74c3c"></i> Project </h6>
+                                                                <ul style="padding-left:10%">
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> 1 Real Time Project</li>
+
+
+                                                                </ul>
+                                                                <hr />
+
+                                                            </li>
+                                                        </ul>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    @Html.Partial("PartialView")
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+ 

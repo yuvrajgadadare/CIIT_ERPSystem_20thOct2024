@@ -1,0 +1,153 @@
+﻿@* @model IEnumerable<CIIT_NEW_WithCore.Models.TblmockInterviewStudent>
+@{
+    ViewBag.Title = "MockInterviewResult";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Mock Interview Result</h2>
+@{ 
+    CIIT_NEW_WithCore.Models.TblstudentDetail sd = @Model.First().Student;
+        }
+<div class="row">
+    <div class="col-md-2"></div>
+
+        <div class="col-md-8">
+            <table>
+                <tr>
+                    <td>Student Name :</td>
+                    <td><b>@sd.StudentName</b></td>
+                </tr>
+                <tr>
+                    <td>Email Address :</td>
+                    <td><b>@sd.EmailAddress</b></td>
+                </tr>
+                <tr>
+                    <td>Mobile Number :</td>
+                    <td><b>@sd.MobileNumber</b></td>
+                </tr>
+                <tr>
+                    <td>Course Name :</td>
+                <td><b>@sd.TblstudentCourses.First().Course.CourseName</b></td>
+                </tr>
+            </table>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Sr No</th>
+                        <th>Interview Date</th>
+                        <th>Topics</th>
+                        <th>Attendance</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        int i = 1;
+                    }
+                    @foreach (var item in Model)
+                    {
+                        string is_present_status = "";
+                        if (item.IsPresent == 0)
+                        {
+                            is_present_status = "Not Yet Conducted";
+                        }
+                    else if (item.IsPresent == 1)
+                        {
+
+                            is_present_status = "Present";
+                        }
+                    else if (item.IsPresent == 2)
+                        {
+
+
+                            is_present_status = "Absent";
+                        }
+                        <tr>
+                            <td>@i</td>
+                            <td>@item.MockInterview.MockInterviewDate.ToShortDateString()</td>
+                        <td>@item.MockInterview.InterviewTopics</td>
+                            <td>@is_present_status</td>
+                        </tr>
+                        i++;
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+ *@@* @model IEnumerable<CIIT_NEW_WithCore.Models.TblmockInterviewStudent>
+@{
+    ViewBag.Title = "MockInterviewResult";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Mock Interview Result</h2>
+@{ 
+    CIIT_NEW_WithCore.Models.TblstudentDetail sd = @Model.First().Student;
+        }
+<div class="row">
+    <div class="col-md-2"></div>
+
+        <div class="col-md-8">
+            <table>
+                <tr>
+                    <td>Student Name :</td>
+                    <td><b>@sd.StudentName</b></td>
+                </tr>
+                <tr>
+                    <td>Email Address :</td>
+                    <td><b>@sd.EmailAddress</b></td>
+                </tr>
+                <tr>
+                    <td>Mobile Number :</td>
+                    <td><b>@sd.MobileNumber</b></td>
+                </tr>
+                <tr>
+                    <td>Course Name :</td>
+                <td><b>@sd.TblstudentCourses.First().Course.CourseName</b></td>
+                </tr>
+            </table>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Sr No</th>
+                        <th>Interview Date</th>
+                        <th>Topics</th>
+                        <th>Attendance</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        int i = 1;
+                    }
+                    @foreach (var item in Model)
+                    {
+                        string is_present_status = "";
+                        if (item.IsPresent == 0)
+                        {
+                            is_present_status = "Not Yet Conducted";
+                        }
+                    else if (item.IsPresent == 1)
+                        {
+
+                            is_present_status = "Present";
+                        }
+                    else if (item.IsPresent == 2)
+                        {
+
+
+                            is_present_status = "Absent";
+                        }
+                        <tr>
+                            <td>@i</td>
+                            <td>@item.MockInterview.MockInterviewDate.ToShortDateString()</td>
+                        <td>@item.MockInterview.InterviewTopics</td>
+                            <td>@is_present_status</td>
+                        </tr>
+                        i++;
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+ *@

@@ -1,0 +1,68 @@
+﻿@model ERPSystem_Models.TopicModel
+@{
+    ViewData["Title"] = "Topics";
+    Layout = "~/Areas/Developer/Views/Shared/DeveloperLayout.cshtml";
+}
+
+<style>
+    tr, td, th {
+        height: 10px;
+        padding: 0px
+    }
+
+    .table > :not(caption) > * > * {
+        padding: .3rem .5rem
+    }
+
+    body {
+        font-size: 12px;
+    }
+</style>
+<div class="row">
+    <div class="col-4">
+        @using (Html.BeginForm())
+        {
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Topic Form</h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label>Topic Name</label>
+                        @Html.TextBoxFor(e => e.topic_name, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <input type="submit" value="Submit" class="btn btn-primary">
+                    <span style="color:green;">@ViewBag.msg</span>
+                </div>
+            </div>
+        }
+
+    </div>
+    <div class="col-8">
+        @{
+            int i = 1;
+        }
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Sr No</th>
+                    <th>Topic Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in ViewBag.topics)
+                {
+                    <tr>
+                        <td>@i</td>
+                        <td>@item.topic_name</td>
+                    </tr>
+                    i++;
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

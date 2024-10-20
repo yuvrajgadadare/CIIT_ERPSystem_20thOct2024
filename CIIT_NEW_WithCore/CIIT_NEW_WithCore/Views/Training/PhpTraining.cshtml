@@ -1,0 +1,441 @@
+﻿@{
+    ViewData["Title"] = "PHP Full Stack Development";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+
+    nav > .nav.nav-tabs {
+        border: none;
+        color: #fff;
+        background: #272e38;
+        border-radius: 0;
+    }
+
+    nav > div a.nav-item.nav-link,
+    nav > div a.nav-item.nav-link.active {
+        border: none;
+        padding: 18px 25px;
+        color: #fff;
+        background: #272e38;
+        border-radius: 0;
+    }
+
+        nav > div a.nav-item.nav-link.active:after {
+            content: "";
+            position: relative;
+            bottom: -60px;
+            left: -50%;
+            border: 15px solid transparent;
+            border-top-color: #e74c3c;
+        }
+
+    .tab-content {
+        background: #fdfdfd;
+        line-height: 25px;
+        border: 1px solid #ddd;
+        border-top: 5px solid #e74c3c;
+        border-bottom: 5px solid #e74c3c;
+        padding: 30px 25px;
+    }
+
+    nav > div a.nav-item.nav-link:hover,
+    nav > div a.nav-item.nav-link:focus {
+        border: none;
+        background: #e74c3c;
+        color: #fff;
+        border-radius: 0;
+        transition: background 0.20s linear;
+    }
+</style>
+
+<div class="container" style="padding-top:80px;text-align:justify;font-size:14px;font-family:'Bookman Old Style'">
+    <img src="~/assets/courses/Php.png" style="height:300px;width:100%" />
+
+    <h4 style="margin-top:2%;">
+        Overview of the PHP World
+    </h4>
+    <div>
+        <p>
+            PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML.
+            What distinguishes PHP from something like client-side JavaScript is that the code is executed on the server, generating HTML which is then sent to the client.
+            The client would receive the results of running that script, but would not know what the underlying code was. You can even configure your web server to process all your HTML files with PHP, and then there’s really no way that users can tell what you have up your sleeve.
+        </p>
+
+
+    </div>
+    <div>
+        <p>
+            PHP is widely used for building web applications, but you are not limited to output only HTML. PHP's ouput abilities include rich file types, such as images or PDF files, encrypting data, and sending emails. You can also output easily any text, such as JSON or XML.
+            The best things in using PHP are that it is extremely simple for a newcomer, but offers many advanced features for a professional programmer. Don’t be afraid reading the long list of PHP’s features.
+            You can jump in, in a short time, and start writing simple scripts in a few hoursPHP is a cross-platform language, capable of running on all major operating system platforms and with most of the web server programs such as Apache, IIS, lighttpd and nginx
+        </p>
+
+    </div>
+    <div>
+        <p>
+            PHP is a server-side scripting language that is embedded in HTML. It is used to manage dynamic content, databases, session tracking, even build entire e-commerce sites. Although it is especially suited to web development, you can also build desktop standalone applications as PHP also has a command-line interface. You can use PHP-GTK extension to build GUI applications in PHP.
+        </p>
+    </div>
+    <div>
+        <p>
+            <b>Here are some more important features of PHP −</b>
+
+        <p>1.PHP performs system functions. It can create, open, read, write, and close the files.</p>
+
+        <p>2.PHP can handle forms. It can gather data from files, save data to a file, through email you can send data, return data to the user.</p>
+
+        <p>3.You add, delete, modify elements within your database through PHP.</p>
+
+        <p>4.Access cookies variables and set cookies.</p>
+
+        <p>5.Using PHP, you can restrict users to access some pages of your website.</p>
+
+        <p>6.It can encrypt data.</p>
+        </p>
+    </div>
+
+    <div>
+        <div style="height:30px;width:100%;background-color:#007bff;color:white;text-align:center">
+            <h4>Why CIIT?</h4>
+        </div>
+        <ul style="font-size:14px;list-style:none;margin-top:2%">
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Latest Curriculum</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Highly Experienced Trainers</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Chance to work with our development team</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Practically Work on Projects & Case Studies</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Real time project Training</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> 100% Job assurance</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Weekly Mock & HR Interviews </h6></li>
+            @* <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> 100% Job assurance</h6></li> *@
+        </ul>
+    </div>
+    <div>
+        <div style="height:30px;width:100%;background-color:#007bff;color:white;text-align:center">
+            <h4>Course Curriculum</h4>
+        </div>
+
+        <p style="margin-top:2%">This PHP Full Stack Development course is ideal for anyone with an interest in creating their own projects from scratch,CIIT is a good platform for those people who want to do limitless career as a PHP Developer in IT Indusrty. </p>
+    </div>
+    <div>
+
+
+
+        <div class="" style="text-align:justify;font-family:'Bookman Old Style'">
+            <h4 style="margin-top:2%">Various PHP Courses offered by CIIT Training Institute</h4>
+            <div class="row">
+                <div class="col-md-9">
+
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 ">
+                                <nav>
+                                    <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">PHP Full Stack Development</a>
+                                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">PHP for Working Professionals</a>
+                                        @* <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">PHP Core for Working Professionals</a> *@
+                                    </div>
+                                </nav>
+                                <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" style="padding:2%">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="card border-primary shadow-sm  mb-4">
+                                                    <div class="card-body">
+                                                        <h4 style="color:#e74c3c">CIIT Gaurantee for Quality Training and Live Project with 100% Job Placement</h4>
+                                                        <br />
+                                                        <h5 class="card-title"><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Who can do this course</h5>
+                                                        <p class="card-text" style="padding-left:10%"> Any Graduate ,Non IT / IT professionals</p>
+                                                        <h5 class="card-title"><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Total Duration</h5>
+                                                        <p class="card-text" style="padding-left:10%"> 6 Months Training and gauranteed job from 5th month</p>
+                                                        <h5><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Key Points for Freshers</h5>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  100% Real time Project Training</li>
+                                                            <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Training will be provided by Industry experts</li>
+                                                            <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Mock Interviews will be conducted 2 days a week</li>
+                                                            <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Best Platform for freshers to get their dream job in IT Industry</li>
+                                                            <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Weekly Assessment</li>
+                                                            <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Unlimited Job Calls </li>
+                                                            @* <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  10+ Mini Projects and 2 Real Time Industry Project</li> *@
+                                                        </ul>
+                                                        <h5><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Course Contents</h5>
+                                                        <ul style="padding-left:10%">
+                                                            <li>
+                                                                <h6><i class="fas fa-book" style="color:#e74c3c"></i> Front End</h6>
+                                                                <ul style="padding-left:10%">
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Html,Html5</li>
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> CSS,CSS3</li>
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Bootstrap 5</li>
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JavaScript</li>
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JQuery</li>
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> XML</li>
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Angular 2-8</li>
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> NodeJs</li>
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> ReactJS</li>
+                                                                </ul>
+                                                                <hr />
+                                                            </li>
+                                                            <li>
+                                                                <h6><i class="fas fa-book" style="color:#e74c3c"></i> RDBMS</h6>
+                                                                <ul style="padding-left:10%">
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> MySQL</li>
+                                                                </ul>
+                                                                <hr />
+
+                                                            </li>
+                                                            <li>
+                                                                <h6><i class="fas fa-book" style="color:#e74c3c"></i> PHP Technology </h6>
+                                                                <ul style="padding-left:10%">
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Core PHP</li>
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Advance PHP</li>
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Web API's</li>
+
+                                                                </ul>
+                                                                <hr />
+
+                                                            </li>
+                                                            <li>
+                                                                <h6><i class="fas fa-book" style="color:#e74c3c"></i> Frameworks </h6>
+                                                                <ul style="padding-left:10%">
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> CodeIgniter</li>
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> CakePHP</li>
+
+                                                                </ul>
+                                                                <hr />
+
+                                                            </li>
+                                                            <li>
+                                                                <h6><i class="fas fa-book" style="color:#e74c3c"></i> CMS </h6>
+                                                                <ul style="padding-left:10%">
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> WordPress</li>
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Joomla</li>
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Drupal</li>
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Magento(E-Commerce)</li>
+                                                                </ul>
+                                                                <hr />
+
+                                                            </li>
+                                                            <li>
+                                                                <h6><i class="fas fa-book" style="color:#e74c3c"></i> Marketing </h6>
+                                                                <ul style="padding-left:10%">
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Digital Marketing</li>
+                                                                </ul>
+                                                                <hr />
+
+                                                            </li>
+                                                            <li>
+                                                                <h6><i class="fas fa-book" style="color:#e74c3c"></i> Softaware Testing </h6>
+                                                                <ul style="padding-left:10%">
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Manual</li>
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Automation</li>
+                                                                </ul>
+                                                                <hr />
+
+                                                            </li>
+                                                            <li>
+                                                                <h6><i class="fas fa-book" style="color:#e74c3c"></i> Methodoligies </h6>
+                                                                <ul style="padding-left:10%">
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Agile</li>
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> SCRUM</li>
+                                                                </ul>
+                                                                <hr />
+
+                                                            </li>
+                                                            <li>
+                                                                <h6><i class="fas fa-book" style="color:#e74c3c"></i> Projects</h6>
+                                                                <ul style="padding-left:10%">
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> 1 Real Time Project</li>
+                                                                </ul>
+                                                                <hr />
+
+                                                            </li>
+
+                                                        </ul>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade show " id="nav-profile" role="tabpanel" aria-labelledby="nav-home-tab" style="padding:2%">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="card border-primary shadow-sm  mb-4">
+                                                    <div class="card-body">
+                                                        <h4 style="color:#e74c3c">CIIT Gaurantee for Quality Training and Live Project with 100% Job Placement</h4>
+                                                        <br />
+                                                        <h5 class="card-title"><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Who can do this course</h5>
+                                                        <p class="card-text" style="padding-left:10%"> Any Graduate ,Non IT / IT professionals</p>
+                                                        <h5 class="card-title"><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Total Duration</h5>
+                                                        <p class="card-text" style="padding-left:10%"> 3 Months Training and gauranteed job from 5th month</p>
+                                                        <h5><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Key Points for Freshers</h5>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  100% Real time Project Training</li>
+                                                            <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Training will be provided by Industry experts</li>
+                                                            <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Mock Interviews will be conducted 2 days a week</li>
+                                                            <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Best Platform for freshers to get their dream job in IT Industry</li>
+                                                            <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Weekly Assessment</li>
+                                                            <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Unlimited Job Calls </li>
+                                                            @* <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  10+ Mini Projects and 2 Real Time Industry Project</li> *@
+                                                        </ul>
+                                                        <h5><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Course Contents</h5>
+                                                        <ul style="padding-left:10%">
+                                                            <li>
+                                                                <h6><i class="fas fa-book" style="color:#e74c3c"></i> Front End</h6>
+                                                                <ul style="padding-left:10%">
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Html,Html5</li>
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> CSS,CSS3</li>
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Bootstrap 5</li>
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JavaScript</li>
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JQuery</li>
+
+                                                                </ul>
+                                                                <hr />
+                                                            </li>
+                                                            <li>
+                                                                <h6><i class="fas fa-book" style="color:#e74c3c"></i> RDBMS</h6>
+                                                                <ul style="padding-left:10%">
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> MySQL</li>
+                                                                </ul>
+                                                                <hr />
+
+                                                            </li>
+                                                            <li>
+                                                                <h6><i class="fas fa-book" style="color:#e74c3c"></i> Frameworks</h6>
+                                                                <ul style="padding-left:10%">
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> CodeIgniter</li>
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> CakePHP</li>
+                                                                </ul>
+                                                                <hr />
+
+                                                            </li>
+
+
+                                                            <li>
+                                                                <h6><i class="fas fa-book" style="color:#e74c3c"></i> CMS </h6>
+                                                                <ul style="padding-left:10%">
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> WordPress</li>
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JOOMLA</li>
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Drupal</li>
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Magento(E-Commerce)</li>
+                                                                </ul>
+                                                                <hr />
+
+                                                            </li>
+
+
+
+                                                            <li>
+                                                                <h6><i class="fas fa-book" style="color:#e74c3c"></i> Projects</h6>
+                                                                <ul style="padding-left:10%">
+                                                                    <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i>  1 Real Time Project</li>
+                                                                </ul>
+                                                                <hr />
+
+                                                            </li>
+
+                                                        </ul>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    @* <div class="tab-pane fade show " id="nav-contact" role="tabpanel" aria-labelledby="nav-home-tab" style="padding:2%">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="card border-primary shadow-sm  mb-4">
+                                                        <div class="card-body">
+                                                            <h4 style="color:#e74c3c">PHP Training For Working Professionals</h4>
+                                                            <br />
+                                                            <h5 class="card-title"><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Who can do this course</h5>
+                                                            <p class="card-text" style="padding-left:10%">  IT professionals</p>
+                                                            <h5 class="card-title"><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Total Duration</h5>
+                                                            <p class="card-text" style="padding-left:10%"> 2 Months</p>
+
+                                                            <h5><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i>Placements</h5>
+                                                            <p class="card-text" style="padding-left:10%"> 100% Job Assurance</p>
+                                                            <h5><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i>Training Topics</h5>
+                                                            <ul style="padding-left:10%">
+
+
+                                                                <li>
+                                                                    <h6><i class="fas fa-book" style="color:#e74c3c"></i> Front End</h6>
+                                                                    <ul style="padding-left:10%">
+                                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Html,Html5</li>
+                                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> CSS,CSS3</li>
+                                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Bootstrap 5</li>
+                                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JavaScript</li>
+                                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JQuery</li>
+
+                                                                    </ul>
+                                                                    <hr />
+                                                                </li>
+                                                                <li>
+                                                                    <h6><i class="fas fa-book" style="color:#e74c3c"></i> RDBMS</h6>
+                                                                    <ul style="padding-left:10%">
+                                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> MySql</li>
+                                                                    </ul>
+                                                                    <hr />
+
+                                                                </li>
+                                                                <li>
+                                                                    <h6><i class="fas fa-book" style="color:#e74c3c"></i> Frameworks</h6>
+                                                                    <ul style="padding-left:10%">
+                                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> CodeIgniter</li>
+                                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> CakePHP</li>
+                                                                    </ul>
+                                                                    <hr />
+
+                                                                </li>
+
+
+                                                                <li>
+                                                                    <h6><i class="fas fa-book" style="color:#e74c3c"></i> CMS </h6>
+                                                                    <ul style="padding-left:10%">
+                                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> WordPress</li>
+                                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JOOMLA</li>
+                                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Drupal</li>
+                                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Magento(E-Commerce)</li>
+                                                                    </ul>
+                                                                    <hr />
+
+                                                                </li>
+
+
+
+                                                                <li>
+                                                                    <h6><i class="fas fa-book" style="color:#e74c3c"></i> Projects</h6>
+                                                                    <ul style="padding-left:10%">
+                                                                        <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> 1 Project</li>
+                                                                    </ul>
+                                                                    <hr />
+
+                                                                </li>
+
+                                                            </ul>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> *@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    @Html.Partial("PartialView")
+
+                </div>
+                </<div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

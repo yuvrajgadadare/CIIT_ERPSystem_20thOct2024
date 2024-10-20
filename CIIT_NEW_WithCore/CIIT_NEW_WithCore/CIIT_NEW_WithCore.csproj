@@ -1,0 +1,70 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\assets\.sass-cache\05a6991ff954a592e23ab9d14202cd5edc93a9c3\style.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\05a6991ff954a592e23ab9d14202cd5edc93a9c3\_variable.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\09511fb459e6908b6008cb123d3da74c87040c51\style.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\09511fb459e6908b6008cb123d3da74c87040c51\_variable.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\302261ae95d2e642321c80f6db61a43fdf6c09dd\style.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\302261ae95d2e642321c80f6db61a43fdf6c09dd\_variable.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\4645f421d84c78cf77453e0e0f0cc8d4e835002a\style.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\4645f421d84c78cf77453e0e0f0cc8d4e835002a\_variable.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\4a07a1181e6d7c97754f8a473dc124ebb16042ad\style.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\4a07a1181e6d7c97754f8a473dc124ebb16042ad\_variable.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\547dd70afbb823abc27ff9cde551e9769cd0d6a1\style.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\547dd70afbb823abc27ff9cde551e9769cd0d6a1\_variable.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\79eec4cfac86a4311641e442445b587090bf79fc\style.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\79eec4cfac86a4311641e442445b587090bf79fc\_variable.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\8136bdfee5732e373c1b40684fcddf2553a3d4f0\style.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\8136bdfee5732e373c1b40684fcddf2553a3d4f0\_variable.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\87d7d2c53dbc96fa4103c335be9858a0be75d3be\style.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\87d7d2c53dbc96fa4103c335be9858a0be75d3be\_variable.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\95cf556d26084464b0bbe049abf61d95dda952fa\style.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\95cf556d26084464b0bbe049abf61d95dda952fa\_variable.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\a9980f5e94da02293ec68656b8c909660a62ff20\style.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\a9980f5e94da02293ec68656b8c909660a62ff20\_variable.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\bba4c5a66a7894a69c91d4bbaeb2427a107f1434\style.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\bba4c5a66a7894a69c91d4bbaeb2427a107f1434\_variable.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\eabf039d09464d8f012fa233de6105a3725fdbbd\style.scssc" />
+    <None Include="wwwroot\assets\.sass-cache\eabf039d09464d8f012fa233de6105a3725fdbbd\_variable.scssc" />
+    <None Include="wwwroot\assets\scss\.sass-cache\87f88134b2e274406d696eddf2817a21a5f37943\style.scssc" />
+    <None Include="wwwroot\assets\scss\.sass-cache\87f88134b2e274406d696eddf2817a21a5f37943\_variable.scssc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="4.8.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.6" />
+    <PackageReference Include="NETCore.MailKit" Version="2.1.0" />
+    <PackageReference Include="RazorPay.Core" Version="1.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="wwwroot\images\Students\" />
+    <Folder Include="wwwroot\Videos\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="F:\CIIT\CIIT WebSite With Batch Management\CIIT_ERPSystem\ERPSystem_Models\ERPSystem_Models.csproj" />
+    <ProjectReference Include="F:\CIIT\CIIT WebSite With Batch Management\CIIT_ERPSystem\ERPSystem_Services\ERPSystem_Services.csproj" />
+  </ItemGroup>
+
+</Project>

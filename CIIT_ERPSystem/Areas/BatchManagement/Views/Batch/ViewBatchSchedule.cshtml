@@ -1,0 +1,99 @@
+﻿@model IEnumerable< ERPSystem_Models.BatchScheduleModel>
+@{
+    ViewData["Title"] = "View Batch Schedule";
+    Layout = "~/Areas/BatchManagement/Views/Shared/BatchManagementLayout.cshtml";
+ }
+<style>
+    .form-control {
+        font-size: 12px
+    }
+
+    label {
+        font-size: 12px
+    }
+
+    span {
+        font-size: 12px
+    }
+
+    input[type=text] {
+        font-size: 12px
+    }
+</style>
+<style>
+    table {
+        font-size: 12px;
+    }
+
+
+    .form-control {
+        font-size: 12px
+    }
+
+    label {
+        font-size: 12px
+    }
+
+    span {
+        font-size: 12px
+    }
+
+    input[type=text] {
+        font-size: 12px
+    }
+</style>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-header">
+            <h4>Batch Schedule</h4>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                @Html.Partial("~/Areas/Trainer/Views/Shared/BatchDetails.cshtml")
+
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    @Html.Partial("~/Areas/Trainer/Views/Shared/BatchStudent_Attendance.cshtml")
+
+                </div>
+                <div class="col-md-8">
+                    <h5>Batch Schedule</h5>
+                    <div class="table-responsive">
+
+                        <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Content Name</th>
+                                <th>Expected Date</th>
+                                <th>Actual Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                int i = 1;
+                            }
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@i</td>
+                                    <td>@item.content_name</td>
+                                    <td>@item.expected_date</td>
+                                    <td>@item.actual_date</td>
+
+                                    <td>@item.status</td>
+                                </tr>
+                                i++;
+                            }
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+</div>

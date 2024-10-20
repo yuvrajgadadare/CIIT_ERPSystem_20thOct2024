@@ -1,0 +1,421 @@
+﻿@{
+    ViewData["Title"] = "Python Full Stack Development";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+
+    nav > .nav.nav-tabs {
+        border: none;
+        color: #fff;
+        background: #272e38;
+        border-radius: 0;
+    }
+
+    nav > div a.nav-item.nav-link,
+    nav > div a.nav-item.nav-link.active {
+        border: none;
+        padding: 18px 25px;
+        color: #fff;
+        background: #272e38;
+        border-radius: 0;
+    }
+
+        nav > div a.nav-item.nav-link.active:after {
+            content: "";
+            position: relative;
+            bottom: -60px;
+            left: -50%;
+            border: 15px solid transparent;
+            border-top-color: #e74c3c;
+        }
+
+    .tab-content {
+        background: #fdfdfd;
+        line-height: 25px;
+        border: 1px solid #ddd;
+        border-top: 5px solid #e74c3c;
+        border-bottom: 5px solid #e74c3c;
+        padding: 30px 25px;
+    }
+
+    nav > div a.nav-item.nav-link:hover,
+    nav > div a.nav-item.nav-link:focus {
+        border: none;
+        background: #e74c3c;
+        color: #fff;
+        border-radius: 0;
+        transition: background 0.20s linear;
+    }
+
+
+</style>
+
+<div class="container" style="padding-top:80px;text-align:justify;font-size:14px;font-family:'Bookman Old Style'">
+    <img src="~/assets/courses/Python.jpg" style="height:200px;width:100%" />
+
+    <h4 style="margin-top:2%;text-align:left">
+
+        Annually over 1000 ambitious students embark on their journey to success as Python Developers securing coveted positions in the thriving IT industry.
+    </h4>
+    <div>
+        <p>
+            Python is a world’s fastest growing and most popular programming language used by software engineers, machine learning engineers, data scientist, etc. Python is a general-purpose, versatile and popular programming language. It’s great as a first language because it is concise and easy to read, and it is also a good language to have in any programmer’s stack as it can be used for everything from web development to software development and scientific applications.
+
+        </p>
+        <p>
+            Python is an important programming language that any developer should know. Many programmers use this language to build websites, create learning algorithms, and perform other important tasks. But trying to learn Python can be intimidating, frustrating, and difficult, especially if you’re not sure how to approach it.
+
+
+        </p>
+        <p>
+            <h4>Reasons for Python's popularity</h4>
+        </p>
+        <p>
+            <ul>
+                <li>
+                    <b>Open Source</b>
+                    <p>
+                        Yes, the best part about python is that it is an open source language that makes it highly popular and available among others. On top of that, the codes being open source can be used by anyone publicly on the net. It is also easy to work on the code or even modify it as per the requirement.
+                    </p>
+                <li>
+                    <b> High-level programming language</b>
+                    <p>
+                        With Python, the code looks very close to how humans think. For this purpose, it must abstract the details of the computer from you: memory management, pointers,… Hence, it is slower than “lower-level language” like C;
+
+                    </p>
+
+                </li>
+                <li>
+                    <b>  Cross-platform language</b>
+                    <p>
+                        Another of the best feature about python is that it is extremely diverse when it comes to the operating system. In simple words, python can be used for any type of operating system such as Linus, Windows, Ubuntu, etc. Hence, one can easily run off a software without worrying about system support. It can be interpreted in the language with the help of a portable feature that makes it beneficial to use. In brief, write code on the Mac platform and run it smoothly on Windows as well. There is no need to write a code in multiple languages with it.
+
+                    </p>
+                    </li>
+                <li>
+                    <b>Python is interpreted and not compiled</b>
+                    <p>
+                        Sure, this statement is a gross simplification but it’s somehow correct. During the execution, Python code is interpreted at runtime instead of being compiled to native code at compile time;
+                    </p>
+                    </li>
+
+                <li>
+                    <b>Python is a dynamically typed language</b>
+                    <p>
+                        don’t have to declare the variable type like String, boolean or int. The less you do, the more your computer has to work. For each attribute access, tons of lookup is required. In addition, being very dynamic makes it incredibly hard to optimize Python;
+            </p>
+                    </ul>
+        </p>
+    </div>
+    <div>
+        <p>At CIIT Training Institute, we offer comprehensive Python training tailored for both freshers and seasoned professionals. With a track record of empowering over 10,000 students in Python technology, we've paved the path for countless aspirants to land their dream roles as Python Developers in top-tier companies.</p>
+        <p>Our Python training program features an up-to-date syllabus and hands-on experience with live projects. We guarantee that upon completion of the training, students will possess the skills to independently develop projects. They'll be fully equipped to showcase their expertise confidently in the professional realm.</p>
+    </div>
+    <div>
+        <div style="height:30px;width:100%;background-color:#007bff;color:white;text-align:center">
+            <h4>Why CIIT?</h4>
+        </div>
+        <ul style="font-size:14px;list-style:none;margin-top:2%">
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Latest Curriculum</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Highly Experienced Trainers</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Chance to work with our development team</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Practically Work on Projects & Case Studies</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Real time project Training</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> 100% Job assurance</h6></li>
+            <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> Weekly Mock & HR Interviews </h6></li>
+            @* <li><h6><i class="fas fa-arrow-right" style="color:#e74c3c"></i> 100% Job assurance</h6></li> *@
+        </ul>
+    </div>
+    <div>
+        <div style="height:30px;width:100%;background-color:#007bff;color:white;text-align:center">
+            <h4>Course Curriculum</h4>
+        </div>
+
+        <p style="margin-top:2%">This Python Full Stack Development course is designed for individuals eager to build their own projects from the ground up. CIIT serves as an excellent platform for those aspiring to forge a boundless career as a Python Developer in the IT industry.</p>
+    </div>
+    <div>
+
+
+
+        <div class="" style="text-align:justify;font-family:'Bookman Old Style'">
+            <h4 style="margin-top:2%">Various Python Courses offered by CIIT Training Institute</h4>
+
+            <div class="row">
+                <div class="col-md-9">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 ">
+                        <nav>
+                            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"> Python Development <br />With Stipend</a>
+                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Full Stack Development</a>
+                                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Python for Working<br /> Professionals</a>
+                            </div>
+                        </nav>
+                        <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" style="padding:2%">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card border-primary shadow-sm  mb-4">
+                                            <div class="card-body">
+                                                <h4 style="color:#e74c3c">CIIT Gaurantee for Quality Training and Live Project with 100% Job Placement</h4>
+                                                <br />
+                                                <h5 class="card-title"><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Who can do this course</h5>
+                                                <p class="card-text" style="padding-left:10%"> Any Graduate ,Non IT / IT professionals</p>
+                                                <h5 class="card-title"><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Total Duration</h5>
+                                                <p class="card-text" style="padding-left:10%"> 4 Months Training and gauranteed job from 5th month</p>
+                                                <h5><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Key Points for Freshers</h5>
+                                                <ul style="padding-left:10%">
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  100% Real time Project Training</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Training will be provided by Industry experts</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Mock Interviews will be conducted 2 days a week</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Best Platform for freshers to get their dream job in IT Industry</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Weekly Assessment</li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Unlimited Job Calls </li>
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  10+ Mini Projects and 2 Real Time Industry Projects</li>
+                                                </ul>
+                                                <h5><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Course Contents</h5>
+                                                <ul style="padding-left:10%">
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> Front End</h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Html,Html5</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> CSS,CSS3</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Bootstrap 5</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JavaScript</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JQuery</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> TypeScript</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Angular Latest/ReactJs Latest</li>
+
+                                                        </ul>
+                                                        <hr />
+                                                    </li>
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> RDBMS</h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Oracle - SQL,PLSQL</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> MySQL</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> NoSQL - MongoDB </li>
+                                                        </ul>
+                                                        <hr />
+
+                                                    </li>
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> Python </h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Core Python</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Object Oriented Python</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Data Science Libraries - Numpy,Pandas,Matplotlib,Scipy,Scikit-learn</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Data Analysis Libraries - Scipy,Scikit-learn,Numpy,Pandas,Matplotlib</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Machine Learning & AI</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> DJango</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Tableau </li>
+                                                        </ul>
+                                                        <hr />
+                                                    </li>
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> More Important Topics </h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> File Handling</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Exception Handling</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Modules and Packages</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Regular Expressions</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Control Flow</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Working with Libraries and Frameworks</li>
+                                                        </ul>
+
+                                                        <hr />
+
+                                                    </li>
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> Project </h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> 2 Real Time Projects</li>
+                                                           
+
+                                                        </ul>
+                                                        <hr />
+
+                                                    </li>
+
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" style="padding:2%">
+                                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" style="padding:2%">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="card border-primary shadow-sm  mb-4">
+                                                <div class="card-body">
+                                                    <h4 style="color:#e74c3c">CIIT Gaurantee for Quality Training and Live Project with 100% Job Placement</h4>
+                                                    <br />
+                                                    <h5 class="card-title"><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Who can do this course</h5>
+                                                    <p class="card-text" style="padding-left:10%"> Any Graduate ,Non IT / IT professionals</p>
+                                                    <h5 class="card-title"><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Total Duration</h5>
+                                                    <p class="card-text" style="padding-left:10%"> 4 Months Training and gauranteed job from 5th month</p>
+                                                    <h5><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Key Points for Freshers</h5>
+                                                    <ul style="padding-left:10%">
+                                                        <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  100% Real time Project Training</li>
+                                                        <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Training will be provided by Industry experts</li>
+                                                        <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Mock Interviews will be conducted 2 days a week</li>
+                                                        <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Best Platform for freshers to get their dream job in IT Industry</li>
+                                                        <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Weekly Assessment</li>
+                                                        <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  Unlimited Job Calls </li>
+                                                        <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  10+ Mini Projects and 2 Real Time Industry Projects</li>
+                                                    </ul>
+                                                    <h5><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Course Contents</h5>
+                                                    <ul style="padding-left:10%">
+                                                        <li>
+                                                            <h6><i class="fas fa-book" style="color:#e74c3c"></i> Front End</h6>
+                                                            <ul style="padding-left:10%">
+                                                                <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Html,Html5</li>
+                                                                <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> CSS,CSS3</li>
+                                                                <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Bootstrap 5</li>
+                                                                <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JavaScript</li>
+                                                                <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> JQuery</li>
+                                                                <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> TypeScript</li>
+                                                                <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Angular Latest/ReactJs Latest</li>
+
+                                                            </ul>
+                                                            <hr />
+                                                        </li>
+                                                        <li>
+                                                            <h6><i class="fas fa-book" style="color:#e74c3c"></i> RDBMS</h6>
+                                                            <ul style="padding-left:10%">
+                                                                <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Oracle - SQL,PLSQL</li>
+                                                                <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> MySQL</li>
+                                                                <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> NoSQL - MongoDB </li>
+                                                            </ul>
+                                                            <hr />
+
+                                                        </li>
+                                                        <li>
+                                                            <h6><i class="fas fa-book" style="color:#e74c3c"></i> Python </h6>
+                                                            <ul style="padding-left:10%">
+                                                                <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Core Python</li>
+                                                                <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Object Oriented Python</li>
+                                                                <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Data Science Libraries - Numpy,Pandas,Matplotlib,Scipy,Scikit-learn</li>
+                                                                <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Data Analysis Libraries - Scipy,Scikit-learn,Numpy,Pandas,Matplotlib</li>
+                                                                <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Machine Learning & AI</li>
+                                                                <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> DJango</li>
+                                                                <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Tableau </li>
+
+
+                                                            </ul>
+                                                            <hr />
+
+                                                        </li>
+                                                        <li>
+                                                            <h6><i class="fas fa-book" style="color:#e74c3c"></i> Methodoligies </h6>
+                                                            <ul style="padding-left:10%">
+                                                                <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> POSTMAN</li>
+                                                                <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> GitHub</li>
+
+                                                            </ul>
+                                                            <hr />
+
+                                                        </li>
+                                                        <li>
+                                                            <h6><i class="fas fa-book" style="color:#e74c3c"></i> Project </h6>
+                                                            <ul style="padding-left:10%">
+                                                                <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> 2 Real Time Projects</li>
+
+
+                                                            </ul>
+                                                            <hr />
+
+                                                        </li>
+
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" style="padding:2%">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card border-primary shadow-sm  mb-4">
+                                            <div class="card-body">
+                                                <h4 style="color:#e74c3c">CIIT Gaurantee for real time industry  training with live project</h4>
+                                                <br />
+                                                <h5 class="card-title"><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Who can do this course</h5>
+                                                <p class="card-text" style="padding-left:10%">Any Graduate,Non IT / IT professionals</p>
+                                                <h5 class="card-title"><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Total Duration</h5>
+                                                <p class="card-text" style="padding-left:10%"> 2-3 Months</p>
+                                                <h5><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Placements</h5>
+                                                <ul style="padding-left:10%">
+                                                    <li><i class="fas fa-arrow-right" style="color:#e74c3c"></i>  100% Job Gurantee</li>
+                                                     </ul>
+                                                <h5><i class="fas fa-star" style="color:#e74c3c;font-size:15px"></i> Training Topics</h5>
+                                                <ul style="padding-left:10%">
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> Python</h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Basics of Python</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Core Python</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Advance Python</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Data Science Libray</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Tableau</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> WxPython</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> Anaconda</li>
+
+                                                        </ul>
+                                                        <hr />
+                                                    </li>
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> Database</h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> MySQL</li>
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> NoSQL(MongoDB)</li>
+                                                        </ul>
+                                                        <hr />
+
+                                                    </li>
+                                                    <li>
+                                                        <h6><i class="fas fa-book" style="color:#e74c3c"></i> Project </h6>
+                                                        <ul style="padding-left:10%">
+                                                            <li><i class="fas fa-chevron-circle-right" style="color:#e74c3c"></i> 1 Real Time Project</li>
+                                                           
+                                                        </ul>
+                                                        <hr />
+
+                                                    </li>
+                                                    
+
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+                <div class="col-md-3">
+                    @Html.Partial("PartialView")
+
+                </div>
+
+        </div>
+        </div>
+    </div>
+</div>
+

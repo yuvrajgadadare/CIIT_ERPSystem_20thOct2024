@@ -1,0 +1,232 @@
+﻿@model ERPSystem_Models.StudentModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
+}
+    <div class="row">
+        <div class="col-lg-12">
+            @using(Html.BeginForm())
+            {
+            @Html.HiddenFor(e=>e.student_id)
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="row">
+                        @if(ViewBag.msg!=null)
+                        {
+                            <div class="alert alert-success alert-dismissible fade show">
+                                <strong>Success!</strong> @ViewBag.msg
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            </div>
+                        }
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-6">
+                            <h5 style="text-align:center">Profile Details</h5>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <p class="mb-0">Full Name</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <div class="row mb-2">
+                                            <div class="col-md-6">
+                                                @Html.TextBoxFor(e => e.student_name, new { @class = "form-control" })
+                                            </div>
+                                            <div class="col-md-6">
+                                                @Html.TextBoxFor(e => e.last_name, new { @class = "form-control" })
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-sm-3">
+                                        <p class="mb-0">Gender</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        @Html.RadioButtonFor(e => e.gender, "Male") <span> Male</span>
+                                        @Html.RadioButtonFor(e => e.gender, "Female") <span> Female</span>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-sm-3">
+                                        <p class="mb-0">Email</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        @Html.TextBoxFor(e => e.email_address, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-sm-3">
+                                        <p class="mb-0">Birth Date</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        @* <input id="birth_date" name="birth_date" width="276" value="@Model.birth_date.ToShortDateString()" /> *@
+                                        @Html.TextBoxFor(e => e.birth_date, new { @class = "form-control" })
+                                        <script>
+                                            $('#birth_date').datepicker({
+                                                uiLibrary: 'bootstrap5'
+                                            });
+                                        </script>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-sm-3">
+                                        <p class="mb-0">Qualification</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        @Html.TextBoxFor(e => e.qualification, new { @class = "form-control" })
+
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-sm-3">
+                                        <p class="mb-0">Phone</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        @Html.TextBoxFor(e => e.mobile_number, new { @class = "form-control" })
+
+                                    </div>
+                                </div>
+                         
+                                <div class="row mb-2">
+                                    <div class="col-sm-3">
+                                        <p class="mb-0">Whatsapp Number</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        @Html.TextBoxFor(e => e.whatsapp_number, new { @class = "form-control" })
+
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-sm-3">
+                                        <p class="mb-0">Parent Name</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        @Html.TextBoxFor(e => e.parent_name, new { @class = "form-control" })
+
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-sm-3">
+                                        <p class="mb-3">Parent Number</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        @Html.TextBoxFor(e => e.parent_number, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-sm-3">
+                                        <p class="mb-0">Local Address</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        @Html.TextAreaFor(e => e.local_address, new { @class = "form-control" })
+
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-sm-3">
+                                        <p class="mb-0">Permanent Address</p>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        @Html.TextAreaFor(e => e.permanent_address, new { @class = "form-control" })
+
+                                    </div>
+                                </div>
+                            <div class="row mb-2">
+                                <div class="col-sm-3">
+                                    <p class="mb-0">Aadhar Number</p>
+                                </div>
+                                <div class="col-sm-9">
+                                    @Html.TextBoxFor(e => e.aadhar_card_number, new { @class = "form-control" })
+
+                                </div>
+                            </div>
+
+                            <div class="row mb-2">
+                                    <div class="col-sm-12" style="text-align:right">
+                                        <input type="submit" value="Update" class="btn btn-primary btn-sm" />
+
+                                    </div>
+                                </div>
+                        </div>    
+                    
+                    </div>
+
+                       
+                        
+                </div>
+            </div>
+            }
+            @* <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4 mb-md-0">
+                        <div class="card-body">
+                            <p class="mb-4">
+                                <span class="text-primary font-italic me-1">assigment</span> Project Status
+                            </p>
+                            <p class="mb-1" style="font-size: .77rem;">Web Design</p>
+                            <div class="progress rounded" style="height: 5px;">
+                                <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
+                                     aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="mt-4 mb-1" style="font-size: .77rem;">Website Markup</p>
+                            <div class="progress rounded" style="height: 5px;">
+                                <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72"
+                                     aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="mt-4 mb-1" style="font-size: .77rem;">One Page</p>
+                            <div class="progress rounded" style="height: 5px;">
+                                <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89"
+                                     aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="mt-4 mb-1" style="font-size: .77rem;">Mobile Template</p>
+                            <div class="progress rounded" style="height: 5px;">
+                                <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55"
+                                     aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="mt-4 mb-1" style="font-size: .77rem;">Backend API</p>
+                            <div class="progress rounded mb-2" style="height: 5px;">
+                                <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66"
+                                     aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4 mb-md-0">
+                        <div class="card-body">
+                            <p class="mb-4">
+                                <span class="text-primary font-italic me-1">assigment</span> Project Status
+                            </p>
+                            <p class="mb-1" style="font-size: .77rem;">Web Design</p>
+                            <div class="progress rounded" style="height: 5px;">
+                                <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
+                                     aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="mt-4 mb-1" style="font-size: .77rem;">Website Markup</p>
+                            <div class="progress rounded" style="height: 5px;">
+                                <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72"
+                                     aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="mt-4 mb-1" style="font-size: .77rem;">One Page</p>
+                            <div class="progress rounded" style="height: 5px;">
+                                <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89"
+                                     aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="mt-4 mb-1" style="font-size: .77rem;">Mobile Template</p>
+                            <div class="progress rounded" style="height: 5px;">
+                                <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55"
+                                     aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p class="mt-4 mb-1" style="font-size: .77rem;">Backend API</p>
+                            <div class="progress rounded mb-2" style="height: 5px;">
+                                <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66"
+                                     aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> *@
+        </div>
+    </div>
+ 

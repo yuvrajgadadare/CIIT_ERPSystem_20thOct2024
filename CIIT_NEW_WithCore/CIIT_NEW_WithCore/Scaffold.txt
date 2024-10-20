@@ -1,0 +1,1 @@
+﻿Scaffold-DbContext "Server=A2NWPLSK14SQL-v04.shr.prod.iad2.secureserver.net;Database=batch_managementDB;User Id=erpuser;Password=CIIT#20242024;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -force

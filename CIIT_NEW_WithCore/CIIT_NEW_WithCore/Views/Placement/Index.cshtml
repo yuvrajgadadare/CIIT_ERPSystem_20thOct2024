@@ -1,0 +1,982 @@
+﻿@{
+    ViewData["Title"] = "Placements";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+
+    nav > .nav.nav-tabs {
+        border: none;
+        color: #fff;
+        background: #272e38;
+        border-radius: 0;
+    }
+
+    nav > div a.nav-item.nav-link,
+    nav > div a.nav-item.nav-link.active {
+        border: none;
+        padding: 18px 25px;
+        color: #fff;
+        background: #272e38;
+        border-radius: 0;
+    }
+
+        nav > div a.nav-item.nav-link.active:after {
+            content: "";
+            position: relative;
+            bottom: -60px;
+            left: -50%;
+            border: 15px solid transparent;
+            border-top-color: #e74c3c;
+        }
+
+    .tab-content {
+        background: #fdfdfd;
+        line-height: 25px;
+        border: 1px solid #ddd;
+        border-top: 5px solid #e74c3c;
+        border-bottom: 5px solid #e74c3c;
+        padding: 30px 25px;
+    }
+
+    nav > div a.nav-item.nav-link:hover,
+    nav > div a.nav-item.nav-link:focus {
+        border: none;
+        background: #e74c3c;
+        color: #fff;
+        border-radius: 0;
+        transition: background 0.20s linear;
+    }
+</style>
+
+<div class="container" style="padding-top:80px;text-align:justify; font-size:16px; font-family:'Bookman Old Style'">
+    <div class="row">
+        @* <img src="~/assets/PLACEMENT1.jpg" style="height:300px; width:100%;border-radius:10px;" /> *@
+        <img class="placeme" src="~/assets/placement3.jpg" style="height:300px; width:100%;border-radius:10px;" />
+    </div>
+
+    <div class="row" style="padding-left:10px;padding-right:10px">
+
+        <h4 style="margin-top:2%;color:#007bff;text-align:center">
+            100% Job Guarantee With Customized Training Program
+
+        </h4>
+        <p>
+            These days there are so many training institutes who claims to offer training and placement. They might be authentic and keep up to their promises, but how would a candidate trust an institute among so many or make the right choice? Here CIIT Training Institute stands out with it’s unique written assurance of 100% job guarantee on a legal bond paper. Employability is not merely a part of the training goals but the ultimate objective of our certification courses.
+        </p>
+        <p>
+            CIIT Training Institute key aim is to deliver Job Oriented Training for both IT students and Non IT students to perform excellence in their choice of domains. We understand the value of money and thus we trained candidate according to the needs of industry.
+
+        </p>
+        <p>
+            CIIT Training Institute training methods and customized courses promise employability, and not just certifications. CIIT Training Institute prepare its candidates as per latest and advanced corporate requirements. Once candidates are given a thorough understanding of theory and practical sessions, they are asked to perform on live projects under supervision of our mentors the industrial experts.
+
+        </p>
+        <p>
+            We take utmost care to ensure that whatever candidates learn in the classroom gets transformed in practical knowledge. They are trained to work in corporate environments and on real time projects so that they find it easy to adapt themselves in the high pressure environment.
+        </p>
+        <p>
+            <h4 style="color:#007bff">Job Guarantee</h4>
+
+            At CIIT, we provide 100% job guarantee for Trainee Engineer Programs in JAVA,.NET and PHP technology. Here student will get 2 months training on all the topics required for Developer.After completion of training he will get opportunity to work with our developemnt team atleast for next 4 months. During this 4 months he will be on probation period, after complition of his 4 months internship he will get opportunity to become our employee.
+        </p>
+        <p>
+            <h4 style="color:#007bff">Job Assurance</h4>
+            At CIIT, we provide 100% job assurance written on registered legal agreement. Now, what more can one ask for? That is the reason why students choose us over other institutes. We do not hesitate in giving a written guarantee to our candidates, as our training and placement program is of that standard.
+            We train our students in such a manner that they become job ready. CIIT acts as a bridge between the academic life of a student and the corporate world. Once they complete our course, they get job ready.
+        </p>
+    </div>
+
+
+
+    <div class="row" style="padding:20px 10px">
+        <h3 style="color:#007bff;text-align:left"> Our Placement Process</h3>
+        <div class="col-md-12">
+            <div class="single-course-content">
+
+
+                <div class="row" style="padding-top:15px">
+                    <div class="col-md-3" style="padding-bottom:10px">
+                        <div class="placement-wrapper" style="border:groove">
+                            <div class="placement-image" style="width:100%;text-align:center">
+                                <img src="~/assets/icons/eligibility.png" style="height: 70px;" />
+                            </div>
+                            <div class="placement-title">
+                                <h3 style="font-size:14px">Eligibility Criteria</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3" style="padding-bottom:10px">
+                        <div class="placement-wrapper" style="border:groove">
+                            <!-- Content for section 2 -->
+                            <div class="placement-image" style="width:100%;text-align:center">
+                                <img src="~/assets/icons/placement.jpg" style="height: 70px;" />
+                            </div>
+                            <div class="placement-title">
+                                <h3 style="font-size:14px">Placements Training</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3" style="padding-bottom:10px">
+                        <div class="placement-wrapper" style="border:groove">
+                            <!-- Content for section 3 -->
+                            <div class="placement-image" style="width:100%;text-align:center">
+                                <img src="~/assets/icons/InterviewQA.jpg" style="height: 70px;" />
+                            </div>
+                            <div class="placement-title">
+                                <h3 style="font-size:14px">Interview Q & A</h3>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="placement-wrapper" style="border:groove">
+                            <!-- Content for section 4 -->
+                            <div class="placement-image" style="width:100%;text-align:center">
+                                <img src="~/assets/icons/resume.jpeg" style="height: 70px;" />
+                            </div>
+                            <div class="placement-title">
+                                <h3 style="font-size:14px">Resume Preparation</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="row" style="padding-top:15px">
+                    <div class="col-md-3" style="padding-bottom:10px">
+                        <div class="placement-wrapper" style="border:groove">
+                            <div class="placement-image" style="width:100%;text-align:center">
+                                <img src="~/assets/icons/aptitude.png" style="height: 70px;" />
+                            </div>
+                            <div class="placement-title">
+                                <h3 style="font-size:14px">Aptitude Test</h3>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3" style="padding-bottom:10px">
+                        <div class="placement-wrapper" style="border:groove">
+                            <!-- Content for section 2 -->
+                            <div class="placement-image" style="width:100%;text-align:center">
+                                <img src="~/assets/icons/mock interviews.jpg" style="height: 70px;" />
+                            </div>
+                            <div class="placement-title">
+                                <h3 style="font-size:14px">Mock Interviews</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3" style="padding-bottom:10px">
+                        <div class="placement-wrapper" style="border:groove">
+                            <!-- Content for section 3 -->
+                            <div class="placement-image" style="width:100%;text-align:center">
+                                <img src="~/assets/icons/schedule interview.png" style="height: 70px;" />
+                            </div>
+                            <div class="placement-title">
+                                <h3 style="font-size:14px">Scheduling Interviews</h3>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3" style="padding-bottom:10px">
+                        <div class="placement-wrapper" style="border:groove">
+                            <div class="placement-image" style="width:100%;text-align:center">
+                                <img src="~/assets/icons/job placement.jpeg" style="height: 70px;" />
+                            </div>
+                            <div class="placement-title">
+                                <h3 style="font-size:14px">Job Placement</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row" style="padding-top:40px">
+        <h3 style="color:#007bff;text-align:left">CIIT Training Institute offers Premier Benefits for the Students</h3>
+        <div class="row" style="padding-top:20px">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card">
+                    <div class="card-body" style="text-align:">
+                        <div class="why_icon" style="text-align:center">
+                            @* <img src="~/assets/know.jpg" alt=""> *@
+                            <img style="color: #007bff; height: 70px; width: 70px" src="~/assets/icons/technical skill.png" />
+
+                        </div>
+                        <div class="why_content" style="height:100px">
+                            <h3 style="color:#007bff;text-align:center">Use Technical Skills</h3>
+                            <p style="text-align:justify">A student's imagination will cross boundaries with systematic training focusing on various technological aspects.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="why_icon" style="text-align:center">
+                            <img style="color: #007bff; height: 70px; width: 70px" src="~/assets/icons/knowledgesharing.png" />
+
+                        </div>
+                        <div class="why_content" style="height:100px">
+                            <h3 style="color: #007bff; text-align: center">Share Knowledge</h3>
+                            <p>An intensive training where professionals share knowledge through practical project implementation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card">
+                    <div class="card-body" style="text-align: ">
+                        <div class="why_icon" style="text-align:center">
+                            <img style="color:#007bf;height:70px;width:70px" src="~/assets/icons/reward.png" />
+                        </div>
+                        <div class="why_content" style="height:100px">
+                            <h3 style="color: #007bff; text-align: center">Get Rewarded</h3>
+                            <p>Our certified trainers, along with industry-relevant teaching methods, provide a stimulating environment provide a stimulating environment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row" style="padding-top:20px">
+        <div style="height:30px; width:100%;background-color:#007bff;color:white;text-align:center">
+            <h4>Our Top Placements</h4>
+        </div>
+    </div>
+    <div class="row">
+        <table class="table table-bordered table-secondary table-striped custom-table ">
+            <thead>
+                <tr style="font-weight:bold">
+
+                    <td>Name of Student </td>
+                    <td>Company</td>
+                    <td>Technology</td>
+                    <td>Package</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Rupesh Dhabade</td>
+                    <td>Perpetituuti Technosoft</td>
+                    <td>Dot Net </td>
+                    <td>6.2 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Akshay Pawar</td>
+                    <td>Rabbit & Tortoise </td>
+                    <td>Dot Net </td>
+                    <td>3.5 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Pratiksha Phadatare</td>
+                    <td>Rabbit & Tortoise </td>
+                    <td>Dot Net </td>
+                    <td>3.5 LPA</td>
+                </tr>
+
+
+                <tr>
+                    <td>Akash Supekar</td>
+                    <td>Avenitrinnovative </td>
+                    <td>Dot Net </td>
+                    <td>3.5 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Kishor Baradkar</td>
+                    <td>Reflection & Global </td>
+                    <td>Dot Net </td>
+                    <td>5.2 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Nilesh More</td>
+                    <td>Height8 Technologies </td>
+                    <td>Dot Net </td>
+                    <td>4.5 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Amey Ransingh</td>
+                    <td>Verseno Solutions </td>
+                    <td>Dot Net </td>
+                    <td>4.5 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Aditya Bhumkar</td>
+                    <td>Sanwell Solutions </td>
+                    <td>Dot Net </td>
+                    <td>4.5 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Sagar Masal</td>
+                    <td>Kanix Infotech</td>
+                    <td>Dot Net </td>
+                    <td>6.5 LPA</td>
+                </tr>
+
+
+                <tr>
+                    <td>Omkar Pawar</td>
+                    <td>Sankalp Computers & Systems </td>
+                    <td>Dot Net </td>
+                    <td>3.5 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Sagar Nachankar</td>
+                    <td>MicroData Care </td>
+                    <td>Dot Net </td>
+                    <td>2.5 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Rutuja Bodake</td>
+                    <td>MicroData Care </td>
+                    <td>Dot Net </td>
+                    <td>2.4 LPA</td>
+                </tr>
+
+
+                <tr>
+                    <td>Datta Shinde</td>
+                    <td>Optical ARC </td>
+                    <td>Front End Developer </td>
+                    <td>2.18 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Rutuja Jare</td>
+                    <td>Cloud Point System Inc</td>
+                    <td>Dot Net </td>
+                    <td>2.4 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Vaishnavi Bhagat</td>
+                    <td>Montcrest  </td>
+                    <td>Dot Net </td>
+                    <td>2.5 LPA</td>
+                </tr>
+
+
+                <tr>
+                    <td>Sanket Bhujbal</td>
+                    <td>Infosys</td>
+                    <td>Dot Net</td>
+                    <td>4.5 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Sourv Ghosh</td>
+                    <td>Credence</td>
+                    <td>Dot Net </td>
+                    <td>4.20 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Snehal</td>
+                    <td>Snow White</td>
+                    <td>MEAN Stack</td>
+                    <td>4.5 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Yogita Ghorad</td>
+                    <td>Agilad Tecchnologies Pvt Ltd</td>
+                    <td>Dot Net</td>
+                    <td>3.5 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Akash Bhujbal</td>
+                    <td>Assentex</td>
+                    <td>Dot Net </td>
+                    <td>3.5 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Dhananjay jaiswal</td>
+                    <td>Bajaj Alianz</td>
+                    <td>DBA </td>
+                    <td>3.5 LPA</td>
+                </tr>
+                <tr>
+                    <td>Rahul Paul</td>
+                    <td>Capgemeni</td>
+                    <td>Dot Net </td>
+                    <td>5.5 LPA</td>
+                </tr>
+
+
+                <tr>
+                    <td>Ashwini Yele </td>
+                    <td>SK Infotech</td>
+                    <td>Dot Net </td>
+                    <td>1.2 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Megha Savner</td>
+                    <td>Getway Technolabs</td>
+                    <td>Dot Net </td>
+                    <td>3.6 LPA</td>
+                </tr>
+
+
+
+                <tr>
+                    <td>Vitthal Chikte </td>
+                    <td>Bajaj Alianz</td>
+                    <td>DBA</td>
+                    <td>4.5 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Aishwarya Khabile </td>
+                    <td>The Most Group</td>
+                    <td>Dot Net </td>
+                    <td>1.8 LPA</td>
+                </tr>
+                <tr>
+                    <td>Mahesh Londhe </td>
+                    <td>Empower Integrated Solutions</td>
+                    <td>PHP </td>
+                    <td>2.2 LPA</td>
+                </tr>
+                <tr>
+                    <td>Sandhya Bhujbal </td>
+                    <td>Puzzle Software</td>
+                    <td>Front End</td>
+                    <td>3.8 LPA</td>
+                </tr>
+
+
+                <tr>
+                    <td>Tushar Mahadik</td>
+                    <td>Scorg</td>
+                    <td>Dot Net </td>
+                    <td>2.5 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Aniket Bhosale</td>
+                    <td>TCS</td>
+                    <td>Dot Net </td>
+                    <td>1.93 LPA</td>
+                </tr>
+
+
+                <tr>
+                    <td>Shital Jawale</td>
+                    <td>AnAr Solutions</td>
+                    <td>Dot Net</td>
+                    <td>1.2 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Smita Satpute</td>
+                    <td>Aptara</td>
+                    <td>Dot Net </td>
+                    <td>1.8 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Sneha Mahale</td>
+                    <td>Indoglobus Solutions</td>
+                    <td>MEAN Stack  </td>
+                    <td>5.0 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Virendra Parade</td>
+                    <td>Integrano</td>
+                    <td>Dot Net</td>
+                    <td>1.8 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Pooja Laygude</td>
+                    <td>Prayo Technogies</td>
+                    <td>Dot Net </td>
+                    <td>1.8 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Arvind Parhate</td>
+                    <td>Panacea Infotech Pvt. Ltd.</td>
+                    <td>Dot Net </td>
+                    <td>2.2LPA</td>
+                </tr>
+                <tr>
+                    <td>Vijay Divekar</td>
+                    <td>Maersk</td>
+                    <td>Dot Net </td>
+                    <td>2.8LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Shakil Shaikh</td>
+                    <td>TCS</td>
+                    <td> Java </td>
+                    <td>14.0 LPA</td>
+                </tr>
+
+
+                <tr>
+                    <td>Prasad Pol</td>
+                    <td>Eclon</td>
+                    <td>Front End </td>
+                    <td>1.8 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Krishna Nichel</td>
+                    <td>Modal Logic</td>
+                    <td>Java </td>
+                    <td>1.8 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Sneha Londhe</td>
+                    <td>Praeo Technogy</td>
+                    <td>Dot Net</td>
+                    <td>1.8 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Tejaswini Balwantro</td>
+                    <td>Praeo Technogy</td>
+                    <td>Dot Net </td>
+                    <td>1.8 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Rohini Bhosale</td>
+                    <td>Infosys</td>
+                    <td>Dot Net </td>
+                    <td>4.3 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Pravin Solankar</td>
+                    <td>Vizlitics Technogies Pvt Ltd</td>
+                    <td>DBA</td>
+                    <td>2.75 LPA</td>
+                </tr>
+                <tr>
+                    <td>Rajendra Patil</td>
+                    <td>Honeywell</td>
+                    <td>Dot Net </td>
+                    <td>5.5 LPA</td>
+                </tr>
+                <tr>
+                    <td>Hemangi Jagtap</td>
+                    <td>ZCON Solutions Pvt Ltd</td>
+                    <td>DBA </td>
+                    <td>5.5 LPA</td>
+                </tr>
+                <tr>
+                    <td>Ajay Mane</td>
+                    <td>TCS  Pvt Ltd</td>
+                    <td>Dot Net </td>
+                    <td>3.5 LPA</td>
+                </tr>
+                <tr>
+                    <td>Vishwjyoti Walode</td>
+                    <td>Integrano</td>
+                    <td>Dot Net </td>
+                    <td>2.2 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Nanaso Pawar</td>
+                    <td>TCS </td>
+                    <td>Dot Net </td>
+                    <td>2.2 LPA</td>
+                </tr>
+
+
+                <tr>
+                    <td>Komal Kardile</td>
+                    <td>Adaptive Technologies</td>
+                    <td>Dot Net </td>
+                    <td>1.8 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Reshma </td>
+                    <td>TCS</td>
+                    <td>Dot Net </td>
+                    <td>4.2 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Rani Kankate</td>
+                    <td>Pragmysys</td>
+                    <td>Dot Net</td>
+                    <td>2.4 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Shraddha Mukta</td>
+                    <td>Accenture</td>
+                    <td>Dot Net </td>
+                    <td>1.8 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Dyaneshwar Patil</td>
+                    <td>Wipro</td>
+                    <td> Dot Net</td>
+                    <td>2.4 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Chaushila Londhe</td>
+                    <td>Cruncher Soft Pvt Ltd</td>
+                    <td>Dot Net </td>
+                    <td>1.4 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Dhanshree Chavan</td>
+                    <td>IBM</td>
+                    <td>Dot Net </td>
+                    <td>2.4 LPA</td>
+                </tr>
+
+
+                <tr>
+                    <td>Sanjay Sharma</td>
+                    <td>BasicX </td>
+                    <td> JAVA </td>
+                    <td>2.6 LPA</td>
+                </tr>
+
+
+                <tr>
+                    <td>Prajkata Lonkar</td>
+                    <td>Maersk</td>
+                    <td> Dot Net </td>
+                    <td>2.6 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Abhishek Bhadkwan</td>
+                    <td>The Most Group</td>
+                    <td> Dot Net</td>
+                    <td>2.4 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Varsha Nagtilak</td>
+                    <td>Web Direct Pvt Ltd</td>
+                    <td> Dot Net </td>
+                    <td>3.2 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Pallavi Patil</td>
+                    <td>Aptara</td>
+                    <td> Dot Net </td>
+                    <td>1.44 LPA</td>
+                </tr>
+                <tr>
+                    <td>Sandhya Sanghshetty</td>
+                    <td>Accenture</td>
+
+                    <td>Dot Net </td>
+                    <td>1.8 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Ketki Atkari</td>
+                    <td>Mayuresh Solutions Pvt Ltd </td>
+
+                    <td>Java</td>
+                    <td>1.2 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Nishtha Vijavargiya</td>
+                    <td>TCS</td>
+
+                    <td>JAVA </td>
+                    <td>1.8 LPA</td>
+                </tr>
+
+
+                <tr>
+                    <td>Bhushan Bairagi</td>
+                    <td>Navndra Enterprices  </td>
+
+                    <td>Java </td>
+                    <td>1.5 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Ankit Gupta</td>
+                    <td> Nuance  </td>
+
+                    <td>JAVA </td>
+                    <td>3.5 LPA</td>
+                </tr>
+
+
+                <tr>
+                    <td>Snehal Shivthare</td>
+                    <td> Automatic Infotech Pvt Ltd  </td>
+
+                    <td>Dot Net</td>
+                    <td>2.4 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Nilesh Chavan</td>
+                    <td> Aloha Technology  </td>
+
+                    <td>Dot Net</td>
+                    <td>1.8 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Mayur Gadekar</td>
+                    <td> Navandra Enterprices  </td>
+
+                    <td>Android </td>
+                    <td>1.5 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Aditya Mukundwar</td>
+                    <td> Ohum Lab Healthcare Pvt Ltd  </td>
+
+                    <td>JAVA</td>
+                    <td>5.8 LPA</td>
+                </tr>
+
+
+                <tr>
+                    <td>Mayur Mahadik</td>
+                    <td> IBS Technologies </td>
+                    <td>Dot Net </td>
+                    <td>3.2 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Shraddha Banne</td>
+                    <td> Sands Technogy</td>
+
+                    <td>Dot Net </td>
+                    <td>1.4 LPA</td>
+                </tr>
+
+
+                <tr>
+                    <td>Avantika  Malleshe</td>
+                    <td> Accenture  </td>
+
+                    <td>Dot Net </td>
+                    <td>1.8 LPA</td>
+                </tr>
+
+
+                <tr>
+                    <td>Amol Khedkar</td>
+                    <td> Maersk </td>
+                    <td>Dot Net </td>
+                    <td>2.4 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Deepak Kumar</td>
+                    <td> L&T India  </td>
+                    <td>Dot Net </td>
+                    <td>9.20LPA</td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td>Neha Bali</td>
+                    <td>Upperthrust Technologies </td>
+                    <td>Java </td>
+                    <td>2.4LPA</td>
+                </tr>
+
+
+
+                <tr>
+                    <td>Sandeep Gupta</td>
+                    <td> Midas Blue Pvt Ltd </td>
+                    <td>Java </td>
+                    <td>2.4LPA</td>
+                </tr>
+
+
+
+
+
+                <tr>
+                    <td>Balaji Masal</td>
+                    <td> Benchmark Solutions Pvt Ltd </td>
+                    <td>Dot Net </td>
+                    <td>3.2 LPA</td>
+                </tr>
+                <tr>
+                    <td>Shraddha Patil</td>
+                    <td> ZCON Solutions Pvt Ltd</td>
+                    <td>Dot Net </td>
+                    <td>4.1 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Ganesh Gore</td>
+                    <td> Delmon Solutions</td>
+                    <td>Dot Net</td>
+                    <td>4.9 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Swapnita Kale</td>
+                    <td> Suma Soft Pvt. Ltd.</td>
+                    <td>Dot Net </td>
+                    <td>3.1 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Piyush Dwivedi</td>
+                    <td> Soft Tech</td>
+                    <td>Dot Net </td>
+                    <td>3.1 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Diksha Rahangale</td>
+                    <td> AnAr Sloutions Pvt Ltd</td>
+                    <td>Dot Net </td>
+                    <td>3.1 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Mahesh Khude</td>
+                    <td> Birla Medisoft Pvt Ltd</td>
+                    <td>.NET </td>
+                    <td>3.2 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Noopur Sarode</td>
+                    <td> Upyogee Soutions Pvt Ltd</td>
+                    <td>Dot Net </td>
+                    <td>2.4LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Swarali Deshmukh</td>
+                    <td> Tata Motors</td>
+                    <td>Dot Net </td>
+                    <td>2.4LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Amit Shinde</td>
+                    <td> Assure Technogy Pvt Ltd</td>
+                    <td>Dot Net </td>
+                    <td>2.4LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Pooja Khante</td>
+                    <td>AnAr Solutions Pvt Ltd</td>
+                    <td>Dot Net </td>
+                    <td>4.5LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Nitin Lonkar</td>
+                    <td>Accenture</td>
+                    <td>Dot Net </td>
+                    <td>4.5LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Rutuja Dhamankar</td>
+                    <td>Soft Tech</td>
+                    <td>Dot Net </td>
+                    <td>1.8 LPA</td>
+                </tr>
+
+                <tr>
+                    <td>Hemangi Oke</td>
+                    <td>Mindtree</td>
+                    <td>Dot Net </td>
+                    <td>2.5 LPA</td>
+                </tr>
+                <tr>
+                    <td>Hemangi Oke</td>
+                    <td>Mindtree</td>
+                    <td>Dot Net </td>
+                    <td>2.5 LPA</td>
+                </tr>
+
+
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+@*
+<div style="padding-top:40px"></div> *@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

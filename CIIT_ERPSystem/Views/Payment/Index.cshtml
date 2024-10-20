@@ -1,0 +1,54 @@
+﻿@model IEnumerable<ERPSystem_Models.StudentPaymentModel>
+@{
+    ViewData["Title"] = "Payment";
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
+}
+
+ <div class="container-fluid">
+     <div class="row">
+        @if (Model.Count() > 0)
+        {
+            int index = 1;
+            @*      float paidamount=0,remaining_amount=0, *@
+            <table class="table table-bordered" style="font-size:small">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Payment Date</th>
+                        <th>Payment Amount</th>
+                        <th>Payment Mode</th>
+                        <th>Payment Description</th>
+                        <th>Action</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var p in Model)
+                    {
+                        <tr>
+                            <td>@index</td>
+                            <td>@p.payment_date.ToShortDateString()</td>
+                            <td>@p.payment_amount</td>
+                            <td>@p.payment_mode</td>
+                            <td>@p.payment_description</td>
+                            <td><a href="/Accountant/Student/ViewInvoice?registration_id=@p.registration_id&payment_id=@p.payment_id">View Invoice</a></td>
+
+                        </tr>
+                        index++;
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <div class="row">
+
+                <div class="alert alert-warning alert-dismissible fade show">
+                    <strong>OOPS!!</strong> No payment done yet
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            </div>
+        }
+    </div>
+ </div>

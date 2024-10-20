@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/ExamLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        @using(Html.BeginForm())
+        {
+        <div class="card">
+            <div class="card-header">
+                <h4>Employee Login</h4>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label>Employee Code</label>
+                    @Html.TextBox("employee_code","",new{@class="form-control"})
+                </div>
+                <div class="mb-3">
+                    <label>Password</label>
+                    @Html.Password("password", "", new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="card-footer">
+                <input type="submit" value="Login" class="btn btn-primary" />
+                <h4 style="color:red">@ViewBag.msg</h4>
+            </div>
+        </div>
+        }
+    </div>
+    <div class="col-md-4"></div>
+</div>
