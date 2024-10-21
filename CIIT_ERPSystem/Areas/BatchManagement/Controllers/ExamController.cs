@@ -163,5 +163,31 @@ namespace CIIT_ERPSystem.Areas.BatchManagement.Controllers
             return View(em);
 
         }
+        public IActionResult ExamCertificate(int id)
+        {
+            if (HttpContext.Session.GetString("employee") == null)
+            {
+                return Redirect("/Account/Login");
+            }
+            string employee = HttpContext.Session.GetString("employee");
+            EmployeeModel emp = (EmployeeModel)JsonConvert.DeserializeObject<EmployeeModel>(employee);
+            ViewData["employee"] = emp;
+            ExamModel em = masterService.GetExam(id);
+            return View(em);
+
+        }
+        public IActionResult PrintCertificate(int id)
+        {
+            if (HttpContext.Session.GetString("employee") == null)
+            {
+                return Redirect("/Account/Login");
+            }
+            string employee = HttpContext.Session.GetString("employee");
+            EmployeeModel emp = (EmployeeModel)JsonConvert.DeserializeObject<EmployeeModel>(employee);
+            ViewData["employee"] = emp;
+            ExamModel em = masterService.GetExam(id);
+            return View(em);
+
+        }
     }
 }

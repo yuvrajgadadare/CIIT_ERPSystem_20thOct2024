@@ -1,12 +1,8 @@
 ﻿@model IEnumerable<ERPSystem_Models.ExamModel>
-
 @{
     ViewData["Title"] = "Exams";
     Layout = "~/Areas/BatchManagement/Views/Shared/BatchManagementLayout.cshtml";
 }
-
-
-
 <div class="container">
     <div class="row">
         <table class="table table-bordered">
@@ -44,6 +40,8 @@
                         <td>@item.grade</td>
                         <td>
                             <a href="/BatchManagement/Exam/ViewExamDetails/@item.exam_id" class="btn">View</a>
+                           &nbsp;
+                            <a href="/BatchManagement/Exam/PrintCertificate/@item.exam_id" class="btn">Certificate</a>
                         </td>
 
                     </tr>
