@@ -62,5 +62,33 @@ namespace CIIT_ERPSystem.Areas.Developer.Controllers
             List<ProgramQuestionModel> lst = questionService.GetContentWiseProgramQuestions(id);
             return Json(lst);
         }
+
+
+        public IActionResult ProgramAnswer()
+        {
+            List<ProgramQuestionModel> lst = questionService.GetAllProgramQuestions();
+            ViewBag.programs=new SelectList(lst, "program_question_id","question_title");
+            ViewData["programsanswers"] = questionService.GetAllProgramAnswers();
+            ProgramAnswerModel pm = new ProgramAnswerModel();
+            return View(pm);
+        }
+        [HttpPost]
+        public IActionResult ProgramAnswer(ProgramAnswerModel p)
+        {
+            questionService.AddProgramAnswer(p);
+            ModelState.Clear();
+            ViewBag.msg = "Program answer added successfully";
+            List<ProgramQuestionModel> lst = questionService.GetAllProgramQuestions();
+            ViewBag.programs = new SelectList(lst, "program_question_id", "question_title");
+            ViewData["programsanswers"] = questionService.GetAllProgramAnswers();
+
+            ProgramAnswerModel pm = new ProgramAnswerModel();
+            return View(pm);
+        }
+
+
+
+
+
     }
 }

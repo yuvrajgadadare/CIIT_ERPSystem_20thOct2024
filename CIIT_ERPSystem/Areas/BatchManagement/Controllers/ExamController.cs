@@ -186,6 +186,8 @@ namespace CIIT_ERPSystem.Areas.BatchManagement.Controllers
             EmployeeModel emp = (EmployeeModel)JsonConvert.DeserializeObject<EmployeeModel>(employee);
             ViewData["employee"] = emp;
             ExamModel em = masterService.GetExam(id);
+            StudentModel sm=studentService.GetStudent(em.student_id);
+            ViewData["student"] = sm;
             return View(em);
 
         }

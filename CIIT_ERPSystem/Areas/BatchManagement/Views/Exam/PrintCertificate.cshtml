@@ -4,7 +4,7 @@
      Layout = "~/Areas/BatchManagement/Views/Shared/BatchManagementLayout.cshtml";
    // Layout = null;
 }
-
+@using ERPSystem_Models;
 <!DOCTYPE html>
 <html lang="en">
 
@@ -60,6 +60,11 @@
             font-family: "Bookman Old Style"
         
         }
+        @Html.Raw("@")page {
+            size: 21cm 29.7cm;
+            margin: 30mm 45mm 30mm 45mm;
+              /* change the margins as you want them to be. */
+            }
         .certificate h2 {
             text-align: center;
             font-weight:normal;
@@ -159,6 +164,9 @@
             font-weight: 400;
         }
     </style>
+        @{
+            StudentModel sm = (StudentModel)ViewData["student"];
+        }
         <div class="">
             <div class="row">
                 <div class="col-md-12">
@@ -172,10 +180,15 @@
                                 <img src="~/assets/images/mainlogo.png" alt="CIIT Logo" class="logo" />
 
                                 <!-- Certificate Title and Details -->
-                                <p><h1>Certificate</h1></p>
+                                <h1>Certificate</h1> 
+                                 <div class="signature" style="height:50px;">
+                                    
+                                </div>
                                 <p><h2>The Academic Council of CIIT</h2></p>
                                 <p><h2>Certifies that</h2></p>
-
+                                 <div class="signature" style="height:50px;">
+                                    
+                                </div>
                                 <!-- Recipient Name -->
                                 <h1 >@Model.student_name</h1>
                                 <p class="para">has completed a exam on</p>
@@ -184,6 +197,9 @@
                                     <p class="para">with grade</p>
                                     <h1>@Model.grade</h1>
                                  </div>
+                                  <div class="signature" style="height:50px;">
+                                    
+                                </div>
                                 <!-- Course Details -->
                                @*  <div class="details">
                                     <p class="para">of 6 Months duration</p>
@@ -194,18 +210,18 @@
                                     <p class="para">Candidate has also completed a Live Project on</p>
                                     <p class="para">.Net Technology under the guidance of the Project Manager</p>
                                 </div> *@
-
+                                 
                                 <!-- Signature Section -->
                                 <div class="signature">
                                     <h3 class="director">Director</h3>
                                     <p>CIIT Training Institute Pvt Ltd</p>
                                 </div>
-
+                                 
                                 <!-- Registration and Certificate Numbers -->
                                 <div class="row">
                                     <div class="col-md-12">
                                         <p class="para2">
-                                            Registration No.R1111000013
+                                            PIN: @sm.permanent_identification_number
                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                             Certificate No:CT111117013
                                         </p>
@@ -214,7 +230,7 @@
                                 <!--<p style="text-align:center">LEGEND</p>-->
                                 <!-- Marks and Interpretation-->
                                 <div class="marks-interpretation">
-                                 <div class="row footer">
+                                 <div class="row ">
                                     <div class="col-md-3"></div>
                                     <div class="col-md-6" style="text-align: center;">
                                         <table  class="table table-borderless">
